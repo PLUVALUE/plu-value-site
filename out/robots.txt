@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://plu-value.fr/sitemap.xml

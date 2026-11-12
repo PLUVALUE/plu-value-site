@@ -1,0 +1,4 @@
+# Le site est pré-construit : Netlify publie le dossier out/ tel quel, sans commande de build.
+[build]
+  publish = "out"
+  command = ""
