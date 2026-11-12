@@ -266,6 +266,10 @@ ARTICLES.append(dict(
 </ol>
 <p>Notre page <a href="/division-maison-logements">division de maison</a> présente la façon dont PLU Value conduit ces étapes, et <a href="/nos-engagements">nos engagements</a> ce que nous prenons à notre charge.</p>
 
+<h2>Peut-on le faire soi-même ?</h2>
+<p>En théorie, oui. En pratique, une division de maison réunit plusieurs métiers : un urbaniste ou un avocat pour lire le règlement, un architecte pour vérifier que le bâtiment s'y prête, des entreprises pour chiffrer les travaux, un géomètre et un notaire pour la copropriété, et une bonne connaissance du marché pour créer des logements qui se vendent. Chacun se paie, et le tout prend des mois.</p>
+<p>Le vrai risque n'est pas de ne pas y arriver : c'est d'y arriver mal. Un logement trop petit, une place de stationnement manquante, une autorisation refusée, et les frais sont engagés pour rien. C'est pour cela que PLU Value ne retient que les projets qu'elle peut mener au bout, et y engage ses propres moyens. Voir <a href="/notre-methode">notre méthode</a>.</p>
+
 <h2>Questions fréquentes</h2>
 <details><summary>Quelle surface minimale pour un logement issu d'une division ?</summary><p>Le Code de la construction et de l'habitation (art. L126-17) interdit la division qui crée des logements de moins de 14 m² et de moins de 33 m³ habitables. Le PLU de la commune peut fixer des tailles plus grandes dans certains secteurs.</p></details>
 <details><summary>Faut-il un permis de construire pour diviser une maison en deux logements ?</summary><p>Cela dépend des travaux. La division en lots ne demande pas toujours de formalité, mais les travaux peuvent exiger une déclaration préalable ou un permis de construire, par exemple en cas de changement de destination avec travaux sur la structure ou la façade. La mairie confirme le cas de votre projet.</p></details>
