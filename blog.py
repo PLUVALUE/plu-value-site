@@ -203,6 +203,90 @@ _draft('champigny', 'diviser-son-terrain-champigny-sur-marne', '2026-10-27', 'Pa
 _draft('densification', 'densification-douce-pavillonnaire-commune', '2026-11-03', 'Communes · Urbanisme', '7 min', 'main')
 _draft('vendre', 'vendre-une-partie-de-son-terrain-maison-trop-grande', '2026-11-10', 'Propriétaires · Maison trop grande', '8 min', 'article')
 
+# ---------------------------------------------------------------- 12/11/2026
+ARTICLES.append(dict(
+    slug="diviser-une-maison-en-plusieurs-logements", date="2026-11-12", cat="Urbanisme · Division de maison", read="8 min",
+    title="Diviser une maison en plusieurs logements : règles et démarches",
+    seo="Diviser une maison en plusieurs logements : les règles",
+    desc="Autorisations d'urbanisme, surface minimale de 14 m², PLU, stationnement, mise en copropriété : ce qu'il faut vérifier avant de diviser une maison en logements.",
+    body="""
+<p class="answer">Oui, une grande maison peut souvent devenir deux ou trois logements, mais trois filtres décident : le PLU de la commune, le Code de la construction (chaque logement créé doit faire au moins 14 m² et 33 m³ et avoir ses propres équipements) et, si les logements sont vendus séparément, la mise en copropriété. L'ordre compte : on vérifie les règles avant de dessiner les lots, pas après.</p>
+
+<h2>Pourquoi diviser une maison plutôt que la vendre entière ?</h2>
+<p>Parce que beaucoup de grandes maisons ne correspondent plus à ceux qui les habitent, ni au budget de ceux qui cherchent. Selon l'Insee, un quart des ménages vivent dans une résidence principale en sous-occupation très accentuée, et 79 % de ces logements sont occupés par une ou deux personnes (recensement 2022, Insee Première n° 2064).</p>
+<p>Une maison de sept pièces trouve peu d'acheteurs à son prix. Deux logements plus petits s'adressent à des budgets plus courants. Ce n'est pas vrai partout, ni pour toutes les maisons : c'est ce que l'étude doit établir. Voir aussi <a href="/blog/maison-qui-ne-se-vend-pas.html">Maison qui ne se vend pas : les raisons fréquentes et les solutions</a>.</p>
+
+<h2>Faut-il une autorisation d'urbanisme ?</h2>
+<p>Pas toujours pour la division elle-même, mais souvent pour les travaux qu'elle demande. Le ministère de la Justice le résume ainsi : diviser un bâtiment en lots ne donne pas forcément lieu à une formalité d'urbanisme ; ce sont les travaux qui peuvent exiger une déclaration préalable ou un permis de construire, par exemple quand un changement de destination s'accompagne de travaux sur la structure ou la façade.</p>
+<p>En pratique, créer une seconde entrée, ouvrir une fenêtre ou aménager des combles touche presque toujours à l'aspect extérieur ou à la surface. Demandez à la mairie quelle autorisation s'applique à votre projet avant de commencer.</p>
+<div class="table">
+  <table>
+    <thead><tr><th>Autorisation</th><th>Délai d'instruction de droit commun</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr><td>Déclaration préalable</td><td>1 mois</td><td>Code de l'urbanisme, art. R*423-23</td></tr>
+      <tr><td>Permis de construire, maison individuelle</td><td>2 mois</td><td>service-public.gouv.fr</td></tr>
+      <tr><td>Permis de construire, autres projets</td><td>3 mois</td><td>service-public.gouv.fr</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Ces délais courent à partir d'un dossier complet et sont allongés en secteur protégé.</p>
+
+<h2>Que dit le PLU de votre commune ?</h2>
+<p>C'est le premier filtre, et il change d'une commune à l'autre. Trois points sont à lire dans le règlement de votre zone :</p>
+<ul>
+  <li><strong>Le stationnement.</strong> Beaucoup de règlements exigent des places par logement. Un logement de plus peut donc demander une place de plus sur le terrain. C'est le blocage le plus fréquent sur une petite parcelle.</li>
+  <li><strong>La taille minimale des logements.</strong> Le Code de l'urbanisme (art. L151-14) permet au PLU de délimiter des secteurs où les programmes doivent comporter une proportion de logements d'une taille minimale.</li>
+  <li><strong>L'autorisation préalable de division.</strong> Dans ces secteurs, la commune ou l'intercommunalité peut soumettre à autorisation les travaux qui créent plusieurs logements dans un immeuble existant, et la refuser si les logements ne respectent pas les proportions et tailles fixées par le PLU (Code de la construction et de l'habitation, art. L126-19).</li>
+</ul>
+<p class="callout"><strong>Limite de cette page :</strong> un régime voisin, souvent appelé « permis de diviser », existe aussi dans les zones d'habitat dégradé (art. L126-18). Nous n'avons pas pu lire le texte officiel de cet article pour cette page : seule la mairie vous dira si votre adresse est concernée.</p>
+
+<h2>Quelle taille et quels équipements pour chaque logement ?</h2>
+<p>Le Code de la construction et de l'habitation (art. L126-17) interdit trois types de division :</p>
+<ul>
+  <li>celle d'un immeuble frappé d'une interdiction d'habiter, d'un arrêté de péril ou déclaré insalubre ;</li>
+  <li>celle qui crée des logements de <strong>moins de 14 m² et de moins de 33 m³</strong> habitables ;</li>
+  <li>celle qui crée des logements sans alimentation en eau potable, sans évacuation des eaux usées ou sans accès à l'électricité, ou sans constat de risque d'exposition au plomb et recherche d'amiante.</li>
+</ul>
+<p>Diviser sans respecter ces règles expose à une amende qui peut atteindre 15 000 €, et 25 000 € en cas de nouveau manquement dans les trois ans (art. L183-14).</p>
+<p>Si les logements sont loués, ils doivent en plus être décents : au moins une pièce principale de 9 m² avec 2,20 m sous plafond, ou un volume habitable de 20 m³ (décret n° 2002-120, art. 4). Le règlement sanitaire départemental peut être plus exigeant.</p>
+
+<h2>Vendre les logements séparément : la copropriété</h2>
+<p>Vendre deux logements d'une même maison à deux acheteurs revient en général à créer une copropriété : un état descriptif de division, qui définit les lots, et un règlement de copropriété, qui fixe les parties communes et la répartition des charges.</p>
+<p>Si la maison a plus de dix ans, la mise en copropriété doit être précédée d'un diagnostic technique global (Code de la construction et de l'habitation, art. L731-4). L'ANIL précise qu'il se fait avant la rédaction du règlement et de l'état descriptif.</p>
+<p>C'est le notaire qui rédige ces actes. Les questions d'impôt et de taxe dépendent de votre situation : faites-les chiffrer par lui, nous ne publions pas de montant.</p>
+
+<h2>Dans quel ordre s'y prendre ?</h2>
+<ol>
+  <li><strong>Lire le PLU</strong> de la zone : stationnement, taille des logements, autorisation préalable éventuelle. Le <a href="https://www.geoportail-urbanisme.gouv.fr/" rel="noopener">Géoportail de l'urbanisme</a> donne la zone de votre adresse.</li>
+  <li><strong>Vérifier la maison</strong> : peut-on créer deux entrées, deux cuisines, deux salles d'eau, et séparer les compteurs sans toucher aux murs porteurs ?</li>
+  <li><strong>Faire dessiner le projet</strong> par un architecte ou un maître d'œuvre, avec les surfaces de chaque logement.</li>
+  <li><strong>Déposer l'autorisation</strong> d'urbanisme adaptée et attendre la fin des délais de recours.</li>
+  <li><strong>Préparer la copropriété</strong> avec le géomètre et le notaire.</li>
+  <li><strong>Vendre</strong>, par une agence immobilière.</li>
+</ol>
+<p>Notre page <a href="/division-maison-logements">division de maison</a> présente la façon dont PLU Value conduit ces étapes, et <a href="/nos-engagements">nos engagements</a> ce que nous prenons à notre charge.</p>
+
+<h2>Questions fréquentes</h2>
+<details><summary>Quelle surface minimale pour un logement issu d'une division ?</summary><p>Le Code de la construction et de l'habitation (art. L126-17) interdit la division qui crée des logements de moins de 14 m² et de moins de 33 m³ habitables. Le PLU de la commune peut fixer des tailles plus grandes dans certains secteurs.</p></details>
+<details><summary>Faut-il un permis de construire pour diviser une maison en deux logements ?</summary><p>Cela dépend des travaux. La division en lots ne demande pas toujours de formalité, mais les travaux peuvent exiger une déclaration préalable ou un permis de construire, par exemple en cas de changement de destination avec travaux sur la structure ou la façade. La mairie confirme le cas de votre projet.</p></details>
+<details><summary>Combien de temps prend l'instruction ?</summary><p>En droit commun, un mois pour une déclaration préalable, deux mois pour un permis de construire portant sur une maison individuelle et trois mois pour les autres projets, à partir d'un dossier complet. Ces délais sont plus longs en secteur protégé, et il faut y ajouter les délais de recours.</p></details>
+<details><summary>Faut-il créer une copropriété ?</summary><p>Oui en général si les logements sont vendus à des acheteurs différents : il faut un état descriptif de division et un règlement de copropriété, rédigés par un notaire. Si la maison a plus de dix ans, un diagnostic technique global doit précéder la mise en copropriété.</p></details>
+<details><summary>Le PLU peut-il empêcher la division ?</summary><p>Oui, de fait : s'il exige des places de stationnement par logement que le terrain ne peut pas accueillir, ou s'il impose une taille minimale de logement que la maison ne permet pas d'atteindre. C'est pourquoi le PLU se lit en premier.</p></details>
+
+<h2>Sources</h2>
+<ol class="sources">
+  <li>Ministère de la Justice, « Faut-il une autorisation pour diviser un bâtiment en plusieurs lots ? » : https://www.justice.fr/fiche/faut-autorisation-diviser-batiment-plusieurs-lots (consulté le 12/11/2026).</li>
+  <li>Code de l'urbanisme, art. R*423-23 (délais d'instruction) : https://legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074075/LEGISCTA000006158835/2026-02-03 (consulté le 12/11/2026).</li>
+  <li>Service-public.gouv.fr, permis de construire (délais) : https://www.service-public.gouv.fr/particuliers/vosdroits/F1986 (consulté le 12/11/2026).</li>
+  <li>Code de la construction et de l'habitation, art. L126-17 (divisions interdites) : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041565257 ; art. L126-19 (autorisation préalable) : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041565261 ; art. L183-14 (amende) : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041570625 (consultés le 12/11/2026). Art. L126-18 : texte non lu.</li>
+  <li>Code de l'urbanisme, art. L151-14 (taille minimale des logements) : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000031211187 (consulté le 12/11/2026, extrait).</li>
+  <li>Décret n° 2002-120 du 30 janvier 2002, art. 4 (logement décent) : https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000043842463 ; ministère de la Justice, « Logement à louer décent » : https://www.justice.fr/fiche/logement-decent (consultés le 12/11/2026).</li>
+  <li>Code de la construction et de l'habitation, art. L731-4 (diagnostic technique global) : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000028779366 ; ANIL, « Diagnostic technique global de la copropriété » : https://anil.org/aj-copropriete-diagnostic-technique-global (consultés le 12/11/2026).</li>
+  <li>Insee Première n° 2064, « Un quart des ménages vivent dans un logement en sous-occupation très accentuée », juillet 2025 : https://www.insee.fr/fr/statistiques/8606928 (consulté le 12/11/2026).</li>
+</ol>
+<p class="meta">Cette page est une information générale, pas un conseil juridique ni fiscal. Consultez la mairie de votre commune et un notaire avant toute décision.</p>
+"""))
+
 SEO = {'densification-douce-pavillonnaire-commune': 'Densification douce du pavillonnaire : le rôle de la commune', 'vendre-une-partie-de-son-terrain-maison-trop-grande': 'Vendre une partie de son terrain : maison trop grande ?', 'diviser-son-terrain-champigny-sur-marne': 'Diviser son terrain à Champigny-sur-Marne : le PLU'}
 for a in ARTICLES:
     if a['slug'] in SEO: a['seo'] = SEO[a['slug']]
