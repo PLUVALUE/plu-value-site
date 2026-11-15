@@ -169,3 +169,43 @@ def faq_block(items, hid="h-faq", title="Questions fréquentes"):
     ld = {"@context": "https://schema.org", "@type": "FAQPage",
           "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in items]}
     return html, ld
+
+# ---------- VIDÉOS (série Flair, fichiers dans out/media/videos/) ----------
+VIDEOS = {
+    3: ("ep03-parents-maison-trop-grande", "Une maison devenue trop grande : la vendre en un seul bloc n'est pas la seule option", "2026-11-13", 20),
+    4: ("ep04-agents-mandat-qui-ne-part-pas", "Agents : ce mandat qui ne part pas depuis des mois", "2026-11-13", 20),
+    5: ("ep05-faq-on-achete-ta-maison", "Est-ce que PLU Value achète ma maison ?", "2026-11-13", 19),
+    6: ("ep06-faq-qui-paie-les-etudes", "Qui paie les études ?", "2026-11-13", 20),
+    7: ("ep07-agents-avant-la-baisse-de-prix", "Agents : à vérifier avant de demander une baisse de prix", "2026-11-13", 22),
+    8: ("ep08-avant-apres-trois-logements", "Même maison, trois logements : ce qui change", "2026-11-13", 21),
+    9: ("ep09-faq-qui-intervient", "Quels professionnels interviennent ?", "2026-11-14", 25),
+    10: ("ep10-agents-tu-nous-presentes-un-bien", "Agents : vous nous présentez un bien, et après ?", "2026-11-14", 25),
+    12: ("ep12-vendre-un-bout-de-jardin", "Vendre une partie de son jardin : trois vérifications d'abord", "2026-11-15", 23),
+}
+VIDEO_NOTE = "Exemples types : chaque bien est un cas particulier, rien n'est automatique."
+
+
+def _video(n):
+    f, t, d, sec = VIDEOS[n]
+    html = (f'<figure class="vid"><video controls playsinline preload="none" poster="/media/videos/{f}.jpg" width="1080" height="1920" aria-label="{t}">'
+            f'<source src="/media/videos/{f}.mp4" type="video/mp4"></video><figcaption>{t}</figcaption></figure>')
+    ld = {"@context": "https://schema.org", "@type": "VideoObject", "name": t, "description": t + ". Vidéo PLU Value, " + str(sec) + " secondes.",
+          "thumbnailUrl": f"https://plu-value.fr/media/videos/{f}.jpg", "contentUrl": f"https://plu-value.fr/media/videos/{f}.mp4",
+          "uploadDate": d + "T12:00:00+01:00", "duration": f"PT{sec}S", "inLanguage": "fr-FR"}
+    return html, ld
+
+
+def videos_block(ids, hid, title, lead=""):
+    """Section « en vidéo » : renvoie (html, liste de données structurées VideoObject)."""
+    pairs = [_video(n) for n in ids]
+    html = (f'  <section aria-labelledby="{hid}">\n    <h2 id="{hid}">{title}</h2>\n'
+            + (f'    <p>{lead}</p>\n' if lead else '')
+            + '    <div class="vids">' + "".join(h for h, _ in pairs) + '</div>\n'
+            + f'    <p class="hint">{VIDEO_NOTE}</p>\n  </section>\n')
+    return html, [l for _, l in pairs]
+
+
+def video_inline(n):
+    """Une vidéo seule, dans un article."""
+    h, ld = _video(n)
+    return f'<div class="vids one">{h}</div>', ld

@@ -1,0 +1,95 @@
+<form enctype="multipart/form-data" method="post" name="documents-bien" data-netlify="true" hidden><input name="reference"><input name="agent-email"><input name="bien-ville"><input name="numero"><input type="file" name="document"><input name="form-name" value="documents-bien"></form>
+    <form enctype="multipart/form-data" id="depot" method="POST" name="depot-bien" data-netlify="true" netlify-honeypot="bot-field" novalidate="">
+      <input type="hidden" name="form-name" value="depot-bien">
+      <input type="hidden" name="reference" id="reference">
+      <input type="hidden" name="horodatage" id="horodatage">
+      <p class="hidden-bot"><label>Ne pas remplir <input name="bot-field" id="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+      <fieldset>
+        <legend>Vous</legend>
+        <div class="row two">
+          <div class="f"><label for="agent-nom">Nom et prénom *</label><input id="agent-nom" name="agent-nom" required="" autocomplete="name"></div>
+          <div class="f"><label for="agent-agence">Agence ou réseau *</label><input id="agent-agence" name="agent-agence" required="" placeholder="iad, SAFTI, agence indépendante…"></div>
+        </div>
+        <div class="row three">
+          <div class="f"><label for="agent-tel">Téléphone *</label><input id="agent-tel" name="agent-tel" type="tel" required="" autocomplete="tel"></div>
+          <div class="f"><label for="agent-email">E-mail *</label><input id="agent-email" name="agent-email" type="email" required="" autocomplete="email"></div>
+          <div class="f"><label for="agent-carte">Carte T ou RSAC <span class="hint">facultatif</span></label><input id="agent-carte" name="agent-carte"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Le bien</legend>
+        <div class="row two">
+          <div class="f"><label for="bien-ville">Commune du bien *</label><input id="bien-ville" name="bien-ville" required="" placeholder="Villeneuve-Saint-Georges (94)"></div>
+          <div class="f"><label for="bien-adresse">Adresse du bien <span class="hint">pas celle de l'agence, ou « communiquée après accord »</span></label><input id="bien-adresse" name="bien-adresse"></div>
+        </div>
+        <div class="row two">
+          <div class="f"><label for="bien-type">Type de bien *</label>
+            <select id="bien-type" name="bien-type" required="">
+              <option value="">Choisir…</option>
+              <option>Maison</option><option>Maison avec grand terrain</option><option>Terrain</option>
+              <option>Immeuble</option><option>Local / atelier / entrepôt</option><option>Appartement</option><option>Autre</option>
+            </select></div>
+          <div class="f"><label for="bien-parcelle">Référence cadastrale <span class="hint">facultatif</span></label><input id="bien-parcelle" name="bien-parcelle" class="mono" placeholder="AO 367"></div>
+        </div>
+        <div class="row three">
+          <div class="f"><label for="bien-surface">Surface habitable (m²)</label><input id="bien-surface" name="bien-surface" type="number" inputmode="numeric" min="0"></div>
+          <div class="f"><label for="bien-terrain">Terrain (m²)</label><input id="bien-terrain" name="bien-terrain" type="number" inputmode="numeric" min="0"></div>
+          <div class="f"><label for="bien-prix">Prix affiché (€) *</label><input id="bien-prix" name="bien-prix" type="number" inputmode="numeric" min="0" required=""></div>
+        </div>
+        <div class="row three">
+          <div class="f"><label for="bien-depuis">En vente depuis</label><input id="bien-depuis" name="bien-depuis" type="month"></div>
+          <div class="f"><label for="bien-visites">Visites à ce jour</label><input id="bien-visites" name="bien-visites" type="number" inputmode="numeric" min="0"></div>
+          <div class="f"><label for="bien-mandat">Votre mandat</label>
+            <select id="bien-mandat" name="bien-mandat"><option value="">Choisir…</option><option>Exclusif</option><option>Simple</option><option>Pas encore de mandat</option></select></div>
+        </div>
+        <div class="f"><span>Pourquoi ça ne se vend pas ?</span>
+          <div class="chips">
+            <label><input type="checkbox" name="blocage[]" value="Trop grand">Trop grand</label>
+            <label><input type="checkbox" name="blocage[]" value="Trop cher au global">Trop cher au global</label>
+            <label><input type="checkbox" name="blocage[]" value="Grand terrain">Grand terrain</label>
+            <label><input type="checkbox" name="blocage[]" value="Atypique">Atypique</label>
+            <label><input type="checkbox" name="blocage[]" value="Travaux lourds">Travaux lourds</label>
+            <label><input type="checkbox" name="blocage[]" value="Succession / indivision">Succession / indivision</label>
+            <label><input type="checkbox" name="blocage[]" value="Vendeur pressé">Vendeur pressé</label>
+          </div>
+        </div>
+        <div class="f"><label for="bien-annonce">Lien de l'annonce</label><input id="bien-annonce" name="bien-annonce" type="url" placeholder="https://"></div>
+        <div class="f"><label for="bien-fichiers">Photos, plans, diagnostics <span class="hint">recommandé, plusieurs fichiers possibles, jusqu'à 8 Mo chacun</span></label><input id="bien-fichiers" type="file" multiple="" accept="image/*,.pdf,.doc,.docx"></div>
+        <div class="f"><label for="bien-lien-docs">Fichier de plus de 8 Mo ? Lien vers les documents <span class="hint">facultatif : Google Drive, Dropbox…</span></label><input id="bien-lien-docs" name="bien-lien-docs" type="url" placeholder="https://"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Le vendeur</legend>
+        <div class="f"><span>Ce qui l'intéresse le plus</span>
+          <div class="chips">
+            <label><input type="radio" name="offre-souhaitee" value="Valorisation sans achat">Valoriser sans vendre tout de suite</label>
+            <label><input type="radio" name="offre-souhaitee" value="Achat marchand de biens">Vendre vite</label>
+            <label><input type="radio" name="offre-souhaitee" value="Les deux">Les deux</label>
+            <label><input type="radio" name="offre-souhaitee" value="Je ne sais pas" checked="">Je ne sais pas encore</label>
+          </div>
+        </div>
+        <div class="f"><label for="bien-notes">Ce qu'on doit savoir</label><textarea id="bien-notes" name="bien-notes" placeholder="Prix plancher du vendeur, délai, retours des visites, servitudes, voisins…"></textarea></div>
+      </fieldset>
+
+      <div class="consent">
+        <label><input type="checkbox" id="ok-charte" name="charte-acceptee" value="oui" required=""><span>J'ai lu et j'accepte la <a href="#charte-texte">charte de confidentialité et de non-contournement</a> (v1, octobre 2026). *</span></label>
+        <label><input type="checkbox" id="ok-vendeur" name="accord-vendeur" value="oui" required=""><span>Je transmets ces informations avec l'accord du vendeur, dans le cadre de mon mandat. *</span></label>
+      </div>
+
+      <div class="submit">
+        <button class="btn primary" type="submit" id="send">Envoyer le bien</button>
+        <span class="error" id="err" role="alert" hidden></span>
+      </div>
+    </form>
+
+    <div class="receipt" id="receipt" tabindex="-1" hidden>
+      <span class="eyebrow" style="color:var(--ok)">Dépôt enregistré</span>
+      <h3>Merci, votre bien est entre de bonnes mains.</h3>
+      <p>Référence <span class="ref" id="r-ref"></span> · déposé le <span class="mono" id="r-date"></span></p>
+      <p>Gardez cette référence : elle date votre dépôt au titre de la charte. Nous revenons vers vous avec l'étude de faisabilité. Une question en attendant : écrivez-nous sur WhatsApp ou à contact@plu-value.fr.</p>
+      <p class="hint" id="r-preview" hidden>Aperçu : l'envoi réel sera actif une fois la plateforme en ligne.</p>
+      <div><button class="btn ghost" type="button" id="again">Déposer un autre bien</button></div>
+    </div>
+  

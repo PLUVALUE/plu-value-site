@@ -1,31 +1,14 @@
 # -*- coding: utf-8 -*-
 import re
-from base import page, ba_slider, TERRAIN_PAIR, MAISON_BA, SIM, TEAM, FINAL_CTA, PARTNER, faq_block
+from base import page, ba_slider, TERRAIN_PAIR, MAISON_BA, SIM, TEAM, FINAL_CTA, PARTNER, faq_block, videos_block
+VID_AG, VID_AG_LD = videos_block([4, 7, 10], 'h-vid', "En vidéo : ce que nous changeons pour vos mandats", "Trois cas en vingt secondes chacun : le mandat qui stagne, la baisse de prix, ce qui se passe après votre dépôt.")
 from pages import P
 
-CHARTE = open("/home/claude/v2/_charte_details.html").read().replace('class="charter" id="charte-texte"', 'class="charter" id="charte-texte"')
-
-# ---------- formulaire agent (repris à l'identique : mêmes noms de champs) ----------
-dep = open("/home/claude/site/_deposer.html").read()
-a = dep.find('<form enctype="multipart/form-data" method="post" name="documents-bien">')
-b = dep.find('</section>')
-dep = dep[a:b]
-dep = dep.replace('<form enctype="multipart/form-data" method="post" name="documents-bien">',
-                  '<form enctype="multipart/form-data" method="post" name="documents-bien" data-netlify="true" hidden>')
-dep = dep.replace('<input type="file" name="document"></form>',
-                  '<input type="file" name="document"><input name="form-name" value="documents-bien"></form>')
-dep = dep.replace('<form enctype="multipart/form-data" id="depot" method="POST" name="depot-bien" novalidate="">',
-                  '<form enctype="multipart/form-data" id="depot" method="POST" name="depot-bien" data-netlify="true" netlify-honeypot="bot-field" novalidate="">\n'
-                  '      <input type="hidden" name="form-name" value="depot-bien">\n'
-                  '      <input type="hidden" name="reference" id="reference">\n'
-                  '      <input type="hidden" name="horodatage" id="horodatage">')
-dep = re.sub(r'\n\s*\n\s*\n\s*\n', '\n', dep)
-dep = dep.replace('https://plu-value.fr/#charte-texte', '#charte-texte')
-dep = dep.replace('<div class="receipt" id="receipt" tabindex="-1">', '<div class="receipt" id="receipt" tabindex="-1" hidden>')
-dep = dep.replace('<span class="error" id="err" role="alert"></span>', '<span class="error" id="err" role="alert" hidden></span>')
-dep = dep.replace('<p class="hint" id="r-preview">', '<p class="hint" id="r-preview" hidden>')
-dep = dep.replace('<legend><span class="mono">A</span> Vous</legend>', '<legend>Vous</legend>').replace('<legend><span class="mono">B</span> Le bien</legend>', '<legend>Le bien</legend>').replace('<legend><span class="mono">C</span> Le vendeur</legend>', '<legend>Le vendeur</legend>')
-DEP_FORM = dep
+# La charte et le formulaire agent sont deux blocs HTML figés, rangés dans parts/ (le générateur ne dépend d'aucun fichier hors du dépôt).
+import os
+_HERE = os.path.dirname(os.path.abspath(__file__))
+CHARTE = open(os.path.join(_HERE, "parts", "charte.html"), encoding="utf-8").read()
+DEP_FORM = open(os.path.join(_HERE, "parts", "depot_form.html"), encoding="utf-8").read()
 
 FORMS_JS = """<script>
 (function(){
@@ -213,7 +196,7 @@ P["agents-immobiliers"] = ("Valorisez vos mandats difficiles | PLU Value",
     {CHARTE}
     <div><a class="btn primary" href="/deposer-un-bien?profil=agent">Déposer un bien</a></div>
   </section>
-{FINAL_CTA}""")
+{VID_AG}{FINAL_CTA}""", VID_AG_LD)
 
 # ---------- NOTAIRES ----------
 P["notaires"] = ("Notaires : potentiel immobilier des successions | PLU Value",

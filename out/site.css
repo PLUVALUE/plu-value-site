@@ -175,3 +175,9 @@ aside.help .btn.ghost{color:#F7F4EC;border-color:#F7F4EC}
 .postlist{display:grid;gap:14px}@media (min-width:760px){.postlist{grid-template-columns:1fr 1fr}}
 .postlist .card h2,.postlist .card h3{font-size:1.2rem}
 .postlist .card p{color:var(--ink-2);font-size:.95rem}
+.vids{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+.vid{margin:0;flex:0 0 62%;max-width:280px;scroll-snap-align:start;display:grid;gap:8px;align-content:start}
+.vid video{width:100%;height:auto;aspect-ratio:9/16;border-radius:12px;background:#0B2924;display:block}
+.vid figcaption{font-size:.92rem;line-height:1.35;color:var(--ink-2)}
+.vids.one{justify-content:center;margin:18px 0}.vids.one .vid{flex-basis:260px}
+@media (min-width:760px){.vids{display:grid;grid-template-columns:repeat(3,minmax(0,260px));justify-content:center;overflow:visible;gap:20px}.vids.one{grid-template-columns:minmax(0,260px)}.vid{max-width:none}}

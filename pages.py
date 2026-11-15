@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import re, sys, os
-sys.path.insert(0, "/home/claude/site/build")
-from base import page, ba_slider, TERRAIN_PAIR, MAISON_BA, SIM, TEAM, FINAL_CTA, PARTNER, faq_block
+from base import page, ba_slider, TERRAIN_PAIR, MAISON_BA, SIM, TEAM, FINAL_CTA, PARTNER, faq_block, videos_block
 
 P = {}
 
@@ -49,6 +48,8 @@ FAQ = [
  ("Comment PLU Value est-il rémunéré ?", "Notre rémunération est liée à la valorisation obtenue : nous sommes payés quand le projet réussit, selon les modalités écrites au contrat. Nous n'avons donc aucun intérêt à engager des dépenses dans un projet qui ne fonctionne pas."),
 ]
 FAQ_HTML, FAQ_LD = faq_block(FAQ)
+VID_HOME, VID_HOME_LD = videos_block([8, 5, 6], 'h-vid', "L'essentiel en vidéo", "Trois vidéos de vingt secondes pour comprendre l'idée, ce que nous faisons et qui paie quoi.")
+VID_PROP, VID_PROP_LD = videos_block([3, 8, 9], 'h-vid', "En vidéo : ce qui peut changer pour votre maison", "Vingt secondes par vidéo, sans jargon.")
 
 SOLUTIONS3 = f"""<div class="grid3">
       <a class="card" href="/division-maison-logements"><span class="k">1 · Le bâtiment</span><h3>Diviser une maison</h3><p class="hint">Étudier la création de plusieurs logements indépendants dans une construction existante.</p><em>Diviser une maison →</em></a>
@@ -137,7 +138,7 @@ P[""] = ("PLU Value | Valorisation et division immobilière",
     <figure class="shot"><img src="/media/site-accueil.webp" alt="Vue aérienne d'un quartier pavillonnaire au coucher du soleil" width="1536" height="864" loading="lazy"></figure>
     <p>Partout, on manque de logements, et le parc existant est une ressource sous-utilisée : de grandes maisons occupées par une ou deux personnes, de grands jardins difficiles à entretenir. Les transformer intelligemment, sans artificialiser de nouveaux terrains, c'est une contribution concrète, à notre échelle, au besoin de logements.</p>
   </section>
-{FAQ_HTML}{FINAL_CTA}""", FAQ_LD)
+{VID_HOME}{FAQ_HTML}{FINAL_CTA}""", [FAQ_LD] + VID_HOME_LD)
 
 # ---------- NOS SOLUTIONS ----------
 P["nos-solutions"] = ("Nos solutions : diviser une maison, un terrain, un immeuble | PLU Value",
@@ -212,7 +213,7 @@ P["valoriser-maison-familiale"] = ("Valoriser une maison familiale avant de la v
     </ul>
     <div><a class="btn gold" href="/nos-engagements">Nos engagements en détail</a></div>
   </section>
-{FAQ_HTML.replace('h-faq','h-faq2')}{FINAL_CTA}""")
+{VID_PROP}{FAQ_HTML.replace('h-faq','h-faq2')}{FINAL_CTA}""", VID_PROP_LD)
 
 # ---------- DIVISION MAISON ----------
 P["division-maison-logements"] = ("Diviser une maison en 2 logements | PLU Value",
@@ -418,6 +419,3 @@ P["equipe"] = ("Les fondateurs de PLU Value | PLU Value",
     <p class="hint">PLU Value est une marque exploitée par LATULIPE SAS, RCS Nîmes 921 470 951.</p>
   </section>
 {FINAL_CTA}""")
-
-with open("/home/claude/v2/_pages_a.py.done", "w") as f:
-    f.write("ok")

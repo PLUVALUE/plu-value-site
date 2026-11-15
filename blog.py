@@ -296,6 +296,10 @@ for a in ARTICLES:
     if a['slug'] in SEO: a['seo'] = SEO[a['slug']]
 ARTICLES.sort(key=lambda a: a['date'], reverse=True)
 
+# Vidéo associée à un article (numéro d'épisode dans base.VIDEOS), placée après le premier paragraphe.
+ARTICLE_VIDEO = {'vendre-une-partie-de-son-terrain-maison-trop-grande': 12, 'agent-immobilier-mandat-qui-stagne': 4,
+                 'maison-qui-ne-se-vend-pas': 8, 'contrat-de-valorisation-immobiliere': 5}
+
 ORG_LD = {"@type": "Organization", "name": "PLU Value", "url": "https://plu-value.fr/"}
 
 
@@ -305,12 +309,18 @@ def article_page(a):
     url = "https://plu-value.fr/" + path
     others = [o for o in ARTICLES if o is not a][:3]
     cards = "".join(f'<a class="card" href="/blog/{o["slug"]}.html"><span class="k">{o["cat"]}</span><h3>{o["title"]}</h3><em>Lire l\'article →</em></a>' for o in others)
+    art_body, vld = a['body'], None
+    if a['slug'] in ARTICLE_VIDEO:
+        from base import video_inline
+        vh, vld = video_inline(ARTICLE_VIDEO[a['slug']])
+        assert '</p>' in art_body, a['slug']
+        art_body = art_body.replace('</p>', '</p>\n' + vh, 1)
     body = f"""  <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a> › <a href="/blog/">Conseils</a> › {a['cat'].split(' · ')[-1]}</nav>
   <article class="post">
     <span class="eyebrow">{a['cat']}</span>
     <h1>{a['title']}</h1>
     <p class="meta">Publié le {fdate(a['date'])} · {a['read']} de lecture · PLU Value</p>
-{a['body']}
+{art_body}
     {CTA}
   </article>
   <section aria-labelledby="h-lire"><h2 id="h-lire">À lire aussi</h2><div class="postlist">{cards}</div></section>"""
@@ -320,6 +330,7 @@ def article_page(a):
               {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://plu-value.fr/"},
               {"@type": "ListItem", "position": 2, "name": "Conseils", "item": "https://plu-value.fr/blog/"},
               {"@type": "ListItem", "position": 3, "name": a['title'], "item": url}]}]
+    if vld: ld.append(vld)
     faq = re.findall(r'<details[^>]*><summary>(.*?)</summary>\s*<p>(.*?)</p></details>', a['body'], re.S)
     if faq:
         strip = lambda t: H.unescape(re.sub(r'<[^>]+>', '', t)).strip()
