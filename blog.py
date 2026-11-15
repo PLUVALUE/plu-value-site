@@ -291,6 +291,76 @@ ARTICLES.append(dict(
 <p class="meta">Cette page est une information générale, pas un conseil juridique ni fiscal. Consultez la mairie de votre commune et un notaire avant toute décision.</p>
 """))
 
+ARTICLES.append(dict(
+    slug="maison-en-indivision-qui-ne-se-vend-pas", date="2026-11-15", cat="Succession · Indivision", read="7 min",
+    title="Maison en indivision qui ne se vend pas : que peuvent faire les héritiers ?",
+    seo="Maison en indivision qui ne se vend pas : que faire ?",
+    desc="Maison des parents héritée à plusieurs, sans accord ou sans acheteur : règles de l'indivision, frais qui courent, options avant de baisser le prix.",
+    body="""
+<p class="answer">Une maison en indivision qui ne se vend pas bloque souvent pour deux raisons qui se cumulent : il faut l'accord de tous les héritiers pour la vendre, et une grande maison de famille trouve peu d'acheteurs à son prix. Avant de baisser le prix ou d'aller au tribunal, une troisième voie mérite d'être étudiée : vérifier si le bien peut se vendre autrement, en plusieurs lots. Ce n'est pas possible partout, et cela se vérifie.</p>
+
+<h2>La maison des parents est vide, et rien ne bouge : pourquoi ?</h2>
+<p>La situation est fréquente. Les parents sont partis, vous êtes deux, trois ou quatre à hériter, et la maison où vous avez grandi est en vente depuis des mois. L'un veut vendre vite, l'autre refuse de « brader », un troisième habite loin et ne répond plus. Pendant ce temps, la maison reste fermée.</p>
+<p>Juridiquement, vous êtes en indivision : tant que le partage n'est pas fait, les biens du défunt appartiennent ensemble à tous les héritiers, explique le ministère de la Justice [1]. Personne ne possède « sa » chambre ou « sa » moitié de jardin : chacun détient une part de l'ensemble.</p>
+
+<h2>Faut-il que tous les héritiers soient d'accord pour vendre ?</h2>
+<p>Oui, en principe. Pour les actes les plus importants, dont la vente d'un bien immobilier, la décision doit être prise à l'unanimité [1]. Un seul héritier qui refuse le prix, ou qui ne signe pas, suffit à tout arrêter.</p>
+<p>Il existe des exceptions. Le tribunal peut autoriser la vente à la demande d'héritiers qui détiennent au moins les deux tiers des droits indivis ; cette dérogation ne joue pas si le bien est démembré (usufruit et nue-propriété) ou si l'un des héritiers fait l'objet d'une mesure de protection [1][2]. En cas de mésentente, le tribunal peut aussi nommer un mandataire chargé de gérer provisoirement [1].</p>
+<p>Nous n'avons pas pu lire, dans une source officielle, le détail des étapes et des délais de cette procédure des deux tiers : demandez-le à votre notaire avant de vous y engager.</p>
+
+<h2>Peut-on vous obliger à rester dans l'indivision ?</h2>
+<p>Non. Les notaires le rappellent : nul ne peut être contraint à demeurer dans l'indivision, et chaque héritier peut demander le partage à tout moment [2]. Si le partage amiable est impossible, il se demande au tribunal ; les autres héritiers peuvent alors demander à rester en indivision entre eux, en attribuant sa part à celui qui veut sortir [1].</p>
+<p>Deux autres points utiles :</p>
+<ul>
+  <li>Les héritiers peuvent signer une convention d'indivision pour organiser la gestion du bien, pour une durée déterminée de cinq ans au maximum [2][3].</li>
+  <li>Un héritier peut céder sa part à un tiers ; les autres ne peuvent pas s'y opposer, mais ils disposent d'un droit de préemption sur cette part [2].</li>
+</ul>
+<p>La voie judiciaire existe donc, mais elle abîme les relations familiales et ne règle pas la question de fond : pourquoi cette maison ne trouve-t-elle pas preneur ?</p>
+
+<h2>Qui paie pendant que la maison ne se vend pas ?</h2>
+<p>Tout le monde. Chaque héritier doit régler les dettes de l'indivision à proportion de sa part [2]. Pour la taxe foncière, chacun paie sa quote-part ; celui qui a tout avancé peut se faire rembourser par les autres [4].</p>
+<p>Le calendrier fiscal, lui, n'attend pas la vente. La déclaration de succession doit être déposée dans les six mois du décès, et les droits se règlent au même moment [5][6]. Un paiement fractionné peut être demandé : sur un an au plus en trois versements, ou sur trois ans en sept versements si au moins la moitié des biens ne sont pas liquides, avec l'accord de tous les héritiers et des intérêts [7]. Votre notaire vous dira ce qui s'applique à votre succession : nous ne chiffrons aucun cas particulier.</p>
+<p>Nous n'avons pas trouvé de source officielle qui précise qui paie l'entretien et l'assurance d'une maison restée vide : c'est une question à poser au notaire, et un sujet à mettre par écrit entre héritiers.</p>
+
+<h2>Baisser le prix, attendre, ou vendre autrement ?</h2>
+<p>Quand une maison héritée ne se vend pas, les héritiers ont en général quatre options.</p>
+<div class="table"><table>
+  <thead><tr><th>Option</th><th>Ce que cela règle</th><th>Ce que cela ne règle pas</th></tr></thead>
+  <tbody>
+    <tr><td>Ne rien faire</td><td>Rien à décider aujourd'hui</td><td>Les charges courent, la maison vide se dégrade, le désaccord s'installe</td></tr>
+    <tr><td>Baisser le prix</td><td>Peut déclencher une offre</td><td>Chaque héritier reçoit moins ; celui qui refusait le prix refusera encore</td></tr>
+    <tr><td>Aller au tribunal</td><td>Met fin au blocage d'un héritier</td><td>La maison reste difficile à vendre telle quelle</td></tr>
+    <tr><td>Étudier une vente en plusieurs lots</td><td>S'adresse à d'autres acheteurs, à d'autres budgets</td><td>N'est pas possible partout : il faut le vérifier</td></tr>
+  </tbody>
+</table></div>
+<p>La quatrième option est la moins connue. Une maison de famille avec un grand jardin, ou une maison de sept ou huit pièces, coûte trop cher au total pour la plupart des acheteurs du quartier. Selon les règles de la commune, il est parfois possible de détacher un terrain à bâtir, ou de créer plusieurs logements dans la maison. Chaque lot vise alors un budget plus courant. Le désaccord sur le prix change aussi de nature : on ne discute plus d'une baisse, mais d'un projet.</p>
+<p>Rien n'est automatique. Tout dépend du plan local d'urbanisme, du terrain, du bâtiment et du marché local. Pour comprendre les deux pistes, voir <a href="/blog/vendre-une-partie-de-son-terrain-maison-trop-grande.html">vendre une partie de son terrain</a> et <a href="/blog/diviser-une-maison-en-plusieurs-logements.html">diviser une maison en plusieurs logements</a>. Notre page <a href="/succession-maison-familiale">succession et maison familiale</a> décrit la façon dont nous travaillons avec les héritiers et leur notaire.</p>
+
+<h2>Pourquoi ne pas le faire seuls ?</h2>
+<p>Parce qu'une division demande plusieurs métiers à la fois : lire le règlement d'urbanisme, vérifier que le bâtiment ou le terrain s'y prête, faire chiffrer les travaux, faire borner, obtenir les autorisations, connaître les prix du secteur, et avancer les frais pendant des mois. À plusieurs héritiers, il faut en plus que tous décident ensemble à chaque étape.</p>
+<p>Mal préparé, un projet peut être refusé par la mairie, ou coûter des frais sans résultat. Dans une indivision déjà tendue, c'est le scénario à éviter.</p>
+<p>PLU Value réunit ces métiers. L'étude préalable est gratuite ; si rien n'est réaliste, nous vous le disons, avec la raison. Pour les projets que nous retenons, nous engageons nos propres moyens dans les études et les démarches : nous avons donc le même intérêt que vous à ce que le projet aboutisse. La vente reste confiée à une agence immobilière, et les actes à votre notaire. Voir <a href="/nos-engagements">nos engagements</a>, ou <a href="/deposer-un-bien">présentez-nous le bien</a>.</p>
+
+<h2>Questions fréquentes</h2>
+<details><summary>Un seul héritier peut-il bloquer la vente de la maison ?</summary><p>Oui, en principe : la vente d'un bien immobilier en indivision se décide à l'unanimité. Le tribunal peut toutefois autoriser la vente à la demande d'héritiers détenant au moins les deux tiers des droits indivis, sauf si le bien est démembré ou si un héritier est sous mesure de protection.</p></details>
+<details><summary>Peut-on sortir de l'indivision sans l'accord des autres ?</summary><p>Oui. Nul ne peut être contraint à demeurer dans l'indivision : chaque héritier peut demander le partage, à l'amiable ou, à défaut, devant le tribunal. Il peut aussi céder sa part, les autres héritiers disposant d'un droit de préemption.</p></details>
+<details><summary>Qui paie la taxe foncière d'une maison en indivision ?</summary><p>Chaque héritier paie sa quote-part. Celui qui a réglé la totalité peut demander aux autres de lui rembourser leur part.</p></details>
+<details><summary>Combien de temps a-t-on pour régler la succession auprès des impôts ?</summary><p>La déclaration de succession doit être déposée dans les six mois du décès, douze mois si le décès a eu lieu à l'étranger, et les droits sont dus au même moment. Un paiement fractionné peut être demandé sous conditions. Le notaire vous indiquera votre situation exacte.</p></details>
+<details><summary>Diviser la maison ou le terrain, est-ce toujours possible ?</summary><p>Non. Cela dépend du plan local d'urbanisme, des servitudes, de la configuration du terrain et du bâtiment, et de l'intérêt économique de l'opération. C'est ce qu'une étude préalable permet de savoir avant toute décision.</p></details>
+
+<h2>Sources</h2>
+<ol class="sources">
+  <li>Ministère de la Justice, « Succession : indivision entre les héritiers » : https://www.justice.fr/fiche/succession-indivision-entre-heritiers (consulté le 15/11/2026).</li>
+  <li>Notaires de France, « Acheter en indivision (règles générales) » : https://www.notaires.fr/fr/immobilier-fiscalite/achat-et-vente-cas-particuliers/le-regime-de-lindivision (consulté le 15/11/2026).</li>
+  <li>Code civil, convention d'indivision à durée déterminée (cinq ans au plus) : https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006444603/2007-01-01 (consulté le 15/11/2026).</li>
+  <li>Service-public.gouv.fr, « Impôts locaux : qui doit payer la taxe foncière en cas d'indivision ? » : https://www.service-public.gouv.fr/particuliers/vosdroits/F263 (consulté le 15/11/2026, version anglaise de la fiche).</li>
+  <li>Service-public.gouv.fr, « Déclaration de succession » : https://www.service-public.gouv.fr/particuliers/vosdroits/R10279 (consulté le 15/11/2026).</li>
+  <li>Ministère de la Justice, « Droits de succession - Déclaration » : https://www.justice.fr/fiche/droits-succession-declaration (consulté le 15/11/2026).</li>
+  <li>Ministère de la Justice, « Paiement des droits de succession » : https://www.justice.fr/fiche/paiement-droits-succession (consulté le 15/11/2026).</li>
+</ol>
+<p class="meta">Cette page est une information générale, pas un conseil juridique ni fiscal. Consultez votre notaire avant toute décision.</p>
+"""))
+
 SEO = {'densification-douce-pavillonnaire-commune': 'Densification douce du pavillonnaire : le rôle de la commune', 'vendre-une-partie-de-son-terrain-maison-trop-grande': 'Vendre une partie de son terrain : maison trop grande ?', 'diviser-son-terrain-champigny-sur-marne': 'Diviser son terrain à Champigny-sur-Marne : le PLU'}
 for a in ARTICLES:
     if a['slug'] in SEO: a['seo'] = SEO[a['slug']]
@@ -298,7 +368,7 @@ ARTICLES.sort(key=lambda a: a['date'], reverse=True)
 
 # Vidéo associée à un article (numéro d'épisode dans base.VIDEOS), placée après le premier paragraphe.
 ARTICLE_VIDEO = {'vendre-une-partie-de-son-terrain-maison-trop-grande': 12, 'agent-immobilier-mandat-qui-stagne': 4,
-                 'maison-qui-ne-se-vend-pas': 8, 'contrat-de-valorisation-immobiliere': 5}
+                 'maison-qui-ne-se-vend-pas': 8, 'maison-en-indivision-qui-ne-se-vend-pas': 9, 'contrat-de-valorisation-immobiliere': 5}
 
 ORG_LD = {"@type": "Organization", "name": "PLU Value", "url": "https://plu-value.fr/"}
 
