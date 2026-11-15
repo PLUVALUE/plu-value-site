@@ -361,6 +361,82 @@ ARTICLES.append(dict(
 <p class="meta">Cette page est une information générale, pas un conseil juridique ni fiscal. Consultez votre notaire avant toute décision.</p>
 """))
 
+ARTICLES.append(dict(
+    slug="vendre-sa-maison-residence-senior-ehpad", date="2026-11-15", cat="Propriétaires · Résidence senior et EHPAD", read="7 min",
+    title="Vendre sa maison pour aller en résidence senior ou payer l'EHPAD : faut-il tout vendre ?",
+    seo="Vendre sa maison pour aller en résidence senior",
+    desc="Résidence senior ou EHPAD à financer : ce que coûte un EHPAD selon la CNSA, les aides, la règle fiscale à connaître et les options avant de vendre la maison.",
+    body="""
+<p class="answer">Vendre sa maison pour aller en résidence senior, ou pour payer l'EHPAD d'un conjoint ou d'un parent, est souvent la bonne décision. Mais « vendre la maison » ne veut pas forcément dire la vendre d'un seul bloc, au premier prix proposé. Avant de signer, trois vérifications valent la peine : ce que le séjour coûtera vraiment, les aides et la règle fiscale qui s'appliquent, et la façon de vendre qui correspond le mieux à votre bien.</p>
+
+<h2>La maison est devenue trop grande : à quel moment faut-il se décider ?</h2>
+<p>Les enfants sont partis, il reste quatre chambres vides, un escalier qui fatigue et un jardin qu'on n'arrive plus à entretenir. Selon l'Insee, 34,4 % des personnes de 65 ans ou plus vivent seules dans leur logement, et 43,4 % des femmes de cet âge (chiffres 2023) [1]. Vous n'êtes pas un cas isolé.</p>
+<p>Le plus souvent, la décision se prend dans l'urgence : une chute, une hospitalisation, une place qui se libère. C'est le pire moment pour vendre, parce qu'on accepte alors la première offre. Y réfléchir avant, quand rien ne presse, laisse le choix.</p>
+
+<h2>Résidence autonomie, résidence services, EHPAD : quelle différence ?</h2>
+<p>Les résidences autonomie et les résidences services s'adressent à des personnes âgées autonomes qui veulent vivre de façon indépendante avec des services. L'EHPAD, lui, est un établissement médicalisé : il héberge des personnes, en général âgées d'au moins 60 ans, qui ont besoin de soins et d'aide au quotidien [2].</p>
+<p>Nous n'avons pas pu ouvrir la page officielle qui compare résidences autonomie et résidences services (pour-les-personnes-agees.gouv.fr), et nous n'avons trouvé aucun chiffre officiel sur le coût d'une résidence services : demandez un devis complet à chaque résidence, services compris.</p>
+
+<h2>Combien coûte un EHPAD ?</h2>
+<p>La Caisse nationale de solidarité pour l'autonomie (CNSA) publie les prix. En 2024, pour une chambre seule en hébergement permanent, le prix médian était de 2 138 € par mois dans une chambre habilitée à l'aide sociale, et de 3 016 € par mois dans une chambre non habilitée [3]. Ce montant additionne l'hébergement et le tarif dépendance minimal, avant aides.</p>
+<div class="table"><table>
+  <thead><tr><th>Statut de l'établissement</th><th>Chambre habilitée à l'aide sociale</th><th>Chambre non habilitée</th></tr></thead>
+  <tbody>
+    <tr><td>Public</td><td>2 109 €</td><td>2 250 €</td></tr>
+    <tr><td>Privé non lucratif</td><td>2 200 €</td><td>2 527 €</td></tr>
+    <tr><td>Privé commercial</td><td>2 064 €</td><td>3 186 €</td></tr>
+  </tbody>
+</table></div>
+<p class="hint">Prix médians mensuels 2024, chambre seule, hébergement permanent. Source : CNSA [3].</p>
+<p>Les écarts entre départements sont importants : pour une chambre non habilitée, la CNSA relève 5 106 € par mois à Paris et 4 186 € dans les Hauts-de-Seine, contre 2 055 € en Lozère [3]. Sur plusieurs années, la somme à réunir est donc élevée, et c'est ce qui conduit beaucoup de familles à vendre la maison.</p>
+
+<h2>Quelles aides, et que deviennent-elles à la succession ?</h2>
+<p>L'aide sociale à l'hébergement (ASH) paie tout ou partie des frais d'hébergement quand les revenus ne suffisent pas, dans les établissements qui ont des places réservées à l'aide sociale : EHPAD, résidences autonomie, unités de soins de longue durée [4]. Deux points sont à connaître avant de la demander :</p>
+<ul>
+  <li>le département peut tenir compte des revenus des enfants, gendres et belles-filles pour fixer son montant [4] ;</li>
+  <li>c'est une avance : le département peut la récupérer au décès sur la succession, et sur une donation faite dans les dix ans avant la demande ou après celle-ci [4].</li>
+</ul>
+<p>Autrement dit, garder la maison en demandant l'aide sociale ne la protège pas toujours pour les enfants. C'est une question à poser au notaire et au conseil départemental, pas à trancher seul.</p>
+
+<h2>Y a-t-il un impôt quand on vend la maison ?</h2>
+<p>La plus-value sur la vente de la résidence principale est exonérée. Si vous avez déjà quitté le logement, l'exonération reste possible lorsque vous l'avez occupé jusqu'à sa mise en vente et que la vente a lieu dans un délai normal, en principe un an [5].</p>
+<p>Une règle particulière existe pour la personne entrée en maison de retraite médicalisée : la vente doit intervenir dans les deux ans qui suivent l'entrée, le logement doit être resté libre de toute occupation depuis, et des conditions de revenus et de patrimoine s'appliquent [5].</p>
+<p>Ces délais comptent pour la suite : un projet qui prend du temps doit être calé avec le notaire dès le départ. Nous ne chiffrons aucune situation personnelle.</p>
+
+<h2>Faut-il vendre toute la maison, d'un seul bloc ?</h2>
+<p>Pas forcément. Une grande maison sur un grand terrain coûte cher au total, et peu d'acheteurs ont ce budget. Selon l'Insee, un quart des ménages vivent dans un logement en sous-occupation très accentuée [6] : beaucoup de grandes maisons cherchent preneur en même temps. Vous avez en général quatre options.</p>
+<ul>
+  <li><strong>Ne rien décider.</strong> La maison reste, les charges aussi, et la décision se prendra plus tard, dans l'urgence.</li>
+  <li><strong>Vendre en l'état.</strong> C'est le plus simple. Le prix dépend du nombre d'acheteurs capables d'acheter l'ensemble.</li>
+  <li><strong>Baisser le prix</strong> si la maison ne part pas : c'est autant de moins pour financer le séjour.</li>
+  <li><strong>Vérifier si le bien peut se vendre autrement</strong> : détacher une partie du terrain, ou créer plusieurs logements dans la maison. Chaque lot s'adresse à un budget plus courant.</li>
+</ul>
+<p>La dernière option n'est pas possible partout. Elle dépend des règles d'urbanisme de la commune, du terrain et du bâtiment, et elle demande plus de temps qu'une vente simple : elle ne convient donc pas à toutes les situations, en particulier quand il faut payer un établissement tout de suite. Elle mérite d'être étudiée quand la décision se prépare à l'avance. Pour comprendre, voir <a href="/blog/vendre-une-partie-de-son-terrain-maison-trop-grande.html">vendre une partie de son terrain</a> et <a href="/blog/diviser-une-maison-en-plusieurs-logements.html">diviser une maison en plusieurs logements</a>, ou notre page <a href="/valoriser-maison-familiale">valoriser une maison familiale</a>.</p>
+
+<h2>Pourquoi ne pas le faire seul ?</h2>
+<p>Parce qu'une division réunit plusieurs métiers : lire le plan local d'urbanisme, vérifier que le terrain ou la maison s'y prête, faire chiffrer les travaux, faire borner, obtenir les autorisations, connaître les prix du secteur, et avancer les frais pendant des mois. À 75 ou 80 ans, ou pour des enfants qui gèrent déjà l'entrée d'un parent en établissement, c'est beaucoup.</p>
+<p>Mal préparé, un projet peut être refusé par la mairie, ou coûter des frais sans résultat, au moment où chaque euro compte.</p>
+<p>PLU Value réunit ces métiers. L'étude préalable est gratuite ; si rien n'est réaliste, ou si une vente simple est préférable dans votre cas, nous vous le disons. Pour les projets que nous retenons, nous engageons nos propres moyens dans les études et les démarches : nous avons donc le même intérêt que vous à bien faire. La vente reste confiée à une agence immobilière, et les actes à votre notaire. Voir <a href="/nos-engagements">nos engagements</a>, ou <a href="/deposer-un-bien">présentez-nous votre bien</a>.</p>
+
+<h2>Questions fréquentes</h2>
+<details><summary>Combien coûte un EHPAD par mois ?</summary><p>Selon la CNSA, en 2024, le prix médian d'une chambre seule en hébergement permanent était de 2 138 € par mois en chambre habilitée à l'aide sociale et de 3 016 € en chambre non habilitée, avant aides. Les prix varient fortement selon le département et le statut de l'établissement.</p></details>
+<details><summary>L'aide sociale à l'hébergement est-elle reprise sur la succession ?</summary><p>Oui, elle peut l'être : le département peut récupérer les sommes versées au décès du bénéficiaire sur sa succession, et sur une donation faite dans les dix ans avant la demande ou après celle-ci.</p></details>
+<details><summary>Paie-t-on un impôt sur la vente de sa résidence principale quand on part en établissement ?</summary><p>La plus-value sur la résidence principale est exonérée. Après un départ, la vente doit intervenir dans un délai normal, en principe un an. Pour une entrée en maison de retraite médicalisée, une règle particulière prévoit un délai de deux ans, sous conditions. Faites vérifier votre situation par le notaire.</p></details>
+<details><summary>Peut-on vendre seulement une partie de son terrain pour financer une résidence senior ?</summary><p>Parfois. Cela dépend des règles d'urbanisme de la commune et de la configuration du terrain, et cela demande des autorisations et un bornage. Une étude préalable permet de le savoir avant toute décision.</p></details>
+<details><summary>Les enfants doivent-ils participer aux frais d'EHPAD ?</summary><p>Pour l'aide sociale à l'hébergement, le département peut tenir compte des revenus des enfants, gendres et belles-filles. Les petits-enfants en sont dispensés.</p></details>
+
+<h2>Sources</h2>
+<ol class="sources">
+  <li>Insee, « Personnes vivant seules dans leur logement selon l'âge et le sexe » (données 2023) : https://www.insee.fr/fr/statistiques/2381512 (consulté le 15/11/2026).</li>
+  <li>Ministère de la Justice, « Éhpad : établissement d'hébergement pour personnes âgées dépendantes » : https://www.justice.fr/fiche/ehpad-etablissement-hebergement-personnes-agees-dependantes (extrait lu le 15/11/2026) ; pour-les-personnes-agees.gouv.fr, « Résidence autonomie et résidence services : quelle différence ? » (extrait lu le 15/11/2026, page complète non ouverte).</li>
+  <li>CNSA, Repères statistiques n° 27, « En 2024, un écart moyen de 1 000 euros par mois entre les chambres habilitées à l'aide sociale en EHPAD et les autres », mars 2026 : https://www.cnsa.fr/sites/default/files/2026-04/PUB_RS-n27_Prix-EHPAD_2024_vf.pdf (consulté le 15/11/2026).</li>
+  <li>Ministère de la Justice, « Aide sociale à l'hébergement (ASH) d'une personne âgée » : https://www.justice.fr/fiche/aide-sociale-hebergementash-personne-agee (consulté le 15/11/2026).</li>
+  <li>impots.gouv.fr, « Plus-values exonérées » : https://www.impots.gouv.fr/particulier/plus-values-exonerees (consulté le 15/11/2026).</li>
+  <li>Insee Première n° 2064, « Un quart des ménages vivent dans un logement en sous-occupation très accentuée », juillet 2025 : https://www.insee.fr/fr/statistiques/8606928 (consulté le 12/11/2026).</li>
+</ol>
+<p class="meta">Cette page est une information générale, pas un conseil juridique, fiscal ou médical. Consultez votre notaire et le conseil départemental avant toute décision.</p>
+"""))
+
 SEO = {'densification-douce-pavillonnaire-commune': 'Densification douce du pavillonnaire : le rôle de la commune', 'vendre-une-partie-de-son-terrain-maison-trop-grande': 'Vendre une partie de son terrain : maison trop grande ?', 'diviser-son-terrain-champigny-sur-marne': 'Diviser son terrain à Champigny-sur-Marne : le PLU'}
 for a in ARTICLES:
     if a['slug'] in SEO: a['seo'] = SEO[a['slug']]
@@ -368,7 +444,7 @@ ARTICLES.sort(key=lambda a: a['date'], reverse=True)
 
 # Vidéo associée à un article (numéro d'épisode dans base.VIDEOS), placée après le premier paragraphe.
 ARTICLE_VIDEO = {'vendre-une-partie-de-son-terrain-maison-trop-grande': 12, 'agent-immobilier-mandat-qui-stagne': 4,
-                 'maison-qui-ne-se-vend-pas': 8, 'maison-en-indivision-qui-ne-se-vend-pas': 9, 'contrat-de-valorisation-immobiliere': 5}
+                 'maison-qui-ne-se-vend-pas': 8, 'maison-en-indivision-qui-ne-se-vend-pas': 9, 'vendre-sa-maison-residence-senior-ehpad': 3, 'contrat-de-valorisation-immobiliere': 5}
 
 ORG_LD = {"@type": "Organization", "name": "PLU Value", "url": "https://plu-value.fr/"}
 
