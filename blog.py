@@ -437,6 +437,81 @@ ARTICLES.append(dict(
 <p class="meta">Cette page est une information générale, pas un conseil juridique, fiscal ou médical. Consultez votre notaire et le conseil départemental avant toute décision.</p>
 """))
 
+# ---------------------------------------------------------------- 16/11/2026
+ARTICLES.append(dict(
+    slug="faut-il-baisser-le-prix-de-sa-maison", date="2026-11-16", cat="Vendre · Maison en vente depuis longtemps", read="7 min",
+    title="Faut-il baisser le prix de sa maison quand elle ne se vend pas ?",
+    seo="Faut-il baisser le prix de sa maison qui ne se vend pas ?",
+    desc="Des visites, pas d'offre, un mandat qui arrive à échéance : avant de baisser le prix de sa maison, ce qu'il faut vérifier, et les autres façons de vendre.",
+    body="""
+<p class="answer">Faut-il baisser le prix de sa maison quand elle ne se vend pas ? Parfois oui : si des maisons comparables se vendent moins cher autour de chez vous, le marché a déjà répondu. Mais quand la maison est grande ou posée sur un grand terrain, ce n'est pas toujours le prix au mètre carré qui bloque : c'est le montant total, que peu d'acheteurs peuvent emprunter. Dans ce cas, baisser encore ne règle rien, et il existe d'autres façons de vendre à étudier avant.</p>
+
+<h2>Des mois de visites et toujours pas d'offre : que se passe-t-il ?</h2>
+<p>L'annonce est en ligne depuis le printemps. Il y a eu des visites, des compliments sur le jardin, puis plus de nouvelles. L'agence a proposé une baisse, puis une autre, et le mandat arrive à échéance.</p>
+<p>Le marché, lui, n'est pas à l'arrêt. Les notaires comptent 949 000 ventes de logements anciens sur douze mois à fin mai 2026, en progression de 5,7 % sur un an. Mais ils notent aussi que « les acquéreurs prennent plus de temps » pour concrétiser et que « les négociations retrouvent une place plus importante » [1]. En Île-de-France, les prix des maisons baissaient encore légèrement au premier trimestre 2026 (-0,4 %) [1].</p>
+
+<h2>Pourquoi ma maison ne part pas alors que le prix au m² est correct ?</h2>
+<p>Parce qu'un acheteur n'achète pas un prix au mètre carré : il achète avec une mensualité. Le Haut Conseil de stabilité financière a demandé aux banques, dans sa recommandation de janvier 2021, que le taux d'effort des emprunteurs n'excède pas 35 % et que la durée du crédit n'excède pas 25 ans, avec une marge de souplesse limitée à 20 % des crédits accordés [2]. Et le taux moyen des nouveaux crédits à l'habitat était de 3,32 % en septembre 2026, selon la Banque de France [3].</p>
+<p><strong>Exemple.</strong> Un ménage qui gagne 5 000 € par mois ne peut pas, en principe, dépasser 1 750 € de mensualités (35 %). Si le prix total de votre maison demande une mensualité plus élevée, ce ménage ne peut pas faire d'offre, même s'il a adoré la visite.</p>
+<p>Plus le prix total est haut, moins il reste de ménages capables de suivre. C'est le cas typique de la grande maison familiale : selon l'Insee, 41 % des maisons individuelles sont en sous-occupation très accentuée, c'est-à-dire qu'elles comptent au moins trois pièces de plus que ce dont le ménage a besoin [4]. Beaucoup de grandes maisons, peu de grands budgets.</p>
+
+<h2>Comment savoir si c'est vraiment le prix qui bloque ?</h2>
+<p>Avant de baisser, posez-vous trois questions simples, et posez-les à votre agent immobilier.</p>
+<ul>
+  <li><strong>Y a-t-il des visites ?</strong> Peu ou pas de visites : le prix affiché, les photos ou l'annonce écartent les acheteurs avant même qu'ils se déplacent.</li>
+  <li><strong>Que disent ceux qui ont visité ?</strong> « Trop de travaux », « trop grand pour nous », « trop de terrain à entretenir », « la banque ne suit pas » : ce ne sont pas des remarques sur le prix au m², ce sont des remarques sur le bien lui-même ou sur son montant total.</li>
+  <li><strong>À quel prix se sont vendues les maisons voisines, et lesquelles ?</strong> Si les ventes récentes du quartier concernent surtout des maisons plus petites, la vôtre n'a peut-être pas de vrai point de comparaison.</li>
+</ul>
+<p>Nous n'avons trouvé aucune statistique officielle sur « la bonne baisse » ou sur le nombre de visites sans offre à partir duquel il faudrait réagir. Les seuils que l'on lit sur les sites d'annonces sont des règles de pratique, pas des mesures.</p>
+
+<h2>Quelles sont mes options, honnêtement ?</h2>
+<div class="table"><table>
+  <thead><tr><th>Option</th><th>Quand elle a du sens</th><th>Sa limite</th></tr></thead>
+  <tbody>
+    <tr><td>Ne rien changer et attendre</td><td>Vous n'êtes pas pressé et les visites sont régulières.</td><td>Les charges continuent, et une annonce ancienne finit par inquiéter les acheteurs.</td></tr>
+    <tr><td>Baisser le prix</td><td>Des maisons comparables se vendent moins cher près de chez vous.</td><td>Chaque baisse est perdue pour vous. Si c'est le montant total qui bloque, il faut baisser beaucoup pour changer de catégorie d'acheteurs.</td></tr>
+    <tr><td>Changer l'annonce ou d'agence</td><td>Peu de visites, photos ou description faibles.</td><td>Ne change rien si le bien lui-même ne correspond pas aux budgets du quartier.</td></tr>
+    <tr><td>Vendre autrement : en plusieurs lots</td><td>Grande maison ou grand terrain, et des règles d'urbanisme qui le permettent.</td><td>Pas possible partout. Demande des études, des autorisations et du temps.</td></tr>
+  </tbody>
+</table></div>
+<p>Si vous devez vendre vite, une baisse franche reste souvent la voie la plus simple.</p>
+
+<h2>Et si le problème n'était pas le prix, mais la taille du bien ?</h2>
+<p>C'est la question que presque personne ne pose. Une maison de sept pièces sur un grand terrain s'adresse à très peu d'acheteurs. La même propriété, présentée en deux biens, peut en intéresser beaucoup plus :</p>
+<ul>
+  <li><strong>détacher une partie du terrain</strong> : d'un côté la maison avec un jardin plus facile à vivre, de l'autre un terrain à bâtir. Voir <a href="/division-terrain">la division de terrain</a> et notre article <a href="/blog/vendre-une-partie-de-son-terrain-maison-trop-grande.html">vendre une partie de son terrain</a> ;</li>
+  <li><strong>créer deux ou trois logements dans la maison</strong>, quand le bâtiment et les règles le permettent. Voir <a href="/blog/diviser-une-maison-en-plusieurs-logements.html">diviser une maison en plusieurs logements</a>.</li>
+</ul>
+<p>Chaque lot coûte moins cher au total que l'ensemble, et s'adresse donc à des budgets plus courants. Cela ne veut pas dire que la somme des lots dépassera votre prix actuel : cela dépend de la commune, du terrain, des travaux et du marché, et seule une étude peut le dire.</p>
+<p>Car tout n'est pas permis. C'est le plan local d'urbanisme de la commune qui décide : reculs par rapport à la rue et aux voisins, part du terrain qui peut être construite, accès, stationnement. Une division de terrain passe au minimum par une déclaration préalable en mairie, dont le délai d'instruction est d'un mois, deux mois en général en secteur protégé [5], sans compter les études à mener avant. Ce n'est donc pas une solution rapide.</p>
+
+<h2>Mon mandat arrive à échéance : que puis-je faire ?</h2>
+<p>Un mandat de vente doit avoir une durée limitée. Le plus souvent, il est irrévocable pendant trois mois ; ensuite, vous pouvez y mettre fin en prévenant l'agent quinze jours à l'avance par lettre recommandée avec accusé de réception [6]. Relisez votre mandat : la durée et les conditions exactes y figurent.</p>
+<p>La fin d'un mandat n'oblige pas à se fâcher avec son agent. Il connaît votre bien et les objections des visiteurs : c'est souvent lui qui peut dire si le blocage vient du prix ou de la taille du bien. Voir aussi <a href="/blog/maison-qui-ne-se-vend-pas.html">maison qui ne se vend pas : les raisons fréquentes et les solutions</a>.</p>
+
+<h2>Pourquoi ne pas le faire seul ?</h2>
+<p>Parce que « couper en deux » ne se résume pas à tracer un trait sur un plan. Il faut lire le règlement d'urbanisme, vérifier les accès et les réseaux, faire intervenir un géomètre, parfois un architecte, faire chiffrer les travaux, déposer les bonnes demandes en mairie, connaître les prix réels du secteur pour chaque lot, et avancer tous ces frais pendant des mois.</p>
+<p>Mal préparé, le projet peut être refusé par la mairie, ou coûter des frais sans résultat, pendant que la maison reste invendue.</p>
+<p>PLU Value réunit ces métiers. L'étude préalable est gratuite ; si rien n'est réaliste, ou si une baisse de prix est la réponse la plus raisonnable, nous vous le disons. Pour les projets que nous retenons, nous engageons nos propres moyens dans les études et les démarches : nous avons donc le même intérêt que vous à bien faire. Nous ne vendons pas et ne publions pas d'annonces : la vente reste confiée à une agence immobilière, la vôtre si vous en avez une. Voir <a href="/nos-engagements">nos engagements</a>, ou <a href="/deposer-un-bien">présentez-nous votre bien</a>.</p>
+
+<h2>Questions fréquentes</h2>
+<details><summary>De combien faut-il baisser le prix d'une maison qui ne se vend pas ?</summary><p>Il n'existe pas de pourcentage officiel. La bonne référence, ce sont les ventes récentes de maisons comparables dans votre quartier, que votre agent ou votre notaire peut vous montrer. Si aucune maison comparable ne s'est vendue, le problème vient peut-être de la taille du bien plus que de son prix.</p></details>
+<details><summary>Au bout de combien de temps faut-il s'inquiéter ?</summary><p>Nous n'avons pas trouvé de délai de vente officiel qui serve de repère. Les notaires constatent en 2026 que les acquéreurs prennent plus de temps pour concrétiser et négocient davantage. Plus que la durée, regardez le nombre de visites et ce que disent les visiteurs.</p></details>
+<details><summary>Peut-on changer d'agence quand la maison ne se vend pas ?</summary><p>Oui, à la fin de la période d'irrévocabilité prévue au mandat, le plus souvent trois mois, en respectant un préavis de quinze jours par lettre recommandée avec accusé de réception. Vérifiez les clauses de votre propre mandat.</p></details>
+<details><summary>Une grande maison se vend-elle mieux en plusieurs lots ?</summary><p>Pas toujours. Des lots plus petits s'adressent à plus d'acheteurs, mais la division dépend des règles d'urbanisme de la commune, de la configuration du terrain et du bâtiment, et elle demande des études, des autorisations et du temps. Une étude préalable permet de le savoir avant toute décision.</p></details>
+
+<h2>Sources</h2>
+<ol class="sources">
+  <li>Notaires de France (Conseil supérieur du notariat), Note de conjoncture immobilière n° 72, juillet 2026 : https://acte3.notaires.fr/wp-content/uploads/2026/09/Note-de-conjoncture-n°72-Juillet-2026.pdf (consulté le 16/11/2026).</li>
+  <li>Haut Conseil de stabilité financière, recommandation n° R-HCSF-2021-1 du 27 janvier 2021 relative à l'octroi de crédits immobiliers résidentiels en France : https://www.economie.gouv.fr/files/files/directions_services/hcsf/HCSF_Recommandation_R-HCSF-2021-1.pdf (consulté le 16/11/2026). Nous n'avons pas pu confirmer sur une page officielle les textes qui l'ont suivie ; votre banque ou votre courtier vous indiquera les règles appliquées aujourd'hui.</li>
+  <li>Banque de France, « Crédits aux particuliers », septembre 2026, mis en ligne le 5 novembre 2026 (chiffre provisoire) : https://www.banque-france.fr/fr/statistiques/credit/credits-aux-particuliers-2026-09 (consulté le 16/11/2026).</li>
+  <li>Insee Première n° 2064, « Un quart des ménages vivent dans un logement en sous-occupation très accentuée », juillet 2025 : https://www.insee.fr/fr/statistiques/8606928 (consulté le 16/11/2026).</li>
+  <li>Service-public, « Déclaration préalable (DP) », fiche F17578 : https://www.service-public.gouv.fr/particuliers/vosdroits/F17578 (consulté le 16/11/2026).</li>
+  <li>Ministère de la Justice, « Quel mandat de vente peut-on confier à un agent immobilier ? », mise à jour du 19 septembre 2025 : https://www.justice.fr/fiche/mandat-vente-on-confier-agent-immobilier (consulté le 16/11/2026).</li>
+</ol>
+<p class="meta">Cette page est une information générale, pas un conseil juridique, fiscal ou financier. Chaque bien est étudié au cas par cas ; consultez votre notaire et votre agent immobilier avant toute décision.</p>
+"""))
+
 SEO = {'densification-douce-pavillonnaire-commune': 'Densification douce du pavillonnaire : le rôle de la commune', 'vendre-une-partie-de-son-terrain-maison-trop-grande': 'Vendre une partie de son terrain : maison trop grande ?', 'diviser-son-terrain-champigny-sur-marne': 'Diviser son terrain à Champigny-sur-Marne : le PLU'}
 for a in ARTICLES:
     if a['slug'] in SEO: a['seo'] = SEO[a['slug']]
