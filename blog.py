@@ -512,6 +512,170 @@ ARTICLES.append(dict(
 <p class="meta">Cette page est une information générale, pas un conseil juridique, fiscal ou financier. Chaque bien est étudié au cas par cas ; consultez votre notaire et votre agent immobilier avant toute décision.</p>
 """))
 
+# ---------------------------------------------------------------- 19/11/2026
+ARTICLES.append(dict(
+    slug="terrain-a-batir-val-de-marne-primo-accedant", date="2026-11-17", cat="Acheteurs · Terrain à bâtir", read="7 min",
+    title="Primo-accédant : comment trouver un terrain à bâtir dans le Val-de-Marne ?",
+    seo="Terrain à bâtir Val-de-Marne : guide du primo-accédant",
+    desc="Primo-accédant : comment trouver un terrain à bâtir dans le Val-de-Marne ? Où chercher, quoi vérifier avant d'acheter, budget total et PTZ. Guide prudent.",
+    body="""
+<p class="answer">Les terrains à bâtir sont rares dans le Val-de-Marne, et ceux que l'on voit en annonce sont souvent des morceaux de parcelles déjà bâties. Il faut donc chercher à plusieurs endroits (annonces, agents, notaires, lots issus de divisions), puis vérifier trois choses avant de signer : que le terrain est réellement constructible selon le PLU, qu'un certificat d'urbanisme confirme votre projet, et que le budget complet, terrain et construction compris, tient la route.</p>
+
+<h2>Pourquoi est-il si difficile de trouver un terrain à bâtir dans le Val-de-Marne ?</h2>
+<p>Le Val-de-Marne est un département très urbanisé : il reste peu de grandes parcelles libres. Quand on cherche « terrain à bâtir 94 » en ligne, les premiers résultats sont presque tous des annonces (portails d'annonces, réseaux d'agences), pas des explications. Aucune des pages que nous avons consultées le 17 novembre 2026 ne détaille le budget complet d'un projet de construction dans le département, ni les règles d'urbanisme à vérifier avant d'acheter.</p>
+<p>Un autre point compte pour les acheteurs : le schéma directeur de la région Île-de-France (SDRIF-E) vise la construction de 70 000 logements par an, et 64 551 logements ont été autorisés dans la région sur les douze mois de 2025 (DRIEAT). Les terrains issus de la division de grandes parcelles pavillonnaires font partie des réponses : selon une étude de l'Institut Paris Région citée par la presse spécialisée, cette « densification douce » produit environ 4 500 logements individuels par an dans la région.</p>
+
+<h2>Où chercher un terrain à bâtir quand on est primo-accédant ?</h2>
+<div class="table">
+  <table>
+    <thead><tr><th>Où chercher</th><th>À savoir</th></tr></thead>
+    <tbody>
+      <tr><td>Portails d'annonces et sites d'agences</td><td>Le plus visible, mais très disputé. Lisez l'annonce avec méthode : « constructible » doit être confirmé par le PLU, pas par le vendeur.</td></tr>
+      <tr><td>Agents immobiliers de la commune</td><td>Ils connaissent les terrains avant la mise en ligne. Dites-leur votre budget, votre commune cible et que vous êtes prêt à construire.</td></tr>
+      <tr><td>Notaires</td><td>Ils voient passer des ventes de terrains issus de successions ou de divisions et peuvent orienter.</td></tr>
+      <tr><td>Lots issus d'une division de terrain</td><td>Un propriétaire qui détache une partie de sa parcelle crée un lot plus petit, donc souvent plus accessible. C'est une piste à surveiller, sans certitude d'en trouver un.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Que vérifier avant d'acheter un terrain à bâtir ?</h2>
+<h3>1. La constructibilité : le PLU</h3>
+<p>Cherchez l'adresse sur le <a href="https://www.geoportail-urbanisme.gouv.fr/" rel="noopener">Géoportail de l'urbanisme</a> : vous y trouvez la zone de la parcelle puis le règlement de la commune. Les articles à lire concernent l'emprise au sol, les retraits par rapport à la rue et aux voisins, l'accès, le stationnement et, le cas échéant, une taille minimale de terrain. Un PLU peut avoir été modifié ou remplacé par un PLU intercommunal : demandez à la mairie la version en vigueur. Notre guide <a href="/blog/diviser-son-terrain-plu.html">Diviser son terrain : ce que dit le PLU</a> explique comment lire ces règles.</p>
+<h3>2. Le certificat d'urbanisme opérationnel</h3>
+<p>Il permet de demander à la mairie si votre projet précis est réalisable sur ce terrain. Ce n'est pas une autorisation de construire, mais il est valable 18 mois à compter de sa délivrance (service-public.gouv.fr, fiche F1633). Une promesse de vente peut être signée sous la condition de son obtention : posez la question au notaire.</p>
+<h3>3. Les risques du sol</h3>
+<p>Pour un terrain non bâti et constructible situé en zone d'exposition moyenne ou forte au retrait-gonflement des argiles, le vendeur doit, selon la presse spécialisée, fournir une étude géotechnique (article L132-4 du Code de la construction et de l'habitation). Nous n'avons pas pu lire ce texte sur Légifrance : vérifiez votre adresse sur <a href="https://www.georisques.gouv.fr/" rel="noopener">Géorisques</a> et confirmez avec le notaire.</p>
+<h3>4. L'accès et les réseaux</h3>
+<p>Demandez comment le lot est desservi (voie, eau, électricité, assainissement) et qui paie les raccordements. Cela change fortement le prix réel : un terrain moins cher en annonce peut coûter plus cher une fois relié aux réseaux. Nous ne publions aucun chiffre de raccordement, car il dépend de chaque terrain.</p>
+
+<h2>Quel budget prévoir au-delà du prix du terrain ?</h2>
+<p>Le prix affiché n'est qu'une partie du projet. Voici les postes à prévoir, sans chiffre inventé : demandez un devis ou une confirmation pour chacun.</p>
+<ul>
+  <li><strong>Le terrain</strong> et les frais de notaire de l'acquisition (le notaire donne le montant exact pour votre dossier).</li>
+  <li><strong>L'étude de sol</strong>, si elle n'est pas fournie par le vendeur, et les raccordements aux réseaux.</li>
+  <li><strong>La construction</strong> : avec un contrat de construction de maison individuelle, le constructeur doit avoir souscrit une garantie de livraison, au sens de la loi, et vous en remettre l'attestation, ainsi que celle de son assurance de responsabilité professionnelle et de son assurance décennale (service-public.gouv.fr, fiche F34554).</li>
+  <li><strong>La taxe d'aménagement</strong>, due par le propriétaire pour les travaux soumis à autorisation, au-delà d'un seuil de surface (service-public.gouv.fr).</li>
+  <li><strong>Les assurances et le financement</strong> : le prêt, ses frais et l'assurance emprunteur.</li>
+</ul>
+<p>Le permis de construire d'une maison individuelle est instruit en deux mois après dépôt d'un dossier complet (le délai est plus long dans certains secteurs protégés), et il est valable trois ans (service-public.gouv.fr, fiche F1986, vérifiée le 13 février 2026). Le chantier s'ajoute à ces délais.</p>
+
+<h2>Le prêt à taux zéro peut-il m'aider à construire ?</h2>
+<p>Peut-être. Selon service-public.gouv.fr (page vérifiée le 15 septembre 2026), le prêt à taux zéro (PTZ) s'adresse aux personnes qui n'ont pas été propriétaires de leur résidence principale au cours des deux années précédentes, pour acheter ou construire leur résidence principale. Il doit compléter au moins un autre prêt, et vos revenus doivent rester sous un plafond qui dépend du nombre de personnes logées et de la commune.</p>
+<p>Les conditions de zone ont changé pour les offres de prêt émises à partir d'avril 2025. Lors de notre relecture du 19 novembre 2026, nous n'avons pas pu confirmer sur la page officielle quelles communes sont éligibles pour un logement neuf, ni jusqu'à quelle date : faites la simulation officielle ou posez la question à votre banque, qui dira aussi si le terrain entre dans le coût retenu. Nous ne publions aucun plafond.</p>
+<p class="callout"><strong>À retenir :</strong> cette page ne remplace ni un courtier, ni une banque, ni un notaire. Les règles des aides changent d'une année à l'autre ; vérifiez la version en vigueur le jour de votre demande.</p>
+
+<h2>Pourquoi les lots issus de division comptent pour les primo-accédants ?</h2>
+<p>Une grande maison sur un grand terrain est souvent hors de portée d'un premier achat. Quand son propriétaire peut, selon le PLU, détacher un lot, deux biens plus accessibles apparaissent au lieu d'un seul. Pour un primo-accédant, c'est un terrain à bâtir ou un logement à une taille et un budget plus réalistes. Pour le vendeur, c'est parfois une autre voie que la baisse de prix, et pour la commune, du logement créé dans un tissu déjà urbanisé, sans consommer d'espaces naturels.</p>
+<p>Cette voie ne se décrète pas : elle dépend du PLU de chaque commune, de l'accès et des réseaux. C'est ce que PLU Value étudie avec les propriétaires : voir <a href="/division-terrain">la division de terrain</a> et <a href="/notre-methode">notre méthode</a>. Côté vendeur, lire aussi <a href="/blog/vendre-une-partie-de-son-terrain-maison-trop-grande.html">Maison devenue trop grande : vendre une partie de son terrain</a>.</p>
+
+<h2>Questions fréquentes</h2>
+<details><summary>Un primo-accédant peut-il obtenir un prêt à taux zéro pour construire une maison ?</summary><p>Oui, sous conditions. Selon service-public.gouv.fr (page vérifiée le 15 septembre 2026), le prêt à taux zéro concerne les personnes qui n'ont pas été propriétaires de leur résidence principale au cours des deux années précédentes, pour acheter ou construire leur résidence principale, en complément d'un autre prêt et sous plafond de revenus. Les conditions de zone dépendent de la date de l'offre de prêt : la banque ou le simulateur officiel confirme votre cas.</p></details>
+<details><summary>Qu'est-ce qu'un certificat d'urbanisme opérationnel et pourquoi le demander avant d'acheter ?</summary><p>C'est un document de la mairie qui indique si un projet précis est réalisable sur un terrain. Il n'est pas une autorisation de construire. Il est valable 18 mois à compter de sa délivrance (service-public.gouv.fr).</p></details>
+<details><summary>Combien de temps faut-il pour obtenir un permis de construire pour une maison ?</summary><p>Pour une maison individuelle, le délai d'instruction est de deux mois à compter du dépôt d'un dossier complet, davantage dans certains secteurs protégés ; le permis est ensuite valable trois ans (service-public.gouv.fr, page vérifiée le 13 février 2026). Cela ne comprend ni la préparation du dossier ni le chantier.</p></details>
+<details><summary>Qui paie la taxe d'aménagement ?</summary><p>Le propriétaire, pour les travaux soumis à autorisation qui dépassent un seuil de surface (service-public.gouv.fr). Le montant dépend de la surface et des taux votés localement : la mairie le précise.</p></details>
+<details><summary>PLU Value vend-elle des terrains à bâtir ?</summary><p>Non. PLU Value étudie avec le propriétaire ce que son bien permet et, pour les projets qu'elle retient, finance les études et les démarches. PLU Value ne vend pas et ne publie pas d'annonces : la vente est faite par une agence immobilière. Aucun terrain n'est proposé sur cette page.</p></details>
+
+<h2>Sources</h2>
+<ol class="sources">
+  <li>Service-public.gouv.fr, prêt à taux zéro (« vérifié le 15 septembre 2026 ») : https://www.service-public.gouv.fr/particuliers/vosdroits/F10871 (consulté le 17/11/2026, relu le 19/11/2026 ; conditions de zone pour le neuf et date de fin du dispositif non confirmées à la relecture).</li>
+  <li>Service-public.gouv.fr, certificat d'urbanisme (valable 18 mois ; « vérifié le 2 juillet 2025 ») : https://www.service-public.gouv.fr/particuliers/vosdroits/F1633 (consulté le 17/11/2026, relu le 19/11/2026).</li>
+  <li>Service-public.gouv.fr, permis de construire (délai d'instruction, validité ; « vérifié le 13 février 2026 ») : https://www.service-public.gouv.fr/particuliers/vosdroits/F1986 (consulté le 17/11/2026, relu le 19/11/2026).</li>
+  <li>Service-public.gouv.fr, contrat de construction de maison individuelle (« vérifié le 10 juillet 2026 ») : https://www.service-public.gouv.fr/particuliers/vosdroits/F34554 (consulté le 17/11/2026, relu le 19/11/2026).</li>
+  <li>Service-public.gouv.fr, taxe d'aménagement (actualité publiée le 7 janvier 2026) : https://www.service-public.gouv.fr/particuliers/actualites/A15416 (consulté le 17/11/2026, relu le 19/11/2026).</li>
+  <li>Construires.fr, étude géotechnique en zone d'argile (article L132-4 du Code de la construction et de l'habitation ; source non officielle, texte de loi non lu) : https://www.construires.fr/etude-geotechnique-loi-elan-zone-argile-obligatoire/ (consulté le 17/11/2026).</li>
+  <li>Géoportail de l'urbanisme : https://www.geoportail-urbanisme.gouv.fr/ ; Géorisques : https://www.georisques.gouv.fr/ (consultés le 17/11/2026).</li>
+  <li>Région Île-de-France, « Le SDRIF-E officiellement adopté », 13 juin 2025 (70 000 logements par an) : https://www.iledefrance.fr/toutes-les-actualites/le-sdrif-e-officiellement-adopte-au-terme-de-3-annees-de-preparation (consulté le 19/11/2026).</li>
+  <li>DRIEAT Île-de-France, bilan trimestriel des chiffres du bâtiment francilien, 4e trimestre 2025, publié le 4 mars 2026 (logements autorisés, cumul sur douze mois au 31 décembre 2025) : https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/bilan_trimestriel_des_chiffres_du_batiment_francilien_t4_2025_vfinal.pdf (consulté le 19/11/2026).</li>
+  <li>Lesepl.fr, « Des trajectoires et des pistes pour accompagner la mutation des tissus pavillonnaires », 29 novembre 2024, qui rend compte de l'étude de l'Institut Paris Région (4 500 logements individuels par an ; source secondaire, étude d'origine non lue) : https://lesepl.fr/2024/11/des-trajectoires-et-des-pistes-pour-accompagner-la-mutation-des-tissus-pavillonnaires/ (consulté le 19/11/2026).</li>
+</ol>
+<p class="meta">Cette page est une information générale, pas un conseil juridique, fiscal ni financier. Consultez un notaire, un courtier ou une banque et la mairie de votre commune avant toute décision.</p>
+"""))
+
+ARTICLES.append(dict(
+    slug="diviser-son-terrain-saint-maur-des-fosses", date="2026-11-19", cat="Par commune · Saint-Maur-des-Fossés", read="8 min",
+    title="Peut-on diviser son terrain à Saint-Maur-des-Fossés ?",
+    seo="Diviser son terrain à Saint-Maur-des-Fossés : le PLUi",
+    desc="Diviser son terrain à Saint-Maur-des-Fossés : zone UP du PLUi, bande de 20 m, emprise 40 %, pleine terre 50 %, retraits. Ce qu'il faut vérifier avant.",
+    body="""
+<p class="answer">Peut-on diviser son terrain à Saint-Maur-des-Fossés ? Parfois, mais plus rarement qu'on ne le croit. Dans la zone pavillonnaire (zone UP du PLUi), on ne construit que dans une bande de 20 mètres depuis la rue, la moitié du terrain doit rester en pleine terre, et ces règles s'appliquent à chaque lot créé. Le fond de jardin se détache donc rarement ; un terrain large sur la rue ou à l'angle de deux rues a plus de chances. Tout dépend de votre parcelle.</p>
+
+<h2>J'ai un grand jardin à Saint-Maur : est-ce que cela suffit ?</h2>
+<p>La maison a été achetée il y a trente ans, à La Varenne, à Adamville ou ailleurs dans la boucle de la Marne. Le jardin est grand, vous n'en utilisez plus que la moitié, et un voisin vous a dit un jour : « Vous pourriez vendre un bout de terrain. »</p>
+<p>La surface ne suffit pas. À Saint-Maur, ce qui compte d'abord, c'est la forme du terrain : sa largeur sur la rue, la place de la maison, les arbres. Avant de parler de prix, il faut lire le règlement.</p>
+
+<h2>Quel règlement d'urbanisme s'applique à Saint-Maur aujourd'hui ?</h2>
+<p>Ce n'est plus le PLU de la commune. Saint-Maur-des-Fossés relève du plan local d'urbanisme intercommunal (PLUi) de Paris Est Marne &amp; Bois, approuvé par le conseil de territoire le 12 décembre 2023 et entré en vigueur le 12 janvier 2024. La Ville indique qu'il s'inscrit dans la continuité de l'ancien PLU communal.</p>
+<p>Le règlement est commun aux treize communes du territoire, mais chaque article contient un passage propre à Saint-Maur. C'est lui qu'il faut lire : les règles de <a href="/blog/diviser-son-terrain-champigny-sur-marne.html">Champigny-sur-Marne</a>, par exemple, ne sont pas les mêmes.</p>
+<p class="callout"><strong>Limite de cette page :</strong> nous avons lu le règlement de la zone UP dans sa version approuvée le 12 décembre 2023. Le territoire indique qu'une première évolution du PLUi a été approuvée le 6 mai 2025 et a mis en ligne un règlement mis à jour, que nous n'avons pas pu ouvrir. Nous n'avons lu ni le plan de zonage, ni le plan de prévention du risque d'inondation. Faites confirmer chaque règle par le service urbanisme avant toute décision.</p>
+
+<h2>Ma maison est-elle en zone pavillonnaire ?</h2>
+<p>Le règlement décrit la zone UP comme celle des « secteurs pavillonnaires à préserver ». Elle reprend l'ancienne zone U3 du PLU communal, avec deux secteurs particuliers, UPa et UPb (anciens U3a et U3b).</p>
+<p>Pour connaître votre zone, consultez le plan de zonage sur le site de Paris Est Marne &amp; Bois ou le <a href="https://www.geoportail-urbanisme.gouv.fr/" rel="noopener">Géoportail de l'urbanisme</a>.</p>
+
+<h2>Que dit le règlement de la zone UP pour un terrain que l'on veut diviser ?</h2>
+<p>Première règle, la plus importante : en cas de lotissement ou de division, « le règlement s'applique à chaque lot issu de la division » (article UP.2, point 4). Chaque lot est donc examiné séparément, y compris celui qui garde la maison.</p>
+<div class="table">
+  <table>
+    <thead><tr><th>Ce que vous voulez savoir</th><th>Ce que dit le règlement (Saint-Maur, zone UP)</th><th>Article</th></tr></thead>
+    <tbody>
+      <tr><td>Faut-il une surface minimale ?</td><td>Nous n'en avons trouvé aucune pour Saint-Maur.</td><td>UP.3 à UP.5</td></tr>
+      <tr><td>Où peut-on construire ?</td><td>Dans une bande de 20 m de profondeur depuis la rue. Au-delà : seulement annexes, piscines et terrasses non couvertes.</td><td>UP.6</td></tr>
+      <tr><td>À quelle distance de la rue ?</td><td>Recul d'au moins 5 m (3 m en UPa, 7 m le long des quais de Marne).</td><td>UP.6</td></tr>
+      <tr><td>À quelle distance des voisins ?</td><td>Dans la bande, la construction peut toucher une seule limite latérale, avec un mur sans ouverture. Sinon, retrait de 6 m si la façade a des baies, 4 m sans baie. En fond de parcelle : 8 m avec baies, 4 m sans.</td><td>UP.7</td></tr>
+      <tr><td>Entre deux maisons sur un même terrain ?</td><td>8 m si l'une des façades a des baies, 4 m sinon.</td><td>UP.8</td></tr>
+      <tr><td>Quelle surface bâtie au sol ?</td><td>40 % du terrain au plus (50 % en UPa).</td><td>UP.9</td></tr>
+      <tr><td>Quelle part de jardin ?</td><td>Au moins 50 % du terrain en espaces verts de pleine terre (20 % en UPa, 30 % en UPb).</td><td>UP.14</td></tr>
+      <tr><td>Et les arbres ?</td><td>Toute construction nouvelle se tient à 5 m au moins du collet des arbres ; un arbre à planter par tranche de 100 m² de terrain libre.</td><td>UP.15</td></tr>
+      <tr><td>Combien de places de stationnement ?</td><td>1,5 place par logement à plus de 500 m d'une gare ou d'un transport en site propre, 1 place à moins de 500 m.</td><td>UP.17</td></tr>
+      <tr><td>Quel accès ?</td><td>Un accès d'au moins 3,50 m de large sur une voie ouverte à la circulation, directement ou par une servitude de passage de même largeur.</td><td>UP.19</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Le règlement renvoie aussi au plan de prévention du risque d'inondation : en zone inondable, une construction n'est admise que si elle est compatible avec ce plan.</p>
+
+<h2>Pourquoi la bande de 20 mètres décide-t-elle de presque tout ?</h2>
+<p>Parce qu'elle écarte le projet auquel on pense en premier : la maison neuve au fond du jardin. Au-delà de 20 mètres, le texte lu n'admet que des annexes, des piscines et des terrasses.</p>
+<p>Ce qui reste possible se joue en façade. Exemple de calcul, qui ne vaut pour aucun terrain réel : avec un recul de 5 m et une bande de 20 m, il reste 15 m de profondeur. Sur un lot large de 12 m, une maison posée sur une limite latérale et tenue à 4 m de l'autre, sans baie de ce côté, dispose de 8 m de largeur. Chaque lot doit encore respecter l'emprise, la pleine terre, le stationnement et la distance aux arbres.</p>
+<p>La division concerne donc surtout les terrains larges sur la rue, ceux qui donnent sur deux rues, ou les maisons implantées d'un seul côté de la parcelle. Même là, rien n'est acquis.</p>
+
+<h2>Quelles sont mes options si mon terrain est grand ?</h2>
+<ul>
+  <li><strong>Ne rien faire.</strong> C'est un choix respectable.</li>
+  <li><strong>Vendre la maison et tout le terrain.</strong> C'est le plus simple. Si le terrain avait un potentiel, c'est l'acheteur qui en profitera.</li>
+  <li><strong>Diviser, si le règlement le permet.</strong> Vous gardez la maison et un jardin plus petit, ou vous vendez deux biens au lieu d'un. C'est plus long, et cela n'aboutit pas toujours. Voir notre page <a href="/division-terrain">division de terrain</a>.</li>
+</ul>
+
+<h2>Quelles démarches pour diviser à Saint-Maur ?</h2>
+<ol>
+  <li><strong>Vérifier la zone</strong> et lire le règlement à jour.</li>
+  <li><strong>Demander un certificat d'urbanisme opérationnel.</strong> Il indique si le projet est réalisable sur la parcelle. La mairie répond en deux mois et le certificat est valable 18 mois (service-public.gouv.fr, fiche F1633).</li>
+  <li><strong>Faire dessiner la division</strong> par un géomètre-expert, avec les lots et les accès.</li>
+  <li><strong>Déposer la demande d'autorisation.</strong> Service-public.gouv.fr classe la division d'un terrain en plusieurs lots parmi les travaux soumis à déclaration préalable : un mois d'instruction, deux mois en général en secteur protégé, validité de trois ans (fiche F17578). Certains projets demandent une autre autorisation, point que nous n'avons pas relu sur une page officielle : la mairie le précisera.</li>
+  <li><strong>Signer chez le notaire</strong>, qui chiffre aussi les impôts et taxes de votre cas. La vente elle-même est confiée à une agence immobilière.</li>
+</ol>
+<p>Le détail de ces étapes est dans <a href="/blog/etapes-division-parcellaire.html">Les étapes d'une division parcellaire</a>.</p>
+
+<h2>Pourquoi ne pas le faire seul ?</h2>
+<p>Parce qu'une division réussie à Saint-Maur tient à quelques mètres. Il faut lire le règlement comme le lira l'instructeur (urbanisme, droit), placer une maison qui respecte les retraits, les arbres et la pleine terre sur chacun des lots (architecture, géomètre), chiffrer les travaux et les raccordements, savoir ce qui se vend dans le quartier, et avancer les frais pendant des mois sans savoir si la mairie dira oui.</p>
+<p>Mal préparée, une demande peut être refusée, et les frais sont dépensés pour rien. PLU Value réunit ces métiers et commence par une étude gratuite. Pour les projets qu'elle retient, elle finance les études et les démarches et partage avec vous la valeur créée au-dessus d'un prix de référence fixé ensemble : elle a donc le même intérêt que vous à ne lancer que ce qui tient. Voir <a href="/notre-methode">notre méthode</a> et <a href="/nos-engagements">nos engagements</a>.</p>
+
+<h2>Questions fréquentes</h2>
+<details><summary>Y a-t-il une surface minimale pour diviser un terrain à Saint-Maur-des-Fossés ?</summary><p>Nous n'avons trouvé aucune surface minimale de terrain pour Saint-Maur dans le règlement de la zone UP du PLUi (version approuvée le 12 décembre 2023). Ce sont les autres règles, appliquées à chaque lot, qui limitent la division : bande de 20 m, emprise de 40 %, 50 % de pleine terre, retraits.</p></details>
+<details><summary>Peut-on construire une maison au fond de son jardin à Saint-Maur ?</summary><p>En zone UP, le règlement que nous avons lu n'autorise les constructions que dans une bande de 20 m de profondeur depuis la rue. Au-delà, seules les annexes, les piscines et les terrasses non couvertes sont admises. Vérifiez la zone de votre terrain et la version à jour du règlement auprès du service urbanisme.</p></details>
+<details><summary>PLU Value peut-elle dire si mon terrain est divisible ?</summary><p>Pas sans l'étudier. Aucune page ne peut dire qu'un terrain précis est divisible : cela dépend de sa zone, de ses dimensions, de la place de la maison et des arbres. L'étude de PLU Value est gratuite et commence par cette vérification.</p></details>
+
+<h2>Sources</h2>
+<ol class="sources">
+  <li>Paris Est Marne &amp; Bois, « Plan local d'urbanisme intercommunal » (approbation du 12 décembre 2023, évolution approuvée le 6 mai 2025, pièces du dossier) : https://www.parisestmarnebois.fr/fr/plan-local-durbanisme-intercommunal (consulté le 19/11/2026).</li>
+  <li>Ville de Saint-Maur-des-Fossés, « Élaboration du plan local d'urbanisme intercommunal » (entrée en vigueur le 12 janvier 2024, continuité avec le PLU communal) : https://www.saint-maur.com/ma-ville/cadre-de-vie/les-grands-projets/elaboration-du-plan-local-durbanisme-intercommunal (consulté le 19/11/2026).</li>
+  <li>PLUi Paris Est Marne &amp; Bois, règlement de la zone UP (pièce 5.5), version « PLUi approuvé le 12 décembre 2023 », passages « Pour la commune de Saint-Maur-des-Fossés » des articles UP.2, UP.6, UP.7, UP.8, UP.9, UP.14, UP.15, UP.17 et UP.19 : https://parisestmarnebois.fr/sites/default/files/2023-12/5-5_PEMB-PLUi-UP-REGLEMENT.pdf (consulté le 19/11/2026).</li>
+  <li>Même règlement, version mise en ligne en juin 2025 : https://www.parisestmarnebois.fr/sites/default/files/2025-06/5-5_PEMB-PLUi_UP-REGLEMENT.pdf (non lu : le fichier n'a pas pu être ouvert le 19/11/2026).</li>
+  <li>Service-public.gouv.fr, « Certificat d'urbanisme », fiche F1633 : https://www.service-public.gouv.fr/particuliers/vosdroits/F1633 (consulté le 19/11/2026).</li>
+  <li>Service-public.gouv.fr, « Déclaration préalable (DP) », fiche F17578, vérifiée le 22 octobre 2026 : https://www.service-public.gouv.fr/particuliers/vosdroits/F17578 (consulté le 19/11/2026).</li>
+</ol>
+<p class="meta">Cette page est une information générale, pas un conseil juridique ni fiscal, et ne dit rien d'un terrain en particulier. Consultez le service urbanisme de la mairie et un notaire avant toute décision.</p>
+"""))
+
 SEO = {'densification-douce-pavillonnaire-commune': 'Densification douce du pavillonnaire : le rôle de la commune', 'vendre-une-partie-de-son-terrain-maison-trop-grande': 'Vendre une partie de son terrain : maison trop grande ?', 'diviser-son-terrain-champigny-sur-marne': 'Diviser son terrain à Champigny-sur-Marne : le PLU'}
 for a in ARTICLES:
     if a['slug'] in SEO: a['seo'] = SEO[a['slug']]
