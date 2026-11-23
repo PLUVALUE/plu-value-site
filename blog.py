@@ -676,6 +676,89 @@ ARTICLES.append(dict(
 <p class="meta">Cette page est une information générale, pas un conseil juridique ni fiscal, et ne dit rien d'un terrain en particulier. Consultez le service urbanisme de la mairie et un notaire avant toute décision.</p>
 """))
 
+ARTICLES.append(dict(
+    slug="vendre-la-maison-de-ses-parents-apres-un-deces", date="2026-11-23", cat="Succession · Maison des parents", read="7 min",
+    title="Vendre la maison de ses parents après un décès : par quoi commencer ?",
+    seo="Vendre la maison de ses parents après un décès",
+    desc="Notaire, délais, accord entre frères et sœurs, frais d'une maison vide, diagnostics : les étapes pour vendre la maison de ses parents, et une piste méconnue.",
+    body="""
+<p class="answer">Pour vendre la maison de ses parents après un décès, il faut d'abord passer chez le notaire : dès qu'une succession comprend un bien immobilier, son intervention est obligatoire et il établit l'attestation de propriété au nom des héritiers. Il faut ensuite l'accord de tous les héritiers sur la vente et sur le prix. Avant de fixer ce prix, une question mérite d'être posée : cette maison doit-elle forcément se vendre en un seul morceau ?</p>
+
+<h2>La maison est vide, les papiers s'accumulent : par quoi commencer ?</h2>
+<p>Vous avez les clés, des pièces pleines de souvenirs, et des frères et sœurs qui n'ont pas tous le même rythme. Selon l'Insee, un héritier d'un bien immobilier a en moyenne 54 ans [8] : on hérite en pleine vie active, souvent loin de la maison, avec peu de temps pour s'en occuper.</p>
+<p>Le premier rendez-vous est chez le notaire. Le recours à un notaire est obligatoire quand la succession comprend un bien immobilier ; il l'est aussi quand elle atteint 5 965 € ou qu'il existe un testament ou une donation entre époux [1]. Le notaire établit l'attestation de propriété immobilière, l'acte qui constate que la maison appartient désormais aux héritiers [1].</p>
+<p>D'après un site d'information des notaires, tant que cette attestation n'est pas enregistrée, aucune vente ne peut être réalisée [10]. Nous n'avons pas trouvé cette précision sur une page de l'administration : demandez à votre notaire à quel moment vous pourrez signer.</p>
+
+<h2>Sommes-nous pressés par des délais ?</h2>
+<p>Oui, mais moins qu'on ne le croit pour la vente elle-même. Trois délais sont à connaître.</p>
+<div class="table"><table>
+  <thead><tr><th>Démarche</th><th>Délai</th><th>Source</th></tr></thead>
+  <tbody>
+    <tr><td>Accepter ou refuser la succession</td><td>Personne ne peut vous obliger à choisir pendant 4 mois ; ensuite, si l'on vous somme de choisir, vous avez 2 mois ; sans sommation, 10 ans au plus</td><td>[2]</td></tr>
+    <tr><td>Déposer la déclaration de succession</td><td>6 mois à compter du décès (décès en France métropolitaine)</td><td>[4]</td></tr>
+    <tr><td>En cas de retard</td><td>Intérêt de 0,20 % par mois, et majoration de 10 % à partir du 13e mois</td><td>[4]</td></tr>
+  </tbody>
+</table></div>
+<p>Ces délais concernent l'administration fiscale, pas la vente. Rien n'oblige à vendre la maison dans les six mois. Mais si des droits de succession sont dus, il faut les régler alors que l'argent de la maison n'est pas encore là : parlez-en tôt au notaire, qui vous dira ce qui s'applique à votre succession. Nous ne chiffrons aucun cas particulier.</p>
+
+<h2>Faut-il que tous les frères et sœurs soient d'accord ?</h2>
+<p>Oui. Tant que le partage n'est pas fait, vous êtes en indivision, et pour vendre un bien immobilier, « la décision doit être prise à l'unanimité » [3]. Le tribunal peut autoriser la vente à la demande d'héritiers qui ont au moins les deux tiers des droits, sauf si la propriété est démembrée (usufruit d'un côté, nue-propriété de l'autre) [3].</p>
+<p>Le plus souvent, le désaccord ne porte pas sur le principe mais sur le prix. Si c'est votre cas, lisez <a href="/blog/maison-en-indivision-qui-ne-se-vend-pas.html">Maison en indivision qui ne se vend pas : que peuvent faire les héritiers ?</a></p>
+
+<h2>Que coûte une maison qui reste vide ?</h2>
+<p>Une maison fermée continue de coûter, et ces frais se partagent entre héritiers.</p>
+<ul>
+  <li><strong>L'assurance.</strong> Le logement doit rester assuré pendant tout le règlement de la succession. Les contrats se poursuivent, et les héritiers préviennent l'assureur du décès [5]. Demandez-lui par écrit ce que le contrat couvre quand la maison n'est plus habitée : nous n'avons pas trouvé de règle officielle sur ce point.</li>
+  <li><strong>Les impôts locaux.</strong> La taxe foncière reste due. S'y ajoute, dans certaines communes, une taxe sur les logements vacants : elle vise les logements non meublés et inoccupés depuis au moins un an dans les zones où le logement manque, ou depuis plus de deux ans dans les communes qui l'ont décidé [6]. La fiche officielle prévoit que la taxe n'est pas due quand la vacance ne dépend pas de vous, par exemple un logement mis en vente au prix du marché qui ne trouve pas d'acheteur [6]. Nous avons lu cette fiche dans sa version traduite, et ces règles doivent changer en 2027 : faites confirmer votre cas par votre centre des impôts.</li>
+  <li><strong>L'entretien.</strong> Chauffage hors gel, jardin, toiture, visites régulières : une maison fermée demande des visites régulières.</li>
+</ul>
+
+<h2>Quels diagnostics faut-il avant de mettre en vente ?</h2>
+<p>La maison de vos parents a souvent plusieurs décennies. Le dossier à remettre à l'acheteur comprend notamment le diagnostic de performance énergétique (DPE), le constat de risque d'exposition au plomb, l'état d'amiante, l'état des installations d'électricité et de gaz de plus de quinze ans, l'état de l'assainissement non collectif, l'état relatif aux termites, l'état des risques et le diagnostic bruit, selon l'âge et la situation du bien [7].</p>
+<p>Si la maison est mal classée au DPE, un audit énergétique s'ajoute : en métropole, il concerne les maisons classées E, F ou G [7]. Ces deux fiches ont été lues dans leur version traduite, et la plus ancienne ne cite que F et G : le diagnostiqueur vous confirmera la règle à jour.</p>
+
+<h2>Vendre en l'état, baisser le prix, attendre : quelles options ?</h2>
+<div class="table"><table>
+  <thead><tr><th>Option</th><th>Ce qu'elle apporte</th><th>Sa limite</th></tr></thead>
+  <tbody>
+    <tr><td>Garder la maison</td><td>Du temps pour décider, un lieu de famille</td><td>Les frais courent, et il faut s'entendre sur qui paie et qui s'en occupe</td></tr>
+    <tr><td>Vendre en l'état</td><td>Simple, une seule vente</td><td>Une grande maison ancienne, à rénover, coûte cher au total : peu d'acheteurs ont ce budget</td></tr>
+    <tr><td>Baisser le prix</td><td>Peut déclencher une offre</td><td>Chaque héritier reçoit moins</td></tr>
+    <tr><td>Étudier une vente en plusieurs lots</td><td>S'adresse à d'autres acheteurs, à des budgets plus courants</td><td>Pas possible partout : cela dépend des règles de la commune</td></tr>
+  </tbody>
+</table></div>
+<p>La dernière option est celle dont les guides ne parlent pas. Beaucoup de maisons de parents ont été bâties sur de grands terrains, ou comptent plus de pièces qu'une famille n'en cherche aujourd'hui. Selon le plan local d'urbanisme, il est parfois possible de <a href="/division-terrain">détacher une partie du terrain</a> pour qu'une maison y soit construite, ou de créer plusieurs logements dans la maison. Voir aussi <a href="/blog/diviser-une-maison-en-plusieurs-logements.html">Diviser une maison en plusieurs logements</a>.</p>
+<p>Ce n'est pas automatique, et personne ne peut le dire sans avoir lu le règlement de la zone et regardé le terrain. Mais c'est avant la mise en vente qu'il faut se poser la question : une fois la maison vendue entière, c'est l'acheteur qui décidera de ce qu'il en fait.</p>
+<p>Un point d'attention : l'impôt sur une éventuelle plus-value se calcule à partir de la valeur retenue pour les droits de succession [9]. Le choix entre vendre en l'état et vendre en lots peut donc avoir un effet fiscal. Faites-le chiffrer par le notaire avant de décider.</p>
+
+<h2>Pourquoi ne pas le faire seuls ?</h2>
+<p>Parce qu'une division demande plusieurs métiers en même temps : lire le règlement d'urbanisme, vérifier que le terrain ou le bâtiment s'y prête, faire dessiner le projet, obtenir des devis, connaître les prix du quartier, déposer les demandes en mairie, et avancer les frais pendant des mois.</p>
+<p>Mal préparée, une demande peut être refusée par la mairie, ou coûter des frais sans résultat. Dans une succession, où chacun attend sa part, c'est le scénario à éviter.</p>
+<p>PLU Value réunit ces métiers. L'étude est gratuite ; si rien n'est réaliste, nous vous le disons, avec la raison. Pour les projets que nous retenons, nous engageons nos propres moyens dans les études et les démarches : nous avons donc le même intérêt que vous à bien faire. La vente reste confiée à une agence immobilière, et les actes à votre notaire. Notre page <a href="/succession-maison-familiale">succession et maison familiale</a> explique comment nous travaillons avec les héritiers ; vous pouvez aussi <a href="/deposer-un-bien">nous présenter le bien</a>.</p>
+
+<h2>Questions fréquentes</h2>
+<details><summary>Peut-on vendre la maison de ses parents sans notaire ?</summary><p>Non. Le recours à un notaire est obligatoire dès que la succession comprend un bien immobilier : il établit l'attestation de propriété immobilière au nom des héritiers, puis l'acte de vente.</p></details>
+<details><summary>Combien de temps a-t-on pour vendre la maison après le décès ?</summary><p>Aucun délai n'est imposé pour vendre. En revanche, la déclaration de succession doit être déposée dans les six mois du décès, et un retard entraîne un intérêt de 0,20 % par mois. Le notaire vous indiquera votre calendrier.</p></details>
+<details><summary>Un frère ou une sœur peut-il empêcher la vente ?</summary><p>Oui, en principe : la vente d'un bien immobilier en indivision se décide à l'unanimité. Le tribunal peut l'autoriser à la demande d'héritiers ayant au moins les deux tiers des droits, sauf si la propriété est démembrée.</p></details>
+<details><summary>Faut-il continuer à assurer la maison vide ?</summary><p>Oui. Le logement doit rester assuré pendant tout le règlement de la succession, et les héritiers doivent prévenir l'assureur du décès. Demandez-lui ce que le contrat couvre quand la maison n'est plus occupée.</p></details>
+<details><summary>La maison de mes parents peut-elle être divisée ?</summary><p>Personne ne peut le dire sans l'étudier. Cela dépend du plan local d'urbanisme, des dimensions du terrain, de la place de la maison et du marché local. L'étude de PLU Value est gratuite et commence par cette vérification.</p></details>
+
+<h2>Sources</h2>
+<ol class="sources">
+  <li>Service-public.gouv.fr, « Le recours à un notaire est-il obligatoire dans le cadre d'une succession ? », fiche F1295, vérifiée le 1er janvier 2026 : https://www.service-public.gouv.fr/particuliers/vosdroits/F1295 (consulté le 23/11/2026).</li>
+  <li>Service-public.gouv.fr, « Accepter ou renoncer à la succession (option successorale) », fiche F1199, vérifiée le 19 novembre 2026 : https://www.service-public.gouv.fr/particuliers/vosdroits/F1199 (consulté le 23/11/2026).</li>
+  <li>Service-public.gouv.fr, « Succession : indivision entre les héritiers », fiche F1296, vérifiée le 16 avril 2026 : https://www.service-public.gouv.fr/particuliers/vosdroits/F1296 (consulté le 23/11/2026).</li>
+  <li>Service-public.gouv.fr, « Droits de succession - Déclaration », fiche F80, vérifiée le 14 septembre 2026 : https://www.service-public.gouv.fr/particuliers/vosdroits/F80 (consulté le 23/11/2026).</li>
+  <li>Service-public.gouv.fr, « Un proche est décédé », fiche F16507, vérifiée le 1er octobre 2026 : https://www.service-public.gouv.fr/particuliers/vosdroits/F16507 (consulté le 23/11/2026).</li>
+  <li>Service-public.gouv.fr, taxes sur les logements vacants, fiche F17293 : https://www.service-public.gouv.fr/particuliers/vosdroits/F17293 (consulté le 23/11/2026, version anglaise de la fiche, datée du 9 janvier 2024) ; actualité sur la réforme prévue en 2027 : https://www.service-public.gouv.fr/particuliers/actualites/A18896 (consulté le 23/11/2026, version anglaise).</li>
+  <li>Service-public.gouv.fr, diagnostics immobiliers en cas de vente, fiche F10798 : https://www.service-public.gouv.fr/particuliers/vosdroits/F10798 ; audit énergétique, fiche F37110, vérifiée le 14 septembre 2026 : https://www.service-public.gouv.fr/particuliers/vosdroits/F37110 (consultés le 23/11/2026, versions anglaises des fiches).</li>
+  <li>Insee Analyses n° 125, « Les héritiers d'un bien immobilier ont en moyenne 54 ans, les bénéficiaires d'une donation en ont 48 », 6 octobre 2026 : https://www.insee.fr/fr/statistiques/9061645 (consulté le 23/11/2026).</li>
+  <li>Service-public.gouv.fr, plus-value immobilière, fiche F10864, vérifiée le 15 avril 2026 : https://www.service-public.gouv.fr/particuliers/vosdroits/F10864 (consulté le 23/11/2026, version anglaise de la fiche).</li>
+  <li>Efficience notaires, « Attestation de propriété immobilière » (site d'information notarial, non officiel) : https://efficience.notaires.fr/besoins/attestation-de-propriete-immobiliere-succession/ (consulté le 23/11/2026).</li>
+</ol>
+<p class="meta">Cette page est une information générale, pas un conseil juridique ni fiscal. Consultez votre notaire avant toute décision.</p>
+"""))
+
 SEO = {'densification-douce-pavillonnaire-commune': 'Densification douce du pavillonnaire : le rôle de la commune', 'vendre-une-partie-de-son-terrain-maison-trop-grande': 'Vendre une partie de son terrain : maison trop grande ?', 'diviser-son-terrain-champigny-sur-marne': 'Diviser son terrain à Champigny-sur-Marne : le PLU'}
 for a in ARTICLES:
     if a['slug'] in SEO: a['seo'] = SEO[a['slug']]
