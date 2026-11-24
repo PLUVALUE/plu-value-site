@@ -211,7 +211,7 @@ function answer(st){
   const s=st.stop&&st.stop(S);if(s){stopInfo=s;hist.push(idx);idx="stop";return drawStop()}go(idx+1)}
 function chrome(n){
   const tot=STEPS.filter(visible).length;
-  $("back").hidden=idx===-1;
+  $("back").hidden=idx===-1||idx==="agent";
   $("count").textContent=typeof n==="number"?`${n} / ${tot}`:"";
   $("prog").style.width=(typeof n==="number"?Math.round((n-1)/tot*100):(idx===-1||idx==="agent"||idx==="lien"||idx==="recap")?0:100)+"%";
   window.scrollTo(0,0);
@@ -279,7 +279,7 @@ function suggest(){
   inp.addEventListener("input",()=>{delete inp.dataset.ok;S.cp="";delete S.pm2;delete S.lot;show()});
   box.addEventListener("click",e=>{const b=e.target.closest(".sugb");if(!b)return;inp.value=b.dataset.n;inp.dataset.ok=1;S.cp=b.dataset.cp;delete S.pm2;delete S.lot;box.innerHTML="";const n=$("f_adresse");if(n)n.focus()});
 }
-function restart(){S={};hist=[];blocOnly=false;stopInfo=null;K=new Set();FID=null;ficheInfo=null;isEx=false;hist=[-1];drawAgent()}
+function restart(){S={};hist=[];blocOnly=false;stopInfo=null;K=new Set();FID=null;ficheInfo=null;isEx=false;hist=[];drawAgent()}
 /* ---------- Lien d'annonce et reprise de fiche ---------- */
 const MSG={site_non_lu:"Ce site n'est pas encore lu automatiquement. Saisissez le bien à la main, c'est rapide.",annonce_illisible:"Impossible de lire cette annonce. Saisissez le bien à la main, c'est rapide.",lien_invalide:"Ce lien n'est pas valide.",erreur:"Le service ne répond pas. Réessayez, ou saisissez le bien à la main."};
 function drawLien(msg){
@@ -348,7 +348,8 @@ function drawAgent(){
   <div class="card"><p><strong>La plupart des biens ressortent sans levier.</strong> Dans ce cas, vous repartez avec la valeur réaliste du bien vendu en un seul lot, pour reparler prix avec votre vendeur.</p>
   <p class="lede">Gratuit. Votre mandat et votre client restent les vôtres.</p></div>
   <button class="cta" type="button" data-act="start">Commencer</button>
-  <button class="cta ghost" type="button" data-act="exemple">Voir un exemple de résultat</button>`;
+  <button class="cta ghost" type="button" data-act="exemple">Voir un exemple de résultat</button>
+  <p class="legal" style="text-align:center">Propriétaire, héritier ou notaire ? <a href="/deposer-un-bien?profil=proprietaire" style="color:var(--accent)">Présentez votre bien ici</a>.</p>`;
 }
 function drawStop(){
   chrome();
@@ -478,6 +479,6 @@ const ACT={
 };
 (function(){var q=new URLSearchParams(location.search).get("profil");
   if(["proprietaire","heritier","notaire","autre"].includes(q)){location.replace("/deposer-un-bien?profil="+q);return}
-  if(q==="agent"){hist=[-1];drawAgent()}else draw()})();
+  hist=[];drawAgent()})();
 </script>
 </body></html>
