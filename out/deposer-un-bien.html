@@ -269,7 +269,7 @@
     var pf=document.getElementById('d-profil');if(pf)pf.value=v;}
   radios.forEach(function(r){r.addEventListener('change',function(){show(r.value)})});
   var q=new URLSearchParams(location.search).get('profil');
-  if(q==='agent'&&!new URLSearchParams(location.search).get('diag')&&/deposer-un-bien/.test(location.pathname)){location.replace('/diagnostic?profil=agent');return}
+  if((!q||q==='agent')&&!new URLSearchParams(location.search).get('diag')&&/deposer-un-bien/.test(location.pathname)){location.replace('/diagnostic');return}
   if(q){var r=document.querySelector('input[name=profil-choix][value="'+q+'"]');if(r){r.checked=true;show(q)}}
   /* formulaires simples */
   document.querySelectorAll('form[data-simple]').forEach(function(f){

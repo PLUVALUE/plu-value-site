@@ -14,7 +14,7 @@ def fdate(d):
 CTA = f"""<aside class="help" aria-label="Faire étudier un bien">
       <h2>Votre bien a peut-être plus de potentiel que vous ne le pensez</h2>
       <p>PLU Value étudie gratuitement ce que votre maison ou votre terrain permet. Pour les projets que nous retenons, nous finançons les études et les démarches, et nous partageons avec vous la valeur créée au-dessus d'un prix de référence fixé ensemble. Aucun résultat n'est garanti : chaque bien est étudié au cas par cas.</p>
-      <div class="cta"><a class="btn gold" href="/deposer-un-bien">Faire étudier mon bien</a><a class="btn ghost" href="{WA}" target="_blank" rel="noopener">Écrire sur WhatsApp</a></div>
+      <div class="cta"><a class="btn gold" href="/diagnostic">Faire étudier mon bien</a><a class="btn ghost" href="{WA}" target="_blank" rel="noopener">Écrire sur WhatsApp</a></div>
     </aside>"""
 
 ARTICLES = []
@@ -145,7 +145,7 @@ ARTICLES.append(dict(
 <li>Notre comité étudie la faisabilité.</li>
 <li>Nous vous répondons : si nous pouvons apporter de la valeur, nous vous disons si nous nous engageons, et à quelles conditions.</li>
 </ol>
-<p>Le détail du partenariat est sur la page <a href="/agents-immobiliers">agents immobiliers</a>. Pour déposer un mandat : <a href="/deposer-un-bien?profil=agent">dépôt d'un bien par un agent</a>.</p>
+<p>Le détail du partenariat est sur la page <a href="/agents-immobiliers">agents immobiliers</a>. Pour déposer un mandat : <a href="/diagnostic">dépôt d'un bien par un agent</a>.</p>
 """))
 
 ARTICLES.append(dict(
@@ -339,7 +339,7 @@ ARTICLES.append(dict(
 <h2>Pourquoi ne pas le faire seuls ?</h2>
 <p>Parce qu'une division demande plusieurs métiers à la fois : lire le règlement d'urbanisme, vérifier que le bâtiment ou le terrain s'y prête, faire chiffrer les travaux, faire borner, obtenir les autorisations, connaître les prix du secteur, et avancer les frais pendant des mois. À plusieurs héritiers, il faut en plus que tous décident ensemble à chaque étape.</p>
 <p>Mal préparé, un projet peut être refusé par la mairie, ou coûter des frais sans résultat. Dans une indivision déjà tendue, c'est le scénario à éviter.</p>
-<p>PLU Value réunit ces métiers. L'étude préalable est gratuite ; si rien n'est réaliste, nous vous le disons, avec la raison. Pour les projets que nous retenons, nous engageons nos propres moyens dans les études et les démarches : nous avons donc le même intérêt que vous à ce que le projet aboutisse. La vente reste confiée à une agence immobilière, et les actes à votre notaire. Voir <a href="/nos-engagements">nos engagements</a>, ou <a href="/deposer-un-bien">présentez-nous le bien</a>.</p>
+<p>PLU Value réunit ces métiers. L'étude préalable est gratuite ; si rien n'est réaliste, nous vous le disons, avec la raison. Pour les projets que nous retenons, nous engageons nos propres moyens dans les études et les démarches : nous avons donc le même intérêt que vous à ce que le projet aboutisse. La vente reste confiée à une agence immobilière, et les actes à votre notaire. Voir <a href="/nos-engagements">nos engagements</a>, ou <a href="/diagnostic">présentez-nous le bien</a>.</p>
 
 <h2>Questions fréquentes</h2>
 <details><summary>Un seul héritier peut-il bloquer la vente de la maison ?</summary><p>Oui, en principe : la vente d'un bien immobilier en indivision se décide à l'unanimité. Le tribunal peut toutefois autoriser la vente à la demande d'héritiers détenant au moins les deux tiers des droits indivis, sauf si le bien est démembré ou si un héritier est sous mesure de protection.</p></details>
@@ -416,7 +416,7 @@ ARTICLES.append(dict(
 <h2>Pourquoi ne pas le faire seul ?</h2>
 <p>Parce qu'une division réunit plusieurs métiers : lire le plan local d'urbanisme, vérifier que le terrain ou la maison s'y prête, faire chiffrer les travaux, faire borner, obtenir les autorisations, connaître les prix du secteur, et avancer les frais pendant des mois. À 75 ou 80 ans, ou pour des enfants qui gèrent déjà l'entrée d'un parent en établissement, c'est beaucoup.</p>
 <p>Mal préparé, un projet peut être refusé par la mairie, ou coûter des frais sans résultat, au moment où chaque euro compte.</p>
-<p>PLU Value réunit ces métiers. L'étude préalable est gratuite ; si rien n'est réaliste, ou si une vente simple est préférable dans votre cas, nous vous le disons. Pour les projets que nous retenons, nous engageons nos propres moyens dans les études et les démarches : nous avons donc le même intérêt que vous à bien faire. La vente reste confiée à une agence immobilière, et les actes à votre notaire. Voir <a href="/nos-engagements">nos engagements</a>, ou <a href="/deposer-un-bien">présentez-nous votre bien</a>.</p>
+<p>PLU Value réunit ces métiers. L'étude préalable est gratuite ; si rien n'est réaliste, ou si une vente simple est préférable dans votre cas, nous vous le disons. Pour les projets que nous retenons, nous engageons nos propres moyens dans les études et les démarches : nous avons donc le même intérêt que vous à bien faire. La vente reste confiée à une agence immobilière, et les actes à votre notaire. Voir <a href="/nos-engagements">nos engagements</a>, ou <a href="/diagnostic">présentez-nous votre bien</a>.</p>
 
 <h2>Questions fréquentes</h2>
 <details><summary>Combien coûte un EHPAD par mois ?</summary><p>Selon la CNSA, en 2024, le prix médian d'une chambre seule en hébergement permanent était de 2 138 € par mois en chambre habilitée à l'aide sociale et de 3 016 € en chambre non habilitée, avant aides. Les prix varient fortement selon le département et le statut de l'établissement.</p></details>
@@ -492,7 +492,7 @@ ARTICLES.append(dict(
 <h2>Pourquoi ne pas le faire seul ?</h2>
 <p>Parce que « couper en deux » ne se résume pas à tracer un trait sur un plan. Il faut lire le règlement d'urbanisme, vérifier les accès et les réseaux, faire intervenir un géomètre, parfois un architecte, faire chiffrer les travaux, déposer les bonnes demandes en mairie, connaître les prix réels du secteur pour chaque lot, et avancer tous ces frais pendant des mois.</p>
 <p>Mal préparé, le projet peut être refusé par la mairie, ou coûter des frais sans résultat, pendant que la maison reste invendue.</p>
-<p>PLU Value réunit ces métiers. L'étude préalable est gratuite ; si rien n'est réaliste, ou si une baisse de prix est la réponse la plus raisonnable, nous vous le disons. Pour les projets que nous retenons, nous engageons nos propres moyens dans les études et les démarches : nous avons donc le même intérêt que vous à bien faire. Nous ne vendons pas et ne publions pas d'annonces : la vente reste confiée à une agence immobilière, la vôtre si vous en avez une. Voir <a href="/nos-engagements">nos engagements</a>, ou <a href="/deposer-un-bien">présentez-nous votre bien</a>.</p>
+<p>PLU Value réunit ces métiers. L'étude préalable est gratuite ; si rien n'est réaliste, ou si une baisse de prix est la réponse la plus raisonnable, nous vous le disons. Pour les projets que nous retenons, nous engageons nos propres moyens dans les études et les démarches : nous avons donc le même intérêt que vous à bien faire. Nous ne vendons pas et ne publions pas d'annonces : la vente reste confiée à une agence immobilière, la vôtre si vous en avez une. Voir <a href="/nos-engagements">nos engagements</a>, ou <a href="/diagnostic">présentez-nous votre bien</a>.</p>
 
 <h2>Questions fréquentes</h2>
 <details><summary>De combien faut-il baisser le prix d'une maison qui ne se vend pas ?</summary><p>Il n'existe pas de pourcentage officiel. La bonne référence, ce sont les ventes récentes de maisons comparables dans votre quartier, que votre agent ou votre notaire peut vous montrer. Si aucune maison comparable ne s'est vendue, le problème vient peut-être de la taille du bien plus que de son prix.</p></details>
@@ -734,7 +734,7 @@ ARTICLES.append(dict(
 <h2>Pourquoi ne pas le faire seuls ?</h2>
 <p>Parce qu'une division demande plusieurs métiers en même temps : lire le règlement d'urbanisme, vérifier que le terrain ou le bâtiment s'y prête, faire dessiner le projet, obtenir des devis, connaître les prix du quartier, déposer les demandes en mairie, et avancer les frais pendant des mois.</p>
 <p>Mal préparée, une demande peut être refusée par la mairie, ou coûter des frais sans résultat. Dans une succession, où chacun attend sa part, c'est le scénario à éviter.</p>
-<p>PLU Value réunit ces métiers. L'étude est gratuite ; si rien n'est réaliste, nous vous le disons, avec la raison. Pour les projets que nous retenons, nous engageons nos propres moyens dans les études et les démarches : nous avons donc le même intérêt que vous à bien faire. La vente reste confiée à une agence immobilière, et les actes à votre notaire. Notre page <a href="/succession-maison-familiale">succession et maison familiale</a> explique comment nous travaillons avec les héritiers ; vous pouvez aussi <a href="/deposer-un-bien">nous présenter le bien</a>.</p>
+<p>PLU Value réunit ces métiers. L'étude est gratuite ; si rien n'est réaliste, nous vous le disons, avec la raison. Pour les projets que nous retenons, nous engageons nos propres moyens dans les études et les démarches : nous avons donc le même intérêt que vous à bien faire. La vente reste confiée à une agence immobilière, et les actes à votre notaire. Notre page <a href="/succession-maison-familiale">succession et maison familiale</a> explique comment nous travaillons avec les héritiers ; vous pouvez aussi <a href="/diagnostic">nous présenter le bien</a>.</p>
 
 <h2>Questions fréquentes</h2>
 <details><summary>Peut-on vendre la maison de ses parents sans notaire ?</summary><p>Non. Le recours à un notaire est obligatoire dès que la succession comprend un bien immobilier : il établit l'attestation de propriété immobilière au nom des héritiers, puis l'acte de vente.</p></details>
@@ -817,7 +817,7 @@ def blog_index():
     <p class="lead">Ce que le PLU permet vraiment, comment débloquer une vente, comment fonctionne un partenariat de valorisation. Des guides sourcés, pour les propriétaires, les agents immobiliers et les communes.</p>
     <div class="postlist">{cards}</div>
   </section>
-  <section class="dark" aria-labelledby="h-b"><h2 id="h-b">Une question sur votre bien ?</h2><p>Présentez-le nous : l'étude préalable est gratuite.</p><div class="cta"><a class="btn gold" href="/deposer-un-bien">Faire étudier mon bien</a></div></section>"""
+  <section class="dark" aria-labelledby="h-b"><h2 id="h-b">Une question sur votre bien ?</h2><p>Présentez-le nous : l'étude préalable est gratuite.</p><div class="cta"><a class="btn gold" href="/diagnostic">Faire étudier mon bien</a></div></section>"""
     ld = {"@context": "https://schema.org", "@type": "Blog", "name": "Conseils PLU Value", "url": "https://plu-value.fr/blog/",
           "blogPost": [{"@type": "BlogPosting", "headline": a['title'], "url": f"https://plu-value.fr/blog/{a['slug']}.html", "datePublished": a['date']} for a in ARTICLES]}
     return ("blog/", "Conseils : division de terrain, PLU, vente bloquée | PLU Value",
@@ -839,7 +839,7 @@ ML = f"""  <article class="post">
     <p>Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, États-Unis, <a href="https://www.netlify.com" rel="noopener">www.netlify.com</a>.</p>
     <h2>Activité</h2>
     <p>PLU Value étudie le potentiel d'urbanisme de biens immobiliers et propose des partenariats de valorisation. Les analyses publiées ou transmises sont indicatives : elles ne constituent ni une offre d'achat, ni un engagement, ni un conseil juridique, fiscal ou financier. Toute opération fait l'objet d'un accord écrit distinct, assorti de conditions suspensives.</p>
-    <p>PLU Value n'exerce pas l'activité d'agent immobilier : elle ne vend pas de biens, ne publie pas d'annonces et ne perçoit pas d'honoraires de transaction. Les biens confiés par des professionnels le sont dans le respect de leurs mandats et de la <a href="/deposer-un-bien?profil=agent">charte de confidentialité et de non-contournement</a>.</p>
+    <p>PLU Value n'exerce pas l'activité d'agent immobilier : elle ne vend pas de biens, ne publie pas d'annonces et ne perçoit pas d'honoraires de transaction. Les biens confiés par des professionnels le sont dans le respect de leurs mandats et de la <a href="/diagnostic">charte de confidentialité et de non-contournement</a>.</p>
     <h2>Propriété intellectuelle</h2>
     <p>L'ensemble des contenus du site (textes, visuels, schémas, logo, charte) est la propriété de l'éditeur, sauf mention contraire. Toute reproduction ou réutilisation sans autorisation écrite est interdite.</p>
     <h2>Responsabilité</h2>
