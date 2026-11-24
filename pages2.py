@@ -21,6 +21,7 @@ FORMS_JS = """<script>
     var pf=document.getElementById('d-profil');if(pf)pf.value=v;}
   radios.forEach(function(r){r.addEventListener('change',function(){show(r.value)})});
   var q=new URLSearchParams(location.search).get('profil');
+  if(q==='agent'&&!new URLSearchParams(location.search).get('diag')&&/deposer-un-bien/.test(location.pathname)){location.replace('/diagnostic?profil=agent');return}
   if(q){var r=document.querySelector('input[name=profil-choix][value="'+q+'"]');if(r){r.checked=true;show(q)}}
   /* formulaires simples */
   document.querySelectorAll('form[data-simple]').forEach(function(f){
@@ -164,7 +165,7 @@ P["agents-immobiliers"] = ("Valorisez vos mandats difficiles | PLU Value",
         <span class="eyebrow">Agents immobiliers</span>
         <h1 id="h1">Votre mandat ne se vend pas ? Avant de baisser le prix, étudions son potentiel.</h1>
         <p class="lead">Division de la maison, lot à bâtir, découpe d'un immeuble : nous étudions gratuitement ce que le bien permet et nous investissons dans les projets retenus. Vous gardez votre client et votre mandat.</p>
-        <div class="cta"><a class="btn primary" href="/deposer-un-bien?profil=agent">Déposer un bien</a><a class="btn ghost" href="#charte">La charte</a></div>
+        <div class="cta"><a class="btn primary" href="/diagnostic?profil=agent">Diagnostiquer un mandat</a><a class="btn ghost" href="#charte">La charte</a></div>
       </div>
       <figure class="shot"><img src="/media/site-agents.webp" alt="Plan cadastral sur lequel une parcelle est divisée, avec une maquette de maison" width="1536" height="864"></figure>
     </div>
@@ -194,7 +195,7 @@ P["agents-immobiliers"] = ("Valorisez vos mandats difficiles | PLU Value",
       <li>Si une opération se fait, votre rémunération est due.</li>
       <li>La date et l'heure de votre dépôt font foi.</li></ul></div>
     {CHARTE}
-    <div><a class="btn primary" href="/deposer-un-bien?profil=agent">Déposer un bien</a></div>
+    <div><a class="btn primary" href="/diagnostic?profil=agent">Diagnostiquer un mandat</a></div>
   </section>
 {VID_AG}{FINAL_CTA}""", VID_AG_LD)
 
@@ -271,5 +272,5 @@ P["investisseurs"] = ("Investisseurs et marchands de biens : opérations étudi�
   <section id="criteres" aria-labelledby="h-f"><h2 id="h-f">Recevoir nos dossiers</h2>{INV_FORM}</section>""", None)
 P["investisseurs"] = P["investisseurs"][:3] + (None, FORMS_JS)
 
-HASH_JS = """<script>(function(){var h=location.hash;if(h==='#deposer'||h==='#charte'||h==='#charte-texte'){location.replace('/deposer-un-bien?profil=agent'+(h==='#deposer'?'':h));}if(h==='#contact'){location.replace('/deposer-un-bien');}})();</script>"""
+HASH_JS = """<script>(function(){var h=location.hash;if(h==='#deposer'||h==='#charte'||h==='#charte-texte'){location.replace('/diagnostic?profil=agent'+(h==='#deposer'?'':h));}if(h==='#contact'){location.replace('/deposer-un-bien');}})();</script>"""
 v=P[""]; P[""]=(v[0],v[1],v[2],v[3],HASH_JS)

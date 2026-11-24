@@ -15,7 +15,8 @@
 - [Division de terrain](https://plu-value.fr/division-terrain)
 - [Succession et maison familiale](https://plu-value.fr/succession-maison-familiale)
 - [Nos engagements](https://plu-value.fr/nos-engagements)
-- [Faire étudier un bien](https://plu-value.fr/deposer-un-bien)
+- [Diagnostic d'un bien, point d'entrée](https://plu-value.fr/diagnostic)
+- [Formulaires de dépôt](https://plu-value.fr/deposer-un-bien)
 
 ## Conseils
 - [Vendre la maison de ses parents après un décès : par quoi commencer ?](https://plu-value.fr/blog/vendre-la-maison-de-ses-parents-apres-un-deces.html)

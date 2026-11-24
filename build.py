@@ -21,6 +21,8 @@ s, t, d, b, ld = blog.blog_index(); write(s, page(s, t, d, b, "", ld))
 for a in blog.ARTICLES:
     s, t, d, b, ld = blog.article_page(a); write(s, page(s, t, d, b, "", ld, og="article"))
 
+shutil.copyfile('parts/diagnostic.html', OUT + '/diagnostic.html'); print('diagnostic')
+
 red = """/proprietaires  /valoriser-maison-familiale  301
 /proprietaires.html  /valoriser-maison-familiale  301
 /agents  /agents-immobiliers  301
@@ -32,7 +34,7 @@ red = """/proprietaires  /valoriser-maison-familiale  301
 """
 open(OUT + '/_redirects', 'w').write(red)
 open(OUT + '/robots.txt', 'w').write('User-agent: *\nAllow: /\nSitemap: https://plu-value.fr/sitemap.xml\n')
-main = ['', 'nos-solutions', 'valoriser-maison-familiale', 'division-maison-logements', 'division-terrain', 'succession-maison-familiale', 'agents-immobiliers', 'notaires', 'investisseurs', 'promoteurs', 'notre-methode', 'nos-engagements', 'exemples-valorisation', 'equipe', 'deposer-un-bien', 'blog/']
+main = ['', 'nos-solutions', 'valoriser-maison-familiale', 'division-maison-logements', 'division-terrain', 'succession-maison-familiale', 'agents-immobiliers', 'notaires', 'investisseurs', 'promoteurs', 'notre-methode', 'nos-engagements', 'exemples-valorisation', 'equipe', 'diagnostic', 'deposer-un-bien', 'blog/']
 x = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 for u in main: x += f'  <url><loc>https://plu-value.fr/{u}</loc><lastmod>2026-11-12</lastmod></url>\n'
 for a in blog.ARTICLES: x += f'  <url><loc>https://plu-value.fr/blog/{a["slug"]}.html</loc><lastmod>{max(a["date"], "2026-11-12")}</lastmod></url>\n'
@@ -55,7 +57,8 @@ llms = """# PLU Value
 - [Division de terrain](https://plu-value.fr/division-terrain)
 - [Succession et maison familiale](https://plu-value.fr/succession-maison-familiale)
 - [Nos engagements](https://plu-value.fr/nos-engagements)
-- [Faire étudier un bien](https://plu-value.fr/deposer-un-bien)
+- [Diagnostic d'un bien, point d'entrée](https://plu-value.fr/diagnostic)
+- [Formulaires de dépôt](https://plu-value.fr/deposer-un-bien)
 
 ## Conseils
 """ + "".join(f"- [{a['title']}](https://plu-value.fr/blog/{a['slug']}.html)\n" for a in blog.ARTICLES) + """

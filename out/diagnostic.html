@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Diagnostic d'un bien | PLU Value</title>
+<meta name="description" content="Agents immobiliers : collez le lien de votre annonce et sachez en deux minutes si votre mandat a un potentiel de division. Propriétaires, héritiers et notaires : présentez votre bien.">
+<link rel="canonical" href="https://plu-value.fr/diagnostic">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout : une colonne étroite, une question par écran, gros boutons au pouce. Vert cadastre + ocre de plan. */
+:root{
+  --bg:#f6f7f4; --surface:#ffffff; --ink:#18211d; --muted:#5d6b64; --line:#d9dfd9;
+  --accent:#1f6b57; --accent-soft:#e3efe9; --ochre:#b86a24; --ochre-soft:#f6eadc; --stop:#a8442a; --stop-soft:#f7e6e0;
+  --f-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121815; --surface:#1a221e; --ink:#e7ece8; --muted:#9aa8a1; --line:#2c3732;
+  --accent:#5cc2a0; --accent-soft:#1f3229; --ochre:#e0a062; --ochre-soft:#33281c; --stop:#ea8a6e; --stop-soft:#3a231c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121815; --surface:#1a221e; --ink:#e7ece8; --muted:#9aa8a1; --line:#2c3732;
+  --accent:#5cc2a0; --accent-soft:#1f3229; --ochre:#e0a062; --ochre-soft:#33281c; --stop:#ea8a6e; --stop-soft:#3a231c; color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+[hidden]{display:none!important}
+.wrap{max-width:560px;margin:0 auto;padding:16px max(16px,env(safe-area-inset-right,0px)) 48px max(16px,env(safe-area-inset-left,0px));display:flex;flex-direction:column;gap:18px}
+.bar{display:flex;align-items:center;gap:12px;min-height:40px}
+.brand{text-decoration:none;font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);flex:1}
+.count{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.back{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 14px;font:inherit;font-size:14px;cursor:pointer}
+.prog{height:4px;background:var(--line);border-radius:99px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:var(--accent)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,7vw,34px);line-height:1.12;margin:0;text-wrap:balance}
+h2{font-family:var(--f-display);font-weight:700;font-size:20px;line-height:1.2;margin:0;text-wrap:balance}
+p{margin:0}
+.lede{color:var(--muted)}
+.stack{display:flex;flex-direction:column;gap:12px}
+.opt{text-decoration:none;display:flex;flex-direction:column;gap:2px;text-align:left;width:100%;min-height:60px;justify-content:center;
+  background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font:inherit;font-weight:600;cursor:pointer}
+.opt small{font-weight:400;color:var(--muted);font-size:14px}
+.opt:hover{border-color:var(--accent)}
+.opt:active{background:var(--accent-soft)}
+button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.cta{display:inline-flex;align-items:center;justify-content:center;min-height:54px;width:100%;border-radius:14px;border:1px solid var(--accent);
+  background:var(--accent);color:var(--surface);font:inherit;font-weight:600;font-size:16px;cursor:pointer;text-decoration:none;padding:12px 16px;text-align:center}
+.cta.ghost{background:transparent;color:var(--accent)}
+label{display:flex;flex-direction:column;gap:5px;font-size:14px;font-weight:500}
+label small{font-weight:400;color:var(--muted)}
+input,select{font:inherit;font-size:17px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:13px 14px;width:100%;min-width:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:380px){.two{grid-template-columns:1fr}}
+.sug{display:flex;flex-direction:column;gap:6px;margin-top:-4px}
+.sugb{display:flex;justify-content:space-between;align-items:center;gap:8px;min-height:48px;text-align:left;background:var(--accent-soft);color:var(--ink);border:0;border-radius:12px;padding:10px 14px;font:inherit;font-weight:600;cursor:pointer}
+.sugb small{font-family:var(--f-mono);font-weight:400;color:var(--muted)}
+.rg{display:flex;flex-direction:column;gap:8px}
+.rg .lab{font-size:14px;font-weight:500}
+.rgr{display:grid;grid-template-columns:54px 1fr 54px;gap:8px}
+.rgr input{text-align:center;font-family:var(--f-mono);font-size:22px;font-variant-numeric:tabular-nums;padding:10px 6px}
+.pm{min-height:54px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--accent);font:inherit;font-size:26px;font-weight:600;cursor:pointer}
+input[type=range]{padding:0;border:0;background:transparent;height:36px;accent-color:var(--accent)}
+.seg{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:6px}
+.seg button{min-height:50px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:14px;font-weight:600;cursor:pointer;padding:6px 4px}
+.seg button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.err{color:var(--stop);font-size:14px;min-height:1.2em}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:12px}
+.chip{align-self:flex-start;font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.chip.go{background:var(--accent-soft);color:var(--accent)}
+.chip.no{background:var(--stop-soft);color:var(--stop)}
+.why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.why li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:15px}
+.why b{font-family:var(--f-mono);font-weight:500;text-align:center;border-radius:6px;height:22px;line-height:22px;font-size:13px}
+.why .ok b{background:var(--accent-soft);color:var(--accent)}
+.why .no b{background:var(--stop-soft);color:var(--stop)}
+.why .chk b{background:var(--ochre-soft);color:var(--ochre)}
+.fig{display:flex;flex-direction:column;gap:2px;border-top:1px dashed var(--line);padding-top:12px}
+.fig span{font-size:13px;color:var(--muted)}
+.fig strong{font-family:var(--f-mono);font-weight:500;font-size:24px;font-variant-numeric:tabular-nums}
+.fig em{font-style:normal;font-size:14px;color:var(--muted)}
+.sheet{border:1px solid var(--accent);border-radius:16px;background:var(--surface);padding:20px;display:flex;flex-direction:column;gap:14px}
+.sheet .eyebrow{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.sheet ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:15px}
+.sheet .fig.best strong{color:var(--accent)}
+.legal{font-size:12px;color:var(--muted)}
+footer.legal a{color:var(--accent)}
+.say{background:var(--ochre-soft);border-radius:12px;padding:14px;font-size:15px}
+.status{font-size:14px;color:var(--accent);min-height:1.2em}
+.mono{font-family:var(--f-mono);font-size:14px;user-select:all}
+textarea.fallback{width:100%;min-height:120px;font:13px var(--f-mono);margin-top:8px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:8px}
+@media (prefers-reduced-motion:no-preference){.prog i{transition:width .25s ease}#view{animation:in .18s ease}}
+@keyframes in{from{transform:translateY(6px)}to{transform:none}}
+</style></head><body>
+<div class="wrap">
+  <div class="bar">
+    <button class="back" id="back" type="button" hidden>Retour</button>
+    <a class="brand" href="/" aria-label="PLU Value, accueil">PLU Value · diagnostic</a>
+    <div class="count" id="count"></div>
+  </div>
+  <div class="prog" aria-hidden="true"><i id="prog"></i></div>
+  <main id="view" class="stack" aria-live="polite"></main>
+  <footer class="legal">PLU Value, marque exploitée par LATULIPE SAS. Aucun résultat n'est garanti : chaque projet dépend des règles d'urbanisme et de l'accord de la mairie. <a href="/mentions-legales.html">Mentions légales</a> · <a href="/confidentialite.html">Confidentialité</a></footer>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const view=$("view");
+const esc=t=>String(t==null?"":t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let S={},idx=-1,hist=[],blocOnly=false,stopInfo=null,K=new Set(),FID=null,ficheInfo=null,isEx=false;
+const API="https://xkuiwbrtnrhyjbbktule.supabase.co/functions/v1/fiche";
+async function api(body){const r=await fetch(API,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});return r.json()}
+
+/* ---------- Étapes : une question par écran ---------- */
+const STEPS=[
+ {id:"type",q:"Quel bien vendez-vous ?",opts:[
+   ["maison","Maison"],["maison2","Maison avec dépendance ou second logement"],
+   ["immeuble","Petit immeuble, un seul propriétaire"],["appart","Appartement en copropriété"]],
+  stop:s=>s.type==="appart"&&{t:"Un appartement en copropriété ne se valorise pas par division.",fix:"PLU Value travaille sur les maisons, les terrains et les immeubles en monopropriété."}},
+ {id:"mois",q:"Depuis combien de temps est-il en vente ?",opts:[
+   ["pre","Pas encore en vente","Le vendeur veut un prix que le marché ne donnera pas"],
+   ["<4","Moins de 4 mois"],["4-6","4 à 6 mois"],["6-12","6 à 12 mois"],[">12","Plus d'un an"]]},
+ {id:"baisses",q:"Combien de baisses de prix déjà faites ?",when:s=>s.mois!=="pre",opts:[["0","Aucune"],["1","Une"],["2","Deux ou plus"]],
+  stop:s=>s.mois==="<4"&&s.baisses==="0"&&{t:"Ce mandat n'est pas bloqué : moins de 4 mois, aucune baisse.",fix:"Laissez le marché répondre. Revenez si le bien n'a pas d'offre au bout de 4 mois."}},
+ {id:"proprio",q:"Qui décide de la vente ?",opts:[
+   ["seul","Un seul propriétaire, ou un couple d'accord"],["accord","Plusieurs propriétaires, tous d'accord"],
+   ["desaccord","Plusieurs propriétaires, pas tous d'accord"],["nsp","Je ne sais pas encore"]],
+  stop:s=>s.proprio==="desaccord"&&{t:"Les propriétaires ne sont pas d'accord entre eux.",fix:"Une valorisation demande la signature de tous. Revenez quand l'indivision parle d'une seule voix."}},
+ {id:"delai",q:"Le vendeur peut-il attendre un an s'il y gagne ?",opts:[
+   ["ok","Oui, il n'est pas pressé"],["presse","Non, il a besoin de l'argent ou doit se reloger avant"],["nsp","Je ne sais pas encore"]],
+  stop:s=>s.delai==="presse"&&{t:"Le vendeur a besoin de vendre vite.",fix:"Une valorisation passe par la mairie puis par plusieurs ventes. Pour lui, le bon levier est le prix."}},
+ {id:"permis",q:"Un permis ou une division est déjà déposé ou obtenu ?",opts:[["non","Non"],["oui","Oui"],["nsp","Je ne sais pas"]],
+  stop:s=>s.permis==="oui"&&{t:"Le dossier d'urbanisme est déjà lancé.",fix:"La valeur est déjà en cours de création par le vendeur : il reste peu à apporter."}},
+ {id:"lieu",bloc:true,q:"Où se situe le bien ?",fields:[
+   ["commune","Commune","text",true,"tapez les premières lettres"],["adresse","Numéro et rue","text",false,"facultatif"]]},
+ {id:"bien",bloc:true,q:"Le bien en chiffres",fields:[
+   ["surface","Surface habitable (m²)","range",true,null,{min:40,max:500,step:5,def:()=>150,must:()=>true,onset:()=>{const p=$("f_prix");if(p&&!p.dataset.t)p._set(defPrix(),false)}}],
+   ["terrain","Surface du terrain (m²)","range",false,"0 s'il n'y en a pas",{min:0,max:3000,step:25,def:()=>500,must:()=>!blocOnly}],
+   ["prix","Prix affiché ou demandé (€)","range",false,"prérempli à titre indicatif : réglez-le sur le prix du mandat",{min:100000,max:3000000,step:10000,def:()=>defPrix(),opt:true}]]},
+ {id:"position",q:"Où est la maison sur le terrain ?",opts:[
+   ["devant","Côté rue, terrain libre derrière"],["fond","Au fond, terrain libre devant"],
+   ["cote","Sur un côté, passage libre de l'autre"],["milieu","Au milieu du terrain"],["sans","Pas de terrain libre"]]},
+ {id:"acces",q:"Peut-on rejoindre le terrain libre sans traverser la maison ?",when:s=>s.position!=="sans"&&s.position!=="milieu",
+  opts:[["oui","Oui","Passage latéral, seconde rue ou façade large"],["non","Non"],["averifier","À vérifier sur place"]]},
+ {id:"entrees",q:"Combien d'entrées indépendantes possibles ?",opts:[
+   ["1","Une seule"],["2","Deux","Étage desservi à part, dépendance, garage aménageable"],["3","Trois ou plus"]]},
+ {id:"marche",bloc:true,q:"Le marché du secteur",
+  dyn:()=>({q:"Le marché du secteur",help:dv().pm2?`Prérempli avec les ventes réelles 2023-2025 à ${S.commune}. Ajustez si le quartier vaut plus ou moins.`:"Trop peu de ventes récentes dans cette commune : indiquez ce que vous constatez."}),fields:[
+   ["pm2","Prix au m² d'une maison familiale (€)","range",true,null,{min:1000,max:16000,step:50,def:()=>dv().pm2||4000,must:()=>!dv().pm2}],
+   ["lot","Prix d'un terrain à bâtir (€)","range",false,()=>dv().lot?"médiane des ventes de la commune":"estimation : réglez-le si vous avez une vente récente",{min:50000,max:1500000,step:5000,def:()=>defLot(),opt:true,keep:()=>!!dv().lot}],
+   ["travaux","État du bien","seg",true,null,{def:"1",opts:[["0","Bon état"],["1","À rafraîchir"],["2","Gros travaux"]]}],
+   ["dpe","DPE","seg",true,null,{def:"D",opts:[["D","A à D"],["E","E"],["F","F ou G"],["?","Inconnu"]]}]]},
+ {id:"travaux",q:"Dans quel état est le bien ?",when:()=>K.has("marche"),opts:[["0","Bon état"],["1","À rafraîchir"],["2","Gros travaux"]]},
+ {id:"ref",q:"",when:s=>!blocOnly&&compute().lever,dyn:()=>{const r=compute();return{q:"Le vendeur accepterait-il de repartir de ce niveau ?",
+   help:`Vendu en un seul lot, ce bien vaut aujourd'hui entre ${rng(r.v1,.07)}. C'est la base du prix de référence, avec une part de tout ce qui se vend au-dessus.`}},
+  opts:[["oui","Oui"],["proposer","Je dois lui en parler"],["non","Non, il tient à son prix"]]}
+];
+const EXEMPLE={type:"maison",mois:"6-12",baisses:"1",proprio:"seul",delai:"ok",permis:"non",commune:"Exemple",adresse:"",surface:240,terrain:1100,prix:890000,
+  position:"devant",acces:"oui",entrees:"2",pm2:4200,lot:240000,travaux:"1",dpe:"E",ref:"oui"};
+
+/* ---------- Calcul ---------- */
+const k5=n=>Math.round(n/5000)*5;
+const eur=n=>isFinite(n)?k5(n).toLocaleString("fr-FR")+" k€":"–";
+const rng=(a,p)=>`${eur(a*(1-p))} et ${eur(a*(1+p))}`;
+const kSize=s=>s<=120?1:s<=150?.92:s<=200?.85:s<=250?.8:.75;
+const SEUIL=50000, LOT_MIN=400;
+function compute(){
+  const S_=+S.surface,T=+S.terrain||0,P=+S.pm2,out={ok:S_>0&&P>0,raisons:[]};
+  if(!out.ok)return out;
+  const kE=S.dpe==="F"?.93:S.dpe==="E"?.97:1, kT=S.travaux==="2"?.88:S.travaux==="1"?.98:1;
+  const pBig=P*kSize(S_)*kE*kT, v1=S_*pBig;
+  const emp=S_/1.6*1.1, keep=Math.max(400,emp*4), reste=Math.max(0,T-keep);
+  const divOK=S.position!=="milieu"&&S.position!=="sans"&&S.acces!=="non"&&S.type!=="appart";
+  const nLots=divOK?Math.min(3,Math.floor(reste/LOT_MIN)):0;
+  const lotVal=+S.lot||P*.12*Math.min(550,Math.max(LOT_MIN,reste/Math.max(1,nLots)));
+  const lotNet=Math.max(0,lotVal-25000);
+  const ent=+S.entrees||1, nLog=Math.min(4,Math.floor(S_/70));
+  const cutOK=S_>=130&&nLog>=2&&(ent>=2||S.type==="maison2"||S.type==="immeuble");
+  const sLog=cutOK?S_*.92/nLog:0, vB=cutOK?nLog*sLog*P*kSize(sLog)*kE*kT*.92:0;
+  const c=[];
+  if(nLots)c.push({nom:`terrain détaché en ${nLots} lot${nLots>1?"s":""} à bâtir, maison conservée`,v2:v1*.97+nLots*lotNet,frais:30000});
+  if(cutOK)c.push({nom:`maison vendue en ${nLog} logements`,v2:vB,frais:40000});
+  if(nLots&&cutOK)c.push({nom:`${nLog} logements et ${nLots} lot${nLots>1?"s":""} à bâtir`,v2:vB*.97+nLots*lotNet,frais:40000});
+  let best=null;for(const x of c){x.net=x.v2*.92-x.frais;if(!best||x.net>best.net)best=x}
+  if(!nLots){
+    if(S.position==="milieu")out.raisons.push("Maison au milieu du terrain : pas de lot à bâtir détachable.");
+    else if(S.position==="sans")out.raisons.push("Pas de terrain libre à détacher.");
+    else if(S.acces==="non")out.raisons.push("Terrain libre sans accès : pas de lot à bâtir.");
+    else out.raisons.push(`Terrain trop petit pour un lot à bâtir : il en faudrait environ ${Math.round((keep+LOT_MIN)/10)*10} m².`);
+  }
+  if(!cutOK){
+    if(S_<130)out.raisons.push("Surface habitable trop faible pour créer plusieurs logements.");
+    else out.raisons.push("Une seule entrée possible : pas de logements indépendants sans gros travaux.");
+  }
+  out.v1=v1;out.pBig=pBig;out.best=best;out.reste=reste;out.nLots=nLots;out.cutOK=cutOK;out.nLog=nLog;
+  out.gain=best?best.net-v1:0;
+  out.lever=!!best&&out.gain>=SEUIL;
+  if(best&&!out.lever)out.raisons.push("Gain trop faible une fois les frais et l'aléa déduits : l'opération ne se justifie pas.");
+  return out;
+}
+const DIVISER=["grigny","etampes","sarcelles","goussainville","trappes","montfermeil","aulnay-sous-bois"];
+const norm=t=>String(t||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").trim().replace(/\s+/g,"-");
+const MOIS={"pre":"pas encore en vente","<4":"moins de 4 mois","4-6":"4 à 6 mois","6-12":"6 à 12 mois",">12":"plus d'un an"};
+
+/* ---------- Navigation ---------- */
+const visible=st=>(blocOnly?!!st.bloc:true)&&!K.has(st.id)&&(!st.when||st.when(S));
+function go(i){while(i<STEPS.length&&!visible(STEPS[i]))i++;if(i>=STEPS.length)return verdict();hist.push(idx);idx=i;draw()}
+function answer(st){
+  if(st.id==="bien"&&!FID&&!isEx)api({commune:S.commune,cp:S.cp,surface:S.surface}).then(r=>{const c=r.candidats||[];if(c.length){const d=x=>Math.abs((+x.prix||0)-(+S.prix||+x.prix||0));c.sort((a,b)=>d(a)-d(b));FID=c[0].id}}).catch(()=>{});
+  const s=st.stop&&st.stop(S);if(s){stopInfo=s;hist.push(idx);idx="stop";return drawStop()}go(idx+1)}
+function chrome(n){
+  const tot=STEPS.filter(visible).length;
+  $("back").hidden=idx===-1;
+  $("count").textContent=typeof n==="number"?`${n} / ${tot}`:"";
+  $("prog").style.width=(typeof n==="number"?Math.round((n-1)/tot*100):(idx===-1||idx==="agent"||idx==="lien"||idx==="recap")?0:100)+"%";
+  window.scrollTo(0,0);
+}
+function draw(){
+  if(idx===-1)return intro();
+  const st=STEPS[idx],d=st.dyn?st.dyn():st,n=STEPS.slice(0,idx+1).filter(visible).length;
+  chrome(n);
+  let h=`<h1>${esc(d.q||st.q)}</h1>`+(d.help||st.help?`<p class="lede">${esc(d.help||st.help)}</p>`:"");
+  if(st.opts)h+=`<div class="stack">`+st.opts.map(([v,l,sub])=>`<button type="button" class="opt" data-v="${esc(v)}">${esc(l)}${sub?`<small>${esc(sub)}</small>`:""}</button>`).join("")+`</div>`;
+  else h+=`<form id="ff" class="stack" novalidate>`+st.fields.map(fieldHTML).join("")+`<div class="err" id="err"></div><button class="cta" type="submit">Continuer</button></form>`;
+  view.innerHTML=h;
+  if($("sug"))suggest();
+  if(st.fields){wire(st);$("ff").addEventListener("submit",e=>{e.preventDefault();
+    for(const[k,l,t,req,,o]of st.fields){
+      if(t==="range"){const el=$("f_"+k),touched=!!el.dataset.t;
+        if(o.must&&o.must()&&!touched){$("err").textContent=`Réglez : ${l.replace(/ \(.*/,"")}.`;$("r_"+k).focus();return}
+        S[k]=(o.opt&&!touched&&!(o.keep&&o.keep()))?"":+el.value;continue}
+      if(t==="seg"){S[k]=$("f_"+k).dataset.val;continue}
+      const v=$("f_"+k).value.trim();
+      if(req&&!v){$("err").textContent=`Il manque : ${l}.`;$("f_"+k).focus();return}
+      S[k]=v}
+    answer(st)})}
+}
+function fieldHTML([k,l,t,req,hint,o]){
+  const hh=hint?` <small>${esc(typeof hint==="function"?hint():hint)}</small>`:"";
+  if(t==="range"){const has=S[k]!==undefined&&S[k]!=="",d=has?S[k]:o.def();
+    return `<div class="rg"><label for="f_${k}">${esc(l)}${hh}</label>
+    <div class="rgr"><button type="button" class="pm" data-pm="${k}" data-d="-1" aria-label="Moins">−</button>
+    <input id="f_${k}" type="number" inputmode="numeric" min="${o.min}" step="${o.step}" value="${d}"${has?' data-t="1"':""}>
+    <button type="button" class="pm" data-pm="${k}" data-d="1" aria-label="Plus">+</button></div>
+    <input id="r_${k}" type="range" min="${o.min}" max="${o.max}" step="${o.step}" value="${Math.min(d,o.max)}" aria-label="${esc(l)}"></div>`}
+  if(t==="seg"){const cur=String(S[k]??o.def);
+    return `<div class="rg"><span class="lab">${esc(l)}</span><div class="seg" id="f_${k}" data-val="${cur}" role="group" aria-label="${esc(l)}">${o.opts.map(([v,x])=>`<button type="button" data-seg="${v}" aria-pressed="${v===cur}">${esc(x)}</button>`).join("")}</div></div>`}
+  return `<label for="f_${k}">${esc(l)}${hh}<input id="f_${k}" type="text" autocomplete="${k==="adresse"?"street-address":"off"}" ${k==="commune"?'autocapitalize="words" autocorrect="off" spellcheck="false" ':""}value="${esc(S[k]??"")}"${req?" required":""}></label>`+(k==="commune"?`<div class="sug" id="sug"></div>`:"");
+}
+function wire(st){
+  for(const[k,,t,,,o]of st.fields){
+    if(t==="range"){const n=$("f_"+k),r=$("r_"+k);
+      const set=(v,touch)=>{v=Math.max(o.min,Math.round(v/o.step)*o.step);n.value=v;r.value=Math.min(v,o.max);if(touch){n.dataset.t=1;$("err").textContent="";if(o.onset)o.onset()}};
+      r.addEventListener("input",()=>set(+r.value,true));
+      n.addEventListener("change",()=>set(+n.value||o.min,true));
+      n._set=set}
+    if(t==="seg"){const g=$("f_"+k);g.addEventListener("click",e=>{const b=e.target.closest("[data-seg]");if(!b)return;g.dataset.val=b.dataset.seg;g.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b))})}
+  }
+  $("ff").addEventListener("click",e=>{const b=e.target.closest("[data-pm]");if(!b)return;const n=$("f_"+b.dataset.pm);n._set(+n.value+(+b.dataset.d)*(+n.step),true)});
+}
+/* Prix réels DVF 2023-2025 de la commune saisie (vide si trop peu de ventes) */
+const dv=()=>COMMUNES.find(c=>c.k===norm(S.commune)&&(!S.cp||c.cp===S.cp))||{};
+const fv=(id,d)=>{const e=$(id);return e?+e.value:d};
+const defPrix=()=>{const s=fv("f_surface",150);return Math.round(s*(dv().pm2||4000)*kSize(s)/10000)*10000};
+const defLot=()=>dv().lot?dv().lot*1000:Math.round(fv("f_pm2",dv().pm2||4000)*57/5000)*5000;
+view.addEventListener("click",e=>{
+  const b=e.target.closest("[data-v]");if(b&&typeof idx==="number"&&idx>=0){S[STEPS[idx].id]=b.dataset.v;return answer(STEPS[idx])}
+  const a=e.target.closest("[data-act]");if(a)ACT[a.dataset.act](a);
+});
+$("back").addEventListener("click",()=>{if(idx==="stop")blocOnly=false;idx=hist.length?hist.pop():-1;if(idx==="stop")return drawStop();if(idx==="verdict")return verdict(true);if(idx==="agent")return drawAgent();if(idx==="lien")return drawLien();if(idx==="recap")return drawRecap();draw()});
+/* Communes d'Île-de-France : nom|code postal, triées par population */
+const COMMUNES="Paris|75001||;Saint-Denis|93200|3500|;Boulogne-Billancourt|92100|13700|;Montreuil|93100|6380|335;Argenteuil|95100||;Nanterre|92000|6430|769;Vitry-sur-Seine|94400|4830|290;Asnières-sur-Seine|92600|8640|;Créteil|94000|5760|440;Colombes|92700|7030|635;Aubervilliers|93300|4030|1195;Aulnay-sous-Bois|93600|3470|200;Versailles|78000|9120|695;Courbevoie|92400|8550|;Rueil-Malmaison|92500|7860|827;Champigny-sur-Marne|94500|4280|208;Saint-Maur-des-Fossés|94100|7120|499;Noisy-le-Grand|93160|4350|345;Drancy|93700|3440|232;Cergy|95000||;Levallois-Perret|92300|11910|;Issy-les-Moulineaux|92130|8960|;Évry-Courcouronnes|91000|2860|361;Ivry-sur-Seine|94200|5780|465;Clichy|92110|9330|;Antony|92160|5990|528;Le Blanc-Mesnil|93150|3510|386;Pantin|93500|7000|;Villejuif|94800|5620|310;Neuilly-sur-Seine|92200|16310|;Sarcelles|95200||;Clamart|92140|7100|1210;Bobigny|93000|3330|;Meaux|77100|2950|145;Maisons-Alfort|94700|6700|;Chelles|77500|3640|180;Corbeil-Essonnes|91100|2920|114;Fontenay-sous-Bois|94120|6980|360;Saint-Ouen-sur-Seine|93400|7280|;Épinay-sur-Seine|93800|3500|750;Sartrouville|78500|5040|350;Sevran|93270|3120|200;Massy|91300|4570|338;Gennevilliers|92230|4400|439;Bondy|93140|3200|;Suresnes|92150|8820|;Vincennes|94300|11260|;Livry-Gargan|93190|3520|100;Rosny-sous-Bois|93110|4580|365;La Courneuve|93120|3640|720;Meudon|92190|8830|;Montrouge|92120|10710|;Melun|77000|2920|117;Choisy-le-Roi|94600|4140|238;Saint-Germain-en-Laye|78100|7070|455;Alfortville|94140|5730|;Noisy-le-Sec|93130|4210|200;Bagneux|92220|5890|;Puteaux|92800|9830|;Mantes-la-Jolie|78200|2800|;Bagnolet|93170|6450|;Gagny|93220|3540|250;Garges-lès-Gonesse|95140||;Villepinte|93420|3130|;Stains|93240|3210|;Poissy|78300|4530|444;Neuilly-sur-Marne|93330|3860|;Pontault-Combault|77340|3690|210;Tremblay-en-France|93290|3300|142;Franconville|95130||;Savigny-sur-Orge|91600|3660|184;Palaiseau|91120|4550|310;Romainville|93230|5620|;Conflans-Sainte-Honorine|78700|4190|233;Châtillon|92320|6900|;Athis-Mons|91200|3850|172;Bezons|95870||;Villeneuve-Saint-Georges|94190|3040|;Châtenay-Malabry|92290|6040|775;Sainte-Geneviève-des-Bois|91700|3490|198;Le Perreux-sur-Marne|94170|7000|780;Trappes|78190|3400|;Les Mureaux|78130|2830|135;Houilles|78800|5310|285;Villiers-sur-Marne|94350|4390|230;Thiais|94320|4480|;Montigny-le-Bretonneux|78180|4450|480;Nogent-sur-Marne|94130|8360|;Pontoise|95000||;Plaisir|78370|3620|235;Herblay-sur-Seine|95220||;Vigneux-sur-Seine|91270|3330|165;Goussainville|95190||;Ris-Orangis|91130|3080|175;L'Haÿ-les-Roses|94240|5000|252;Savigny-le-Temple|77176|2880|205;Cachan|94230|5640|368;Viry-Châtillon|91170|3530|;Le Chesnay-Rocquencourt|78150|7670|;Chatou|78400|6910|500;Malakoff|92240|7850|;La Garenne-Colombes|92250|9640|;Draveil|91210|3580|277;Villiers-le-Bel|95400||;Saint-Cloud|92210|10310|830;Villemomble|93250|4090|;Guyancourt|78280|4210|;Fresnes|94260|5080|;Ermont|95120||;Clichy-sous-Bois|93390|3000|187;Bois-Colombes|92270|8820|;Le Plessis-Robinson|92350|6830|478;Charenton-le-Pont|94220|10350|;Montfermeil|93370|3310|187;Vanves|92170|8060|;Yerres|91330|3810|235;Sucy-en-Brie|94370|4330|250;Rambouillet|78120|3780|249;Gonesse|95500||;Taverny|95150||;Bussy-Saint-Georges|77600|4430|;Champs-sur-Marne|77420|3900|390;Limeil-Brévannes|94450|3660|;Cormeilles-en-Parisis|95240||;Villeparisis|77270|3390|160;Sannois|95110||;Étampes|91150|2680|100;Grigny|91350|2710|;Brétigny-sur-Orge|91220|3200|152;Élancourt|78990|3190|455;Eaubonne|95600||;Villeneuve-la-Garenne|92390|4060|;Les Ulis|91940|3580|;Les Pavillons-sous-Bois|93320|3510|;Brunoy|91800|3850|;Saint-Ouen-l'Aumône|95310||;Orly|94310|3990|402;Le Kremlin-Bicêtre|94270|6500|441;Fontenay-aux-Roses|92260|6280|;Montgeron|91230|3750|;Les Lilas|93260|7890|;Dammarie-les-Lys|77190|2940|140;Combs-la-Ville|77380|3230|325;Roissy-en-Brie|77680|3570|;Deuil-la-Barre|95170||;Maisons-Laffitte|78600|8110|;Vélizy-Villacoublay|78140|6350|;Torcy|77200|3670|;Gif-sur-Yvette|91190|4340|342;Montigny-lès-Cormeilles|95370||;Mantes-la-Ville|78711|2570|115;Sèvres|92310|8430|;Montereau-Fault-Yonne|77130|2070|72;Achères|78260|3780|;Arcueil|94110|5760|;Longjumeau|91160|3560|160;Neuilly-Plaisance|93360|4470|;Saint-Michel-sur-Orge|91240|3210|190;Montmorency|95160||;Morsang-sur-Orge|91390|3520|167;Lagny-sur-Marne|77400|3900|188;Saint-Gratien|95210||;Saint-Cyr-l'École|78210|4860|;Ozoir-la-Ferrière|77330|3660|;Le Plessis-Trévise|94420|4410|258;Saint-Mandé|94160|11950|;Bourg-la-Reine|92340|7560|;Villeneuve-le-Roi|94290|3560|159;Sceaux|92330|8910|;Carrières-sous-Poissy|78955|3590|;Maurepas|78310|3260|;Chaville|92370|7290|;Joinville-le-Pont|94340|7160|;La Celle-Saint-Cloud|78170|7660|481;Mitry-Mory|77290|3260|175;Chilly-Mazarin|91380|3930|;Gentilly|94250|6540|;Chevilly-Larue|94550|4710|;Le Mée-sur-Seine|77350|2570|330;Juvisy-sur-Orge|91260|3760|;Brie-Comte-Robert|77170|3390|198;Chennevières-sur-Marne|94430|4030|;Moissy-Cramayel|77550|3110|342;Bry-sur-Marne|94360|6310|450;Éragny-sur-Oise|95610||;Bonneuil-sur-Marne|94380|4060|425;Soisy-sous-Montmorency|95230||;Osny|95520||;Limay|78520|2610|111;Jouy-le-Moutier|95280||;Garches|92380|8760|;Boissy-Saint-Léger|94470|3820|195;Viroflay|78220|7980|;Le Pré-Saint-Gervais|93310|7490|;Les Clayes-sous-Bois|78340|3990|;Marly-le-Roi|78160|5680|;Bois-d'Arcy|78390|4250|300;Orsay|91400|4180|290;Mennecy|91540|3120|142;Coulommiers|77120|2530|95;Verneuil-sur-Seine|78480|3980|250;Saint-Leu-la-Forêt|95320||;Vauréal|95490||;Domont|95330||;Le Pecq|78230|6020|;Noisiel|77186|3320|;Le Bourget|93350|3760|;Saint-Fargeau-Ponthierry|77310|2980|159;Montévrain|77144|4230|350;Fontainebleau|77300|5880|;Le Vésinet|78110|8930|;Montmagny|95360||;Lognes|77185|3600|;Saint-Brice-sous-Forêt|95350||;Verrières-le-Buisson|91370|5530|;Arnouville|95400||;Carrières-sur-Seine|78420|5580|516;Le Raincy|93340|5000|;Montesson|78360|5430|482;Saint-Maurice|94410|9630|;Valenton|94460|3360|;Persan|95340||;Morangis|91420|3750|244;Lieusaint|77127|3340|;Vaires-sur-Marne|77360|3990|;Andrésy|78570|3880|222;Fleury-Mérogis|91700|3060|;Fontenay-le-Fleury|78330|4270|;Avon|77210|3330|;Claye-Souilly|77410|3440|175;Nemours|77140|2110|;Moret-Loing-et-Orvanne|77250|2810|115;Aubergenville|78410|3190|170;Louvres|95380||;Villetaneuse|93430|2910|;L'Isle-Adam|95290||;La Queue-en-Brie|94510|3360|;Triel-sur-Seine|78510|3520|146;Saint-Pierre-du-Perray|91280|3370|;Villepreux|78450|3880|;Dammartin-en-Goële|77230|3210|142;Dugny|93440|3200|;Arpajon|91290|3140|134;Villecresnes|94440|3690|250;Provins|77160|2060|92;Saint-Germain-lès-Arpajon|91180|3130|117;Épinay-sous-Sénart|91860|2780|;Vaux-le-Pénil|77000|2910|145;Enghien-les-Bains|95880||;Dourdan|91410|2850|160;Cesson|77240|3020|;Ville-d'Avray|92410|9240|;Croissy-sur-Seine|78290|7320|;Ormesson-sur-Marne|94490|4060|257;Chanteloup-les-Vignes|78570|3290|160;Igny|91430|4770|262;Bondoufle|91070|2950|;Épinay-sur-Orge|91360|3580|368;Voisins-le-Bretonneux|78960|4690|;Fosses|95470||;Thorigny-sur-Marne|77400|3630|203;Serris|77700|4080|;Villebon-sur-Yvette|91140|4110|185;La Ferté-sous-Jouarre|77260|2330|79;Beaumont-sur-Oise|95260||;Pierrelaye|95220||;Méry-sur-Oise|95540||;Ézanville|95460||;Beauchamp|95250||;Montlhéry|91310|3490|184;Vernouillet|78540|3930|;Crosne|91560|3890|;Bures-sur-Yvette|91440|4180|;Quincy-sous-Sénart|91480|3230|;Magny-les-Hameaux|78114|3770|197;Vert-Saint-Denis|77240|3140|;Breuillet|91650|3130|125;Bougival|78380|6380|585;Magny-le-Hongre|77700|4680|;Meulan-en-Yvelines|78250|2870|;Bessancourt|95550||;Nangis|77370|2290|76;Gretz-Armainvilliers|77220|3170|179;L'Île-Saint-Denis|93450|4240|;Marcoussis|91460|3460|170;Le Plessis-Bouchard|95130||;Groslay|95410||;Vaucresson|92420|8230|;Tournan-en-Brie|77220|3350|;Paray-Vieille-Poste|91550|3820|;Ballancourt-sur-Essonne|91610|3160|301;La Ville-du-Bois|91620|3550|149;Boussy-Saint-Antoine|91800|3310|190;Vaujours|93410|3310|;Louveciennes|78430|7560|;Linas|91310|3350|147;Jouy-en-Josas|78350|5660|;Gargenville|78440|2980|314;Chessy|77700|4350|260;Saint-Rémy-lès-Chevreuse|78470|4270|202;Noisy-le-Roi|78590|5570|;Beynes|78650|3770|146;Émerainville|77184|3540|;Saint-Prix|95390||;Saint-Germain-lès-Corbeil|91250|3380|;Soisy-sur-Seine|91450|3630|;Lisses|91090|2990|110;Villemoisson-sur-Orge|91360|3800|;Courtry|77181|3340|345;Rosny-sur-Seine|78710|2380|254;Gournay-sur-Marne|93460|4150|323;Courdimanche|95800||;Nanteuil-lès-Meaux|77100|2920|169;Le Mesnil-Saint-Denis|78320|3770|;Orgeval|78630|4640|276;Écouen|95440||;Égly|91520|3250|123;Wissous|91320|4120|203;Épône|78680|3140|368;Étréchy|91580|3260|140;Bailly-Romainvilliers|77700|4210|;Lésigny|77150|3440|;Auvers-sur-Oise|95430||;Saint-Thibault-des-Vignes|77400|3930|325;Les Essarts-le-Roi|78690|3560|;Itteville|91760|3130|123;Saulx-les-Chartreux|91160|3480|244;Othis|77280|3070|304;Bouffémont|95570||;Limours|91470|3330|165;Champagne-sur-Seine|77430|2500|58;Longpont-sur-Orge|91310|3150|125;Le Perray-en-Yvelines|78610|3550|;Saint-Pathus|77178|3020|128;Magnanville|78200|2530|;Nandy|77176|3060|;Le Mesnil-le-Roi|78600|7340|;Menucourt|95180||;Maule|78580|3680|182;Bois-le-Roi|77590|4090|;Esbly|77450|3260|;Jouars-Pontchartrain|78760|3740|252;Marly-la-Ville|95670||;Fontenay-Trésigny|77610|3000|126;La Verrière|78320|3660|;Ablon-sur-Seine|94480|3870|;Villennes-sur-Seine|78670|5980|320;Saintry-sur-Seine|91250|3210|180;Saint-Arnoult-en-Yvelines|78730|3350|;Chambourcy|78240|4790|494;Villabé|91100|3210|139;Buc|78530|5710|;Mouroux|77120|2560|100;Magny-en-Vexin|95420||;Marolles-en-Hurepoix|91630|3450|177;Parmain|95620||;Rungis|94150|4960|;Le Port-Marly|78560|4830|;Viarmes|95270||;Quincy-Voisins|77860|3250|134;Lardy|91510|3070|120;Chevreuse|78460|4310|350;Ollainville|91340|3200|280;Crégy-lès-Meaux|77124|3260|;Saint-Pierre-lès-Nemours|77140|2310|84;Mériel|95630||;Mormant|77720|2680|118;Vaux-sur-Seine|78740|3000|178;Brou-sur-Chantereine|77177|4290|;Coubron|93470|3140|;L'Étang-la-Ville|78620|5860|;Trilport|77470|2950|152;Saint-Chéron|91530|3020|110;Villenoy|77124|3200|;Bonnières-sur-Seine|78270|2380|;Champagne-sur-Oise|95660||;Luzarches|95270||;Crécy-la-Chapelle|77580|3020|140;Saint-Nom-la-Bretèche|78860|6070|;Souppes-sur-Loing|77460|1890|52;Mandres-les-Roses|94520|3630|;Bruyères-sur-Oise|95820||;Ballainvilliers|91160|3840|;Le Coudray-Montceaux|91830|3080|185;Marolles-en-Brie|94440|3480|;La Ferté-Gaucher|77320|1850|;Bièvres|91570|5700|;Noiseau|94880|3780|251;La Frette-sur-Seine|95530||;Milly-la-Forêt|91490|3200|110;Le Thillay|95500||;Villiers-sur-Orge|91700|3420|;Freneuse|78840|2340|94;Nozay|91620|3410|193;Maurecourt|78780|3890|;Guignes|77390|2890|127;Saclay|91400|4710|;Angerville|91670|2240|100;Morigny-Champigny|91150|3090|;Tigery|91250|3660|61;Coignières|78310|3580|;Ecquevilly|78920|3150|126;Leuville-sur-Orge|91310|3210|130;La Norville|91290|3220|148;Forges-les-Bains|91470|3240|175;Jouarre|77640|2200|78;Pomponne|77400|4070|220;Le Châtelet-en-Brie|77820|2970|120;Le Plessis-Pâté|91220|3260|;Mareil-Marly|78750|6150|;Chanteloup-en-Brie|77600|4040|;Survilliers|95470||;Chevry-Cossigny|77173|3690|;Juziers|78820|3060|;Issou|78440|2850|;Montsoult|95560||;Presles|95590||;Montry|77450|3570|155;Boissise-le-Roi|77310|3090|311;Ferrières-en-Brie|77164|4470|;La Rochette|77000|3290|356;Mézières-sur-Seine|78970|3290|178;Ablis|78660|2730|86;Santeny|94440|3730|;Saint-Germain-sur-Morin|77860|3300|165;Boissy-sous-Saint-Yon|91790|3150|130;Pringy|77310|3120|;Saint-Mard|77230|3290|;Bruyères-le-Châtel|91680|3200|127;Chauconin-Neufmontiers|77124|2980|;Puiseux-en-France|95380||;Varennes-sur-Seine|77130|2150|100;Bailly|78870|6110|;La Ferté-Alais|91590|2820|125;Houdan|78550|3240|306;Dampmart|77400|3220|;Lizy-sur-Ourcq|77440|2450|;Marines|95640||;Servon|77170|3750|;Saint-Soupplets|77165|3060|;Rubelles|77950|2880|;Cerny|91590|2960|110;Chaumes-en-Brie|77390|2820|129;Le Mérévillois|91660|2190|70;Annet-sur-Marne|77410|3370|230;Villiers-Saint-Frédéric|78640|4000|240;Thomery|77810|2620|139;Porcheville|78440|2650|108;Buchelay|78200|3090|;Collégien|77090|4150|410;Boissy-le-Châtel|77169|2510|109;Mareuil-lès-Meaux|77100|3020|210;Briis-sous-Forges|91640|3630|119;Chaumontel|95270||;Évry-Grégy-sur-Yerre|77166|3300|125;Frépillon|95740||;Moussy-le-Neuf|77230|3350|;Neauphle-le-Château|78640|3820|;Ormoy|91540|3220|319;Verneuil-l'Étang|77390|2750|;Saint-Mammès|77670|2580|78;Longperrier|77230|3120|185;Château-Landon|77570|1560|;Boutigny-sur-Essonne|91820|2800|230;Asnières-sur-Oise|95270||;Vémars|95470||;Morainvilliers|78630|4240|250;Étiolles|91450|3510|;Saint-Vrain|91770|3160|142;Coupvray|77700|3790|422;Faremoutiers|77515|2810|;Pommeuse|77515|2790|95;Feucherolles|78810|4750|;Montlignon|95680||;Margency|95580||;Grisy-Suisnes|77166|3430|;La Grande-Paroisse|77130|2200|79;Saint-Germain-Laval|77130|2200|;Rozay-en-Brie|77540|2860|;Champcueil|91750|3000|347;Maisse|91720|2550|108;Montfort-l'Amaury|78490|4210|;Bourron-Marlotte|77780|3730|;Cannes-Écluse|77130|2090|266;Andilly|95580||;Vulaines-sur-Seine|77870|3120|;Périgny|94520|3300|125;Saint-Witz|95470||;Vert-le-Petit|91710|3130|156;Donnemarie-Dontilly|77520|1660|61;Saint-Martin-du-Tertre|95270||;Guérard|77580|2970|115;Bernes-sur-Oise|95340||;Roissy-en-France|95700||;Montigny-sur-Loing|77690|3460|85;Chartrettes|77590|3810|;Vernou-la-Celle-sur-Seine|77670|2590|88;Gometz-le-Châtel|91940|3870|;La Queue-les-Yvelines|78940|4110|172;Garancières|78890|3490|145;Champlan|91160|3120|;Hardricourt|78250|2880|104;Gambais|78950|3080|;Villejust|91140|3750|336;Héricy|77850|3260|243;Oissery|77178|2990|;Orgerus|78910|3310|153;Varennes-Jarcy|91480|3290|;Flins-sur-Seine|78410|3360|;Vert-le-Grand|91810|3370|162;Samoreau|77210|3010|;Presles-en-Brie|77220|3360|163;Fontenay-lès-Briis|91640|3190|;Bray-sur-Seine|77480|1810|;Rebais|77510|1920|;Pussay|91740|2220|80;Septeuil|78790|2960|110;Butry-sur-Oise|95430||;Belloy-en-France|95270||;Ennery|95300||;Mézy-sur-Seine|78250|3000|;Bouafle|78410|3300|;Jouy-sur-Morin|77320|1720|;Livry-sur-Seine|77000|3250|265;Fontenay-en-Parisis|95190||;Cheptainville|91630|3120|;Égreville|77620|2150|;Follainville-Dennemont|78520|2650|;La Chapelle-la-Reine|77760|2610|;Varreddes|77910|2710|124;Bonnelles|78830|2900|;Chailly-en-Bière|77930|3050|124;Bréval|78980|2420|95;Pontcarré|77135|3610|196;Villevaudé|77410|3180|193;Réau|77550|3490|;Samois-sur-Seine|77920|3190|262;Boissy-l'Aillerie|95650||;Limetz-Villez|78270|2410|90;Bouray-sur-Juine|91850|3300|;Beautheil-Saints|77120|2230|75;Villiers-sur-Morin|77580|2700|109;Perthes|77930|3150|;Couilly-Pont-aux-Dames|77860|2890|;Neuville-sur-Oise|95000||;Guerville|78930|2850|;Ozouer-le-Voulgis|77390|2770|103;Janville-sur-Juine|91510|3230|;Juilly|77230|3300|;Soignolles-en-Brie|77111|2820|;Baillet-en-France|95560||;Croissy-Beaubourg|77183|3950|;Chars|95750||;Coubert|77170|3540|;Saint-Cyr-sur-Morin|77750|1890|;Les Molières|91470|3880|;Auffargis|78610|3700|175;Vauhallan|91430|4720|;Bullion|78830|3160|;Attainville|95570||;Marles-en-Brie|77610|3030|304;Moncourt-Fromonville|77140|2500|;Saint-Augustin|77515|2670|90;Saâcy-sur-Marne|77730|2140|;Villeneuve-le-Comte|77174|3670|;Maffliers|95560||;Saint-Germain-de-la-Grange|78640|3770|;Nesles-la-Vallée|95690||;Maincy|77950|3050|;Saclas|91690|2410|60;Crouy-sur-Ourcq|77840|2480|;Longueville|77650|2160|;Noisy-sur-École|77123|2860|;Sainte-Colombe|77650|1930|60;Mareil-sur-Mauldre|78124|3530|208;Marolles-sur-Seine|77130|1930|;Congis-sur-Thérouanne|77440|1880|;Angervilliers|91470|2850|136;Villeron|95380||;Conches-sur-Gondoire|77600|3960|;Monthyon|77122|2520|;Marnes-la-Coquette|92430|7320|;Bennecourt|78270|2330|89;Bouleurs|77580|3630|136;Seine-Port|77240|3220|;La Houssaye-en-Brie|77610|2870|;Méré|78490|3510|377;Bazemont|78580|4110|;Chavenay|78450|3700|;Crespières|78121|4700|543;Mours|95260||;Saint-Rémy-l'Honoré|78690|3930|;Sonchamp|78120|3090|;Les Loges-en-Josas|78350|5240|;Corbreuse|91410|2660|;Jouy-le-Châtel|77970|2130|;Voulx|77940|1720|;Sermaise|91530|2780|105;Courpalay|77540|2230|;Chenoise-Cucharmoy|77160|1820|;Lévis-Saint-Nom|78320|3760|;Longnes|78980|2070|;Fontenay-le-Vicomte|91540|3200|162;Charny|77410|3380|133;Chalifert|77144|2980|250;Chailly-en-Brie|77120|2020|86;Le Val-Saint-Germain|91530|3100|;Bagneaux-sur-Loing|77167|1820|;Richebourg|78550|2650|;Châteaufort|78117|4980|;Leudeville|91630|3390|;D'Huison-Longueville|91590|2950|187;Chevannes|91750|2960|;Saint-Maurice-Montcouronne|91530|3040|138;Sourdun|77171|1810|;Voulangis|77580|3290|160;Gometz-la-Ville|91400|3510|;Le Pin|77181|3580|;Cernay-la-Ville|78720|3770|;Condé-Sainte-Libiaire|77450|3350|173;Gazeran|78125|3590|154;Chamigny|77260|2350|;Moussy-le-Vieux|77230|3120|;Bazainville|78550|3110|145;Lumigny-Nesles-Ormeaux|77540|2750|;Saint-Léger-en-Yvelines|78610|3320|142;Vaugrigneuse|91640|3140|140;Baulne|91590|3040|;Dammartin-en-Serve|78111|2660|108;Thoiry|78770|3220|;Grez-sur-Loing|77880|2830|90;Liverdy-en-Brie|77220|3170|149;La Chapelle-Gauthier|77720|2610|96;Mortcerf|77163|2920|;Les Alluets-le-Roi|78580|3270|166;Us|95450||;Penchard|77124|2710|122;Fublaines|77470|2950|;Villeneuve-Saint-Denis|77174|3420|;Moisenay|77950|2670|;Montigny-Lencoup|77520|2540|;Choisy-en-Brie|77320|1900|53;Germigny-l'Évêque|77910|3010|;Neufmoutiers-en-Brie|77610|3250|185;Solers|77111|3280|;Changis-sur-Marne|77660|2670|;Chapet|78130|3400|;Boissy-le-Cutté|91590|2910|;Roinville|91410|2750|;Favières|77220|3420|155;Seraincourt|95450||;Les Bréviaires|78610|3340|205;Gouaix|77114|1780|;Saint-Jean-les-Deux-Jumeaux|77660|2560|;Galluis|78490|3790|;Cormeilles-en-Vexin|95830||;Moigny-sur-École|91490|3010|;Médan|78670|4810|;Breux-Jouy|91650|3020|;Dammartin-sur-Tigeaux|77163|3150|;Condé-sur-Vesgre|78113|3110|95;Lorrez-le-Bocage-Préaux|77710|1880|47;Barbizon|77630|4140|;Moisselles|95570||;Cély|77930|3330|;Touquin|77131|2450|;Férolles-Attilly|77150|3410|;La Celle-sur-Morin|77515|2180|;Auvers-Saint-Georges|91580|3180|;Messy|77410|3430|165;Tacoignières|78910|3000|;Valmondois|95760||;Boissise-la-Bertrand|77350|3370|;Les Granges-le-Roi|91410|3290|;Achères-la-Forêt|77760|2520|;Coutevroult|77580|3460|;Brières-les-Scellés|91150|2630|271;Bonneuil-en-France|95500||;Aulnay-sur-Mauldre|78126|3200|;Sammeron|77260|2330|;Gouvernes|77400|3430|;Armentières-en-Brie|77440|3200|;Soisy-sur-École|91840|2980|;Toussus-le-Noble|78117|4770|;Voisenon|77950|3120|;Salins|77148|2250|;Villiers-Saint-Georges|77560|1820|;Mary-sur-Marne|77440|2290|;Guermantes|77600|3910|;Villeneuve-sur-Bellot|77510|1580|;Nézel|78410|2970|;Vigny|95450||;Oinville-sur-Montcient|78250|3260|;Beaumont-du-Gâtinais|77890|1330|49;Isles-lès-Villenoy|77450|3420|130;Saint-Sauveur-sur-École|77930|3750|;Sivry-Courtry|77115|2680|;Doue|77510|2010|;Fontenailles|77370|2590|;Ableiges|95450||;Sagy|95450||;Chamarande|91730|2530|;Maulette|78550|3480|131;Guernes|78520|2730|;Aigremont|78240|4860|322;Chambry|77910|2770|105;Ussy-sur-Marne|77260|1950|;Villemaréchal|77710|2230|;Chalo-Saint-Mars|91780|2460|;Avrainville|91630|3250|;Châtenay-sur-Seine|77126|1880|;Seugy|95270||;Oncy-sur-École|91490|2970|135;Rouvres|77230|3490|;Luzancy|77138|1710|60;Villiers-le-Bâcle|91190|4270|;Fontaine-le-Port|77590|2670|;Thiverval-Grignon|78850|4230|;Arbonne-la-Forêt|77630|3610|;Auteuil|78770|3700|;Chevru|77320|1900|;Grandpuits-Bailly-Carrois|77720|2260|;Dampierre-en-Yvelines|78720|4120|;Valence-en-Brie|77830|2020|;Hermeray|78125|2960|;Bernay-Vilbert|77540|2600|;Saint-Hilarion|78125|2710|;Chauffry|77169|2330|;Le Mesnil-Amelot|77990|2790|;Darvault|77140|2270|84;Saint-Rémy-de-la-Vanne|77320|1890|;Orcemont|78125|3130|;Aubepierre-Ozouer-le-Repos|77720|2600|;Pamfou|77830|2710|;Saint-Cyr-sous-Dourdan|91410|3250|138;Yèbles|77390|3060|;Vayres-sur-Essonne|91820|3070|;Maisoncelles-en-Brie|77580|2460|;Raizeux|78125|2740|;Saint-Denis-lès-Rebais|77510|2130|68;Tessancourt-sur-Aubette|78250|3190|;Saint-Clair-sur-Epte|95770||;Poigny-la-Forêt|78125|3790|;Bray-et-Lû|95710||;Arnouville-lès-Mantes|78790|2710|;Saulx-Marchais|78650|3620|;Fontenay-Saint-Père|78440|2310|;Fresnes-sur-Marne|77410|3630|220;Ormoy-la-Rivière|91150|2690|100;Saint-Martin-la-Garenne|78520|2650|;Neauphle-le-Vieux|78640|3350|;Bombon|77720|2620|85;Esmans|77940|2080|;Le Tremblay-sur-Mauldre|78490|3250|;Orvilliers|78910|3260|;Guibeville|91630|3380|;Saint-Yon|91650|3140|;Citry|77730|2160|;Le Mesnil-Aubry|95720||;La Chapelle-Rablais|77370|2380|;Les Mesnuls|78490|4190|;Rochefort-en-Yvelines|78730|2630|;Blaru|78270|2430|;Ronquerolles|95340||;Sainte-Mesme|78730|2130|;Guigneville-sur-Essonne|91590|2550|;Nointel|95590||;Grosrouvre|78490|4660|;Moisson|78840|2400|;Boisemont|95000||;Beton-Bazoches|77320|1850|;Villiers-le-Mahieu|78770|3410|;Saint-Siméon|77169|1820|;Ury|77760|2740|;Maison-Rouge|77370|1930|;Bazoches-lès-Bray|77118|1650|;Saint-Gervais|95420||;May-en-Multien|77145|2370|82;Orphin|78125|2960|;Boutigny|77470|2740|;Vaudoy-en-Brie|77141|2280|;Émancé|78125|3410|;Neauphlette|78980|2220|;Avernes|95450||;Dannemois|91490|2950|153;Les Ormes-sur-Voulzie|77134|1690|58;Villiers-Adam|95840||;Aincourt|95510||;Vert|78930|2690|;Soisy-Bouy|77650|1780|;Clairefontaine-en-Yvelines|78120|3610|;Pécy|77970|2170|;Vétheuil|95510||;Saint-Loup-de-Naud|77650|1770|;La Genevraye|77690|2390|;La Celle-les-Bordes|78720|3160|;Saint-Ouen-en-Brie|77720|2610|;Rampillon|77370|2090|;Misy-sur-Yonne|77130|1760|;Amillis|77120|2170|;Poligny|77167|2150|;Chaintreaux|77460|1890|;Saint-Brice|77160|2010|;Dormelles|77130|2100|;Machault|77133|2690|;Ville-Saint-Jacques|77130|2140|;Champeaux|77720|2580|;Prunay-en-Yvelines|78660|2760|;Guillerval|91690|2770|;Gressy|77410|3400|;Étrépilly|77139|2720|;Lainville-en-Vexin|78440|2590|;Marcq|78770|3490|;Reuil-en-Brie|77260|2530|;Poincy|77470|2870|;Jambville|78440|2670|;Buthiers|77760|2330|;Sablonnières|77510|1730|;Thieux|77230|2750|;Villaines-sous-Bois|95570||;Bellot|77510|1780|;La Brosse-Montceaux|77940|2220|;Piscop|95350||;Villeconin|91580|3310|;Breuil-Bois-Robert|78930|2680|;Blandy|77115|2470|;Lesches|77450|3260|170;Isles-les-Meldeuses|77440|2500|;Gironville-sur-Essonne|91720|2340|;Villemer|77250|1570|;Soindres|78200|2770|;Nerville-la-Forêt|95590||;Compans|77290|2720|;Évecquemont|78740|3130|;Chalmaison|77650|1770|;Précy-sur-Marne|77410|2980|;La Boissière-École|78125|3120|;Saint-Martin-en-Bière|77630|3230|;Saint-Germain-Laxis|77950|2890|;Notre-Dame-de-la-Mer|78270|2400|63;Gastins|77370|2640|;Champdeuil|77390|3240|;Bougligny|77570|2080|;Bussy-Saint-Martin|77600|3540|310;Mareil-en-France|95850||;Le Vaudoué|77123|3240|;Larchant|77760|2390|;Mondeville|91590|3090|;Villecerf|77250|2210|;Bazoches-sur-Guyonne|78490|3890|;Nucourt|95420||;Montgé-en-Goële|77230|2540|;Châtres|77610|3140|177;Villeroy|77410|3110|;Grisy-les-Plâtres|95810||;Écharcon|91540|2730|;Sainte-Aulde|77260|2010|;Villiers-sous-Grez|77760|2580|;Nanteau-sur-Lunain|77710|2020|;Perdreauville|78200|2560|;Trilbardou|77450|2810|;Ponthévrard|78730|3040|;Saint-Martin-de-Bréthencourt|78660|2010|;Boissy-le-Sec|91870|2110|;Gaillon-sur-Montcient|78250|2760|;Mousseaux-sur-Seine|78270|1970|;Vendrest|77440|2250|;Mousseaux-lès-Bray|77480|1620|;La Croix-en-Brie|77370|1980|;Méry-sur-Marne|77730|2330|;Adainville|78113|3140|;Auffreville-Brasseuil|78930|2480|;Montceaux-lès-Meaux|77470|2860|;Bouville|91880|2390|105;Bannost-Villegagnon|77970|1680|;Autouillet|78770|3600|;La Villeneuve-en-Chevrie|78270|2470|;Saint-Martin-des-Champs|77320|1840|;Saint-Aubin|91190|3710|;Marchémoret|77230|3320|;Mittainville|78125|2830|;Santeuil|95640||;Orly-sur-Morin|77750|1600|;Fouju|77390|2740|;Janvry|91640|3120|;Fleury-en-Bière|77930|3500|;Brueil-en-Vexin|78440|2410|;Vieille-Église-en-Yvelines|78125|3690|;Jossigny|77600|3580|210;Quiers|77720|1830|;Goussonville|78930|3160|;Thoury-Férottes|77940|1960|;Hermé|77114|1600|;Jablines|77450|3140|;Guitrancourt|78440|3190|;Commeny|95450||;Chalautre-la-Grande|77171|1530|;Labbeville|95690||;Lommoye|78270|2300|;Signy-Signets|77640|2440|;Jumeauville|78580|2940|;Mérobert|91780|2060|;Recloses|77760|2570|;Chaussy|95710||;Les Écrennes|77820|2930|;Féricy|77133|2300|;Limoges-Fourches|77550|3150|;Vallangoujard|95810||;Boullay-les-Troux|91470|3420|;Verdelot|77510|1320|;Cocherel|77440|2040|;Iverny|77165|2210|;Arronville|95810||;Savins|77650|1560|;Valpuiseaux|91720|3880|;Sept-Sorts|77260||;Boissy-sans-Avoir|78490|3620|;Boissy-Mauvoisin|78200|2520|;Gommecourt|78270|2040|;Crisenoy|77390|2730|;Villeneuve-les-Bordes|77154|2030|;La Falaise|78410|3140|;Épiais-Rhus|95810||;Puiseux-Pontoise|95650||;Bussières|77750|1680|;Le Plessis-Feu-Aussoux|77540|2870|;Boinville-le-Gaillard|78660|2500|;Villeneuve-sous-Dammartin|77230|2410|;Villeneuve-sur-Auvers|91580|2500|;Courtomer|77390|2730|;Nonville|77140|2510|;Montainville|78124|3190|;Haravilliers|95640||;Flagy|77940|1870|;Hérouville-en-Vexin|95300||;Morsang-sur-Seine|91250||;Videlles|91890|2560|;Noisy-Rudignon|77940|1940|;Voinsles|77540|2390|;Pecqueuse|91470|3350|155;Saint-Mesmes|77410|3010|167;Coulombs-en-Valois|77840|1510|;Fontaine-Fourches|77480|1680|;Flexanville|78910|2670|;Léchelle|77171|1630|;Goupillières|78770|3110|;Everly|77157|1910|;Nainville-les-Roches|91750|3050|;Condécourt|95450||;Courson-Monteloup|91680|3120|;Gurcy-le-Châtel|77520|1950|;Échouboulains|77830|2200|;Drocourt|78440|3180|;Jouy-Mauvoisin|78200|2870|;Andelu|78770|2820|;Boissy-la-Rivière|91690|2300|;Saint-Germain-sous-Doue|77169|1260|;Noisy-sur-Oise|95270||;Jutigny|77650|1640|;Blennes|77940|1660|;Coulommes|77580|3190|155;Chalautre-la-Petite|77160|1390|;Choisel|78460|4390|;Béhoust|78910||;Gressey|78550||;Tilly|78790|2430|;Saint-Ouen-sur-Morin|77750|1450|;Buno-Bonnevaux|91720|3210|;Bransles|77620|1810|;Frémécourt|95830||;Faÿ-lès-Nemours|77167|1890|62;Villette|78930|2690|;Saint-Fiacre|77470|2220|;Genainville|95420||;Génicourt|95650||;Vimpelles|77520|1580|;Senlisse|78720|3510|;Frémainville|95450||;Bourdonné|78113|2970|;Meilleray|77320|1380|;Le Perchay|95450||;Souzy-la-Briche|91580|2480|;Poigny|77160|1890|;Montereau-sur-le-Jard|77950|2640|;Chevry-en-Sereine|77710|2040|;Villers-en-Arthies|95510||;Rouilly|77160|2190|;Longvilliers|78730|2860|;Longuesse|95450||;Mauperthuis|77120|2660|;La Forêt-le-Roi|91410|3070|;Louan-Villegruis-Fontaine|77560|1450|;Marcilly|77139|2620|;Paley|77710|1860|;Aufferville|77570|1750|;Pierre-Levée|77580|1810|119;Cuisy|77165|2090|;Cléry-en-Vexin|95420||;Saint-Hilliers|77160|1430|;Bellefontaine|95270||;Saint-Jean-de-Beauregard|91940|3330|;Saint-Cyr-la-Rivière|91690|1990|;Lescherolles|77320|1710|;Carnetin|77400|3280|;Fontenay-Mauvoisin|78200||;Les Chapelles-Bourbon|77610|3090|;La Trétoire|77510|1590|;Treuzy-Levelay|77710|1930|;Mons-en-Montois|77520|1750|;Saint-Escobille|91410|1880|;Villenauxe-la-Petite|77480|1490|;Villebéon|77710|2040|;Remauville|77710|1380|;Saint-Illiers-le-Bois|78980|2440|;Saint-Lambert|78470||;Forges|77130|1930|;Chaufour-lès-Bonnières|78270|2000|;Cravent|78270|2160|;Boissettes|77350|3000|;Crèvecœur-en-Brie|77610|3300|;Saint-Forget|78720|2980|;Béthemont-la-Forêt|95840||;Bréançon|95640||;Boutervilliers|91150|2260|100;Tigeaux|77163|2850|;Mareil-le-Guyon|78490|3110|;Hargeville|78790|2210|;Nanteau-sur-Essonne|77760|2850|;Courgent|78790||;Osmoy|78910|3200|120;Laval-en-Brie|77148|1960|;Marolles-en-Brie|77120|2390|;Pézarches|77131|2410|;Prunay-le-Temple|78910|2310|;Nanteuil-sur-Marne|77730|1450|;Sancy|77580|2880|;Saint-Hilaire|91780||;La Chapelle-Moutils|77320|1230|;La Roche-Guyon|95780||;Douy-la-Ramée|77139||;Vicq|78490||;Livilliers|95300||;Ambleville|95420||;Barcy|77910|2270|;Rosay|78790|2980|;Mauchamps|91730|3070|283;Villemareuil|77470|2370|;Richarville|91410|2490|100;Beauchery-Saint-Martin|77560|1510|;Bréau|77720|2220|;Méricourt|78270|2650|;Vinantes|77230|2000|;Mondreville|78980||;Vienne-en-Arthies|95510||;Ocquerre|77440|2210|;Montreuil-sur-Epte|95770||;Monnerville|91930|1520|;Bassevelle|77750||;Berville|95810||;Civry-la-Forêt|78910||;Chalou-Moulineux|91740|2260|;Sognolles-en-Montois|77520|1710|;Noyen-sur-Seine|77114|1340|;Boigneville|91720|1920|;Authon-la-Plaine|91410|2660|;Saint-Germain-sur-École|77930|3140|;Châteaubleau|77370|1590|;Aulnoy|77120|2750|;Argentières|77390|2630|;Montgeroult|95650||;Balloy|77118|1620|57;Champmotteux|91150|2240|76;Sailly|78440|2900|;Mouy-sur-Seine|77480|1300|;La Haute-Maison|77580|2710|;Lissy|77550|2660|;Boulancourt|77760|2430|;Saint-Sauveur-lès-Bray|77480|2670|;Saint-Illiers-la-Ville|78980||;Amponville|77760|2620|;Courances|91490|2730|;La Madeleine-sur-Loing|77570||;Frouville|95690||;Rolleboise|78270|1700|;Melz-sur-Seine|77171|1310|;Jaulnes|77480|1820|;Mauregard|77990||;Tancrou|77440|1940|;Sancy-lès-Provins|77320|1450|;Andrezel|77390|2790|;Saint-Barthélemy|77320|1210|;Dhuisy|77440|1770|;Mondreville|77570|1520|;Saint-Méry|77720|2290|;Tousson|77123|2160|;Auvernaux|91830|3430|;Buhy|95770||;Omerville|95420||;Wy-dit-Joli-Village|95420||;Orsonville|78660|2620|;Plessis-Saint-Benoist|91410|2210|;Prunay-sur-Essonne|91720|1840|;Boitron|77750|1550|;Jaignes|77440|1780|;Vignely|77450|3480|;Montalet-le-Bois|78440||;Abbéville-la-Rivière|91150|2120|;Montceaux-lès-Provins|77151|1160|;La Chapelle-en-Vexin|95420||;Puisieux|77139|2520|;Bouqueval|95720||;Égligny|77126|1710|;Courcelles-sur-Viosne|95650||;Dagny|77320|1570|;Le Plessis-Placy|77440||;Chartronges|77320||;Saint-Martin-des-Champs|78790|3070|;Nantouillet|77230|2410|;Boissets|78910|2530|147;Grandchamp|78113|2560|;Thénisy|77520|1390|;Chauvry|95560||;Montigny-le-Guesdier|77480||;Voulton|77560||;Davron|78810||;Milon-la-Chapelle|78470||;Torfou|91730|2880|;Haute-Isle|95780||;Charmentray|77410|2990|;Chenou|77570||;Le Plessis-l'Évêque|77165|2640|;Boinville-en-Mantois|78930|2630|;Théméricourt|95450||;Chennevières-lès-Louvres|95380||;Allainville|78660|2010|;Villiers-sur-Seine|77114|1530|;Hédouville|95690||;Vaucourtois|77580|2510|;Courdimanche-sur-Essonne|91720|2500|;Montchauvet|78790||;Boissy-aux-Cailles|77760|2500|;Cerneux|77320||;Villuis|77480|1440|;Millemont|78940||;Saint-Sulpice-de-Favières|91910|2510|;Vincy-Manœuvre|77139|2030|;Jagny-sous-Bois|95850||;Guercheville|77760|2080|;Augers-en-Brie|77560|1840|;Saint-Just-en-Brie|77370|1500|;Arthies|95420||;Brignancourt|95640||;Le Plessis-aux-Bois|77165||;Puiselet-le-Marais|91150|2150|;Coutençon|77154|1680|;Montolivet|77320||;Saint-Martin-du-Boschet|77320|1470|;Fontains|77370|1910|;Hondevilliers|77510|1880|;Chevrainvilliers|77760|2530|;Hautefeuille|77515||;Courtacon|77560|1690|;Clos-Fontaine|77370||;Saint-Léger|77510||;Saint-Mars-Vieux-Maisons|77320||;Boinvilliers|78200|2250|247;Ormesson|77167|2150|;Villiers-en-Bière|77190||;Neuilly-en-Vexin|95640||;La Chapelle-Saint-Sulpice|77160||;Forfry|77165|2580|;Marolles-en-Beauce|91150|2430|;Meigneux|77520|1780|;Saint-Cyr-en-Arthies|95510||;Montdauphin|77320||;Trocy-en-Multien|77440|1660|;Fromont|77760||;Luisetaines|77520|1380|;Vaux-sur-Lunain|77710||;Dannemarie|78550||;Herbeville|78580||;Châtillon-la-Borde|77820|2570|;Hodent|95420||;Le Bellay-en-Vexin|95750||;Courcelles-en-Bassée|77126||;Bezalles|77970|1120|;Paray-Douaville|78660||;Ménerville|78200||;Cessoy-en-Montois|77520|1410|;Montmachoux|77940|1590|;Amenucourt|95510||;Congerville-Thionville|91740|2170|;La Tombe|77130|1420|;Maudétour-en-Vexin|95420||;Le Heaulme|95640||;Champcenest|77560|2140|;Villiers-le-Sec|95720||;Germigny-sous-Coulombs|77840|1630|;Vanvillé|77370|2290|;Lassy|95270||;Diant|77940|1680|;Vieux-Champagne|77370||;Fontaine-la-Rivière|91690||;La Chapelle-Iger|77540|2540|;Giremoutiers|77120||;Paroy|77520||;Beauvoir|77390||;Courquetaine|77390||;Flacourt|78200||;Mespuits|91150|1930|;Lizines|77650|1910|;Frétoy|77320||;Leudon-en-Brie|77320||;Gironville|77890|900|;Flins-Neuve-Église|78790||;Guiry-en-Vexin|95450||;Ichy|77890|1800|;Favrieux|78200||;La Hauteville|78113||;Gravon|77118||;Épiais-lès-Louvres|95380||;Châtenoy|77167||;Barbey|77130|2480|;Les Marêts|77560|1960|;Le Plessis-Luzarches|95270||;Courchamp|77560||;Burcy|77760|2040|;La Forêt-Sainte-Croix|91150|1910|;Banthelu|95420||;Arville|77890||;Gesvres-le-Chapitre|77165||;Maisoncelles-en-Gâtinais|77570||;Orveau|91590||;Mortery|77160||;Le Tertre-Saint-Denis|78980||;Chérence|95510||;Brouy|91150||;Chauffour-lès-Étréchy|91580||;Boisdon|77970||;Mulcent|78790||;Obsonville|77890||;Rumont|77760||;Garentreville|77890||;Grisy-sur-Seine|77480|1790|;Rennemoulin|78590||;Arrancourt|91690||;Baby|77480||;Roinvilliers|91150||;Blandy|91150||;Moussy|95640||;Rupéreux|77560||;Vaudherland|95500||;Le Plessis-Gassot|95720||;Bois-Herpin|91150||;Vulaines-lès-Provins|77160||;Chatignonville|91410||;Châtenay-en-France|95190||;Sigy|77520||;Gambaiseuil|78490||;Menouville|95810||;Épinay-Champlâtreux|95270||;Theuville|95810||;Passy-sur-Seine|77480||;Le Tartre-Gaudran|78113||;Montenils|77320||;Charmont|95420||".split(";").map(x=>{const[n,cp,p,l]=x.split("|");return{n,cp,k:norm(n),pm2:+p||0,lot:+l||0}});
+function suggest(){
+  const inp=$("f_commune"),box=$("sug");
+  const show=()=>{const q=norm(inp.value);if(q.length<2||COMMUNES.some(c=>c.k===q&&inp.dataset.ok)){box.innerHTML="";return}
+    const a=COMMUNES.filter(c=>c.k.startsWith(q)),b=a.length<6?COMMUNES.filter(c=>!c.k.startsWith(q)&&(c.k.includes(q)||c.cp.startsWith(inp.value.trim()))):[];
+    box.innerHTML=a.concat(b).slice(0,6).map(c=>`<button type="button" class="sugb" data-n="${esc(c.n)}" data-cp="${c.cp}">${esc(c.n)} <small>${c.cp}</small></button>`).join("")};
+  inp.addEventListener("input",()=>{delete inp.dataset.ok;S.cp="";delete S.pm2;delete S.lot;show()});
+  box.addEventListener("click",e=>{const b=e.target.closest(".sugb");if(!b)return;inp.value=b.dataset.n;inp.dataset.ok=1;S.cp=b.dataset.cp;delete S.pm2;delete S.lot;box.innerHTML="";const n=$("f_adresse");if(n)n.focus()});
+}
+function restart(){S={};hist=[];blocOnly=false;stopInfo=null;K=new Set();FID=null;ficheInfo=null;isEx=false;hist=[-1];drawAgent()}
+/* ---------- Lien d'annonce et reprise de fiche ---------- */
+const MSG={site_non_lu:"Ce site n'est pas encore lu automatiquement. Saisissez le bien à la main, c'est rapide.",annonce_illisible:"Impossible de lire cette annonce. Saisissez le bien à la main, c'est rapide.",lien_invalide:"Ce lien n'est pas valide.",erreur:"Le service ne répond pas. Réessayez, ou saisissez le bien à la main."};
+function drawLien(msg){
+  idx="lien";chrome();
+  view.innerHTML=`<h1>Collez le lien de votre annonce</h1><p class="lede">Nous lisons l'annonce pour vous. Il ne restera que quelques questions.</p>
+  <form id="fl" class="stack" novalidate><label for="lien">Lien de l'annonce<input id="lien" type="url" inputmode="url" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="https://…"></label>
+  <div class="err" id="err">${esc(msg||"")}</div><button class="cta" type="submit" id="go">Analyser l'annonce</button></form>
+  <button class="cta ghost" type="button" data-act="manuel">Je n'ai pas de lien, je saisis à la main</button>`;
+  $("fl").addEventListener("submit",async e=>{e.preventDefault();const u=$("lien").value.trim();
+    if(!/^https?:\/\//i.test(u)){$("err").textContent="Collez l'adresse complète de l'annonce, qui commence par https://";return}
+    const b=$("go");b.disabled=true;b.textContent="Lecture de l'annonce…";
+    try{const r=await api({url:u});if(r.ok&&r.fiche){applyFiche(r.fiche,r);return afterFiche()}drawLien(MSG[r.raison]||MSG.erreur)}catch(e){drawLien(MSG.erreur)}});
+}
+function applyFiche(f,r){
+  FID=f.id;ficheInfo=f;K=new Set();
+  if(["maison","immeuble","appart"].includes(f.type)){S.type=f.type;K.add("type")}
+  if(f.commune){S.commune=f.commune;S.cp=f.cp||"";K.add("lieu")}
+  if(f.surface)S.surface=+f.surface;if(f.terrain!=null)S.terrain=+f.terrain;if(f.prix)S.prix=+f.prix;
+  if(f.surface&&f.prix&&f.terrain!=null&&f.commune)K.add("bien");
+  if(!(r&&r.anciennete_inconnue)&&f.mois_min!=null&&f.mois_min>=4&&f.mois_min<240){S.mois=f.mois_min>=12?">12":f.mois_min>=6?"6-12":"4-6";K.add("mois")}
+  if(f.nb_baisses>=1){S.baisses=f.nb_baisses>=2?"2":"1";K.add("baisses")}
+  S.dpe=!f.dpe?"?":"ABCD".includes(f.dpe)?"D":f.dpe==="E"?"E":"F";
+  const d=dv();if(d.pm2){S.pm2=d.pm2;S.lot=d.lot?d.lot*1000:"";K.add("marche")}
+  const a=f.deja_repondu||{};for(const k of["proprio","delai","permis","position","acces","entrees"])if(a[k]&&S[k]===undefined){S[k]=a[k];K.add(k)}
+}
+function afterFiche(){
+  hist.push("lien");
+  for(const st of STEPS)if(K.has(st.id)&&st.stop){const s=st.stop(S);if(s){stopInfo=s;idx="stop";return drawStop()}}
+  drawRecap();
+}
+function drawRecap(){
+  idx="recap";chrome();const f=ficheInfo,L=[];
+  const T={maison:"Maison",immeuble:"Immeuble",appart:"Appartement"};
+  if(f.commune)L.push(`${T[f.type]||"Bien"} à ${f.commune}${f.cp?" ("+f.cp+")":""}`);else if(T[f.type])L.push(T[f.type]);
+  if(f.surface)L.push(`${f.surface} m² habitables`);
+  if(f.terrain!=null)L.push(+f.terrain?`${f.terrain} m² de terrain`:"Pas de terrain");
+  if(f.prix)L.push(`Prix affiché : ${Number(f.prix).toLocaleString("fr-FR")} €`);
+  if(f.dpe)L.push(`DPE ${f.dpe}`);
+  if(K.has("mois"))L.push(`En ligne depuis au moins ${f.mois_min} mois`);
+  if(K.has("baisses"))L.push(f.nb_baisses>=2?"Plusieurs baisses de prix":"Une baisse de prix");
+  if(K.has("marche"))L.push(`Prix du secteur : ventes réelles 2023-2025 à ${S.commune}`);
+  const n=STEPS.filter(visible).length;
+  view.innerHTML=`<span class="chip go">${f.connu?"Bien déjà suivi par PLU Value":"Annonce lue"}</span>
+  <h1>${n?`Il nous manque ${n} information${n>1?"s":""} pour finir l'évaluation.`:"Nous avons tout ce qu'il faut."}</h1>
+  <div class="card"><h2>Ce que nous savons déjà</h2><ul class="why">${L.map(t=>`<li class="ok"><b>✓</b><span>${esc(t)}</span></li>`).join("")}</ul></div>
+  <button class="cta" type="button" data-act="suite">Continuer</button>
+  <button class="cta ghost" type="button" data-act="corriger">Corriger ces informations</button>`;
+}
+
+function intro(){
+  chrome();
+  view.innerHTML=`<h1>Faire étudier un bien</h1>
+  <p class="lede">Dites-nous qui vous êtes : le parcours s'adapte. L'étude préalable est gratuite et ne vous engage à rien.</p>
+  <div class="stack">
+    <button type="button" class="opt" data-act="agent">Agent immobilier<small>Diagnostic de votre mandat en deux minutes</small></button>
+    <a class="opt" href="/deposer-un-bien?profil=proprietaire">Propriétaire<small>Maison trop grande, grand terrain, vente qui n'avance pas</small></a>
+    <a class="opt" href="/deposer-un-bien?profil=heritier">Héritier ou famille<small>Succession, indivision, maison de famille</small></a>
+    <a class="opt" href="/deposer-un-bien?profil=notaire">Notaire<small>Transmission confidentielle d'un dossier</small></a>
+    <a class="opt" href="/deposer-un-bien?profil=autre">Autre professionnel</a>
+  </div>`;
+}
+function drawAgent(){
+  idx="agent";chrome();
+  view.innerHTML=`<h1>Votre mandat est bloqué ? Voyons s'il y a un levier.</h1>
+  <p class="lede">Deux minutes, une question par écran. Vous saurez si le bien peut se vendre plus cher en plusieurs lots, et pourquoi.</p>
+  <div class="card"><p><strong>La plupart des biens ressortent sans levier.</strong> Dans ce cas, vous repartez avec la valeur réaliste du bien vendu en un seul lot, pour reparler prix avec votre vendeur.</p>
+  <p class="lede">Gratuit. Votre mandat et votre client restent les vôtres.</p></div>
+  <button class="cta" type="button" data-act="start">Commencer</button>
+  <button class="cta ghost" type="button" data-act="exemple">Voir un exemple de résultat</button>`;
+}
+function drawStop(){
+  chrome();
+  view.innerHTML=`<span class="chip no">Pas de levier PLU Value</span><h1>${esc(stopInfo.t)}</h1><p class="lede">${esc(stopInfo.fix)}</p>
+  <button class="cta" type="button" data-act="bloc">Obtenir quand même la valeur réaliste du bien</button>
+  <button class="cta ghost" type="button" data-act="restart">Tester un autre bien</button>`;
+}
+
+/* ---------- Résultat ---------- */
+function reasons(r,lever){
+  const L=[],add=(k,t)=>L.push([k,t]);
+  if(stopInfo)add("no",stopInfo.t);
+  if(lever){
+    add("ok",`Levier identifié : ${r.best.nom}.`);
+    if(S.mois===">12"||S.mois==="6-12"||+S.baisses>=1)add("ok","Bien en vente depuis longtemps ou déjà baissé : le vendeur est prêt à entendre une autre solution.");
+    if(S.proprio==="seul")add("ok","Un seul décideur.");
+    if(S.ref==="oui")add("ok","Vendeur d'accord pour repartir de la valeur réaliste.");
+  }else if(!stopInfo||blocOnly){
+    if(S.ref==="non")add("no","Le vendeur tient à son prix : sans accord sur le prix de référence, pas d'opération possible.");
+    else if(!blocOnly)r.raisons.forEach(t=>add("no",t));
+  }
+  if(lever){
+    add("chk","Règles d'urbanisme de la parcelle : vérifiées par PLU Value avant tout rendez-vous.");
+    if(DIVISER.includes(norm(S.commune)))add("chk","Commune où la création de logements peut exiger une autorisation préalable.");
+    if(S.acces==="averifier")add("chk","Accès au terrain libre à confirmer sur place.");
+    if(S.proprio==="nsp")add("chk","Nombre de propriétaires et accord de chacun.");
+    if(S.delai==="nsp")add("chk","Délai réel du vendeur.");
+    if(S.permis==="nsp")add("chk","Aucune demande d'urbanisme déjà déposée.");
+    if(S.ref==="proposer")add("chk","Accord du vendeur sur le prix de référence.");
+    if(!+S.lot&&r.nLots)add("chk","Prix d'un terrain à bâtir estimé par défaut.");
+  }
+  return L;
+}
+const SYM={ok:"✓",no:"✕",chk:"?"};
+function ficheTexte(r){
+  return `Première estimation en valorisation – ${S.commune}
+Maison ou immeuble de ${S.surface} m²${+S.terrain?` sur ${S.terrain} m² de terrain`:""}
+
+1. Vendu en un seul lot aujourd'hui : entre ${rng(r.v1,.07)}
+Les grandes surfaces se vendent moins cher au m² : peu d'acheteurs peuvent les financer.
+
+2. Vendu en plusieurs lots : entre ${eur(r.best.v2*.88)} et ${eur(r.best.v2*.98)}
+Sous réserve de l'accord de la mairie et de la vérification sur les ventes réelles du secteur.
+
+Comment ça marche
+- Un prix de référence est fixé avec vous, à partir de la valeur en un seul lot.
+- PLU Value avance tous les frais : études, géomètre, démarches en mairie.
+- Vous restez propriétaire jusqu'aux ventes chez votre notaire.
+- PLU Value ne gagne rien si les lots se vendent au prix de référence. Elle se rémunère sur une part de ce qui est vendu au-dessus.
+
+Prochaine étape : étude complète gratuite, puis rendez-vous avec votre agent.
+
+Avis indicatif établi à partir des informations transmises. Ce n'est ni une expertise, ni une offre d'achat, ni un engagement de prix.
+PLU Value – contact@plu-value.fr – 07 56 98 67 00`;
+}
+function dossierTexte(r,lever){
+  return `Diagnostic de mandat PLU Value – ${lever?"LEVIER POSSIBLE":"pas de levier"}
+Bien : ${S.type||""}, ${S.adresse||""} ${S.cp||""} ${S.commune||""} – ${S.surface} m² hab., terrain ${S.terrain||"?"} m², prix affiché ${S.prix||"?"} €
+Mandat : ${MOIS[S.mois]||"?"}, baisses ${S.baisses??"?"}, propriétaires : ${S.proprio||"?"}, délai : ${S.delai||"?"}, permis déposé : ${S.permis||"?"}
+Terrain : maison ${S.position||"?"}, accès ${S.acces||"?"}, entrées ${S.entrees||"?"}
+Marché : ${S.pm2} €/m², terrain à bâtir ${S.lot||"non renseigné"} €, état ${S.travaux}, DPE ${S.dpe}
+Valeur en un seul lot : ${rng(r.v1,.07)}${lever?`\nPiste : ${r.best.nom} – total des lots ≈ ${eur(r.best.v2)} – accord prix de référence : ${S.ref}`:""}
+Fiche : ${FID||"nouvelle"}\nAgent : ${$("ag")?$("ag").value:""} – ${$("tel")?$("tel").value:""}`;
+}
+let last=null;
+function verdict(again){
+  if(!again)hist.push(idx);idx="verdict";chrome();
+  const r=compute();if(!r.ok)return restart();
+  const lever=!stopInfo&&r.lever&&S.ref!=="non";last={r,lever};
+  const why=reasons(r,lever);
+  const ecart=+S.prix>0?Math.round((+S.prix/r.v1-1)*100):null;
+  let h=`<span class="chip ${lever?"go":"no"}">${lever?"Levier possible":"Pas de levier PLU Value"}</span>
+  <h1>${lever?"Ce bien peut se vendre plus cher en plusieurs lots.":"Sur ce bien, le levier est le prix."}</h1>
+  <div class="card"><h2>Pourquoi</h2><ul class="why">${why.map(([k,t])=>`<li class="${k}"><b>${SYM[k]}</b><span>${esc(t)}</span></li>`).join("")}</ul>
+    <div class="fig"><span>Valeur réaliste, vendu en un seul lot</span><strong>${rng(r.v1,.07).replace(" et "," à ")}</strong>
+    <em>Soit environ ${Math.round(r.pBig/50)*50} €/m²${ecart!==null?(ecart>3?`. Le prix affiché est ${ecart} % au-dessus.`:ecart<-3?`. Le prix affiché est ${-ecart} % en dessous.`:". Le prix affiché est dans la fourchette."):"."}</em></div></div>`;
+  if(lever){
+    h+=`<div class="sheet"><div class="eyebrow">À remettre au vendeur</div><h2>Première estimation en valorisation, ${esc(S.commune)}</h2>
+      <div class="fig"><span>Vendu en un seul lot aujourd'hui</span><strong>${rng(r.v1,.07).replace(" et "," à ")}</strong></div>
+      <div class="fig best"><span>Vendu en plusieurs lots</span><strong>${eur(r.best.v2*.88)} à ${eur(r.best.v2*.98)}</strong><em>Sous réserve de l'accord de la mairie et de la vérification sur les ventes réelles.</em></div>
+      <ol><li>Un prix de référence est fixé avec vous, à partir de la valeur en un seul lot.</li><li>PLU Value avance tous les frais : études, géomètre, démarches en mairie.</li>
+      <li>Vous restez propriétaire jusqu'aux ventes chez votre notaire.</li><li>PLU Value ne gagne rien si les lots se vendent au prix de référence. Elle se rémunère sur une part de ce qui est vendu au-dessus.</li></ol>
+      <p class="legal">Avis indicatif établi à partir des informations transmises. Ce n'est ni une expertise, ni une offre d'achat, ni un engagement de prix.</p></div>
+    <button class="cta ghost" type="button" data-act="copyFiche">Copier la fiche vendeur</button><div class="status" id="status2"></div>
+    <div class="card"><h2>Lancer l'étude complète</h2><p class="lede">Gratuite. PLU Value vérifie l'urbanisme et les ventes réelles, puis vous rappelle. Elle ne contacte jamais votre vendeur sans vous.</p>
+      <div class="two"><label for="ag">Nom et agence<input id="ag" type="text" autocomplete="name"></label><label for="tel">Téléphone<input id="tel" type="tel" inputmode="tel" autocomplete="tel"></label></div>
+      <button class="cta" type="button" data-act="send">Transmettre le dossier à PLU Value</button>
+      <a class="cta ghost" id="wa" href="https://wa.me/33756986700" target="_blank" rel="noopener">Ou l'envoyer par WhatsApp</a>
+      <a class="cta ghost" href="/deposer-un-bien?profil=agent&diag=1">Déposer le mandat avec la charte de non-contournement</a>
+      <button class="cta ghost" type="button" data-act="copyDossier">Copier le dossier pour un e-mail</button>
+      <div class="status" id="status"></div><p class="legal">E-mail : <span class="mono">contact@plu-value.fr</span> · WhatsApp : <span class="mono">07 56 98 67 00</span></p></div>`;
+  }else{
+    h+=`<div class="card"><h2>Ce que vous pouvez dire au vendeur</h2><p class="say" id="say">Les ventes du secteur placent un bien de cette taille entre ${rng(r.v1,.07)}. ${ecart>3?`Le prix demandé est ${ecart} % au-dessus. `:""}Le potentiel de division a été étudié : il ne permet pas de vendre plus cher ici. Le levier qui reste est le prix.</p>
+      <button class="cta ghost" type="button" data-act="copySay">Copier ce texte</button><div class="status" id="status"></div></div>`;
+  }
+  h+=`
+  <button class="cta ghost" type="button" data-act="restart">Tester un autre bien</button>`;
+  view.innerHTML=h;
+  if(lever){const up=()=>$("wa").href="https://wa.me/33756986700?text="+encodeURIComponent(dossierTexte(r,true));up();$("ag").addEventListener("input",up);$("tel").addEventListener("input",up)}
+  if(!again&&!isEx)api(payload()).catch(()=>{});
+}
+function payload(){const{r,lever}=last;return{action:"save",fiche_id:FID,reponses:S,agent:$("ag")?$("ag").value:"",tel:$("tel")?$("tel").value:"",
+  resultat:{levier:lever,bloc:Math.round(r.v1),piste:r.best?r.best.nom:"",total_lots:r.best?Math.round(r.best.v2):0,motif:stopInfo?stopInfo.t:(lever?"":(S.ref==="non"?"refus prix de référence":r.raisons.join(" | ")))}}}
+function copy(t,ok){
+  const fail=()=>{$("status").textContent="Copie impossible ici : sélectionnez le texte ci-dessous.";const ta=document.createElement("textarea");ta.className="fallback";ta.readOnly=true;ta.value=t;$("status").after(ta);ta.select()};
+  try{navigator.clipboard.writeText(t).then(()=>{$("status").textContent=ok},fail)}catch(e){fail()}
+}
+const ACT={
+  agent(){hist.push(idx);drawAgent()},
+  start(){hist.push(idx);drawLien()},
+  manuel(){go(0)},
+  suite(){go(0)},
+  corriger(){K=new Set();go(0)},
+  exemple(){S={...EXEMPLE};isEx=true;verdict()},
+  restart,
+  bloc(){blocOnly=true;go(0)},
+  copyFiche(){copy(ficheTexte(last.r),"Fiche vendeur copiée.")},
+  copyDossier(){copy(dossierTexte(last.r,last.lever),"Dossier copié : collez-le dans un e-mail à contact@plu-value.fr.")},
+  copySay(){copy($("say").textContent,"Texte copié.")},
+  async send(btn){
+    if(!$("ag").value.trim()||!$("tel").value.trim()){$("status").textContent="Indiquez votre nom et votre téléphone pour être rappelé.";$("ag").focus();return}
+    btn.disabled=true;
+    try{const r=await api(payload());$("status").textContent=r.ok?"Dossier transmis. PLU Value vous rappelle.":"Envoi impossible : utilisez WhatsApp ou l'e-mail."}
+    catch(e){$("status").textContent="Envoi impossible : utilisez WhatsApp ou l'e-mail."}
+    finally{btn.disabled=false}
+  }
+};
+(function(){var q=new URLSearchParams(location.search).get("profil");
+  if(["proprietaire","heritier","notaire","autre"].includes(q)){location.replace("/deposer-un-bien?profil="+q);return}
+  if(q==="agent"){hist=[-1];drawAgent()}else draw()})();
+</script>
+</body></html>

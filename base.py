@@ -75,8 +75,8 @@ def page(slug, title, desc, body, script="", extra_ld=None, og="website"):
     <div class="top">
       <a class="brand" href="/" aria-label="PLU Value, accueil"><i aria-hidden="true"></i>PLU Value</a>
       <div class="top-actions">
-        <a class="btn primary small" href="/deposer-un-bien">Faire étudier un bien</a>
-        <details class="menu"><summary aria-label="Ouvrir le menu">Menu ☰</summary><nav aria-label="Navigation principale"><a href="/">Accueil</a>{nav_m}<hr><a href="/deposer-un-bien">Contact et dépôt d'un bien</a></nav></details>
+        <a class="btn primary small" href="/diagnostic">Faire étudier un bien</a>
+        <details class="menu"><summary aria-label="Ouvrir le menu">Menu ☰</summary><nav aria-label="Navigation principale"><a href="/">Accueil</a>{nav_m}<hr><a href="/diagnostic">Faire étudier un bien</a></nav></details>
       </div>
     </div>
     <nav class="desk" aria-label="Navigation principale">{nav_d}</nav>
@@ -155,7 +155,7 @@ TEAM = """<div class="team">
 FINAL_CTA = """  <section class="dark" aria-labelledby="h-final">
     <h2 id="h-final">Et si votre propriété avait plus de potentiel que vous ne l'imaginiez ?</h2>
     <p>Présentez-nous votre bien. Nous étudions s'il correspond à nos critères et quelles solutions peuvent être envisagées. Réponse sous 72 heures une fois le dossier complet.</p>
-    <div class="cta"><a class="btn gold" href="/deposer-un-bien">Présenter mon bien à PLU Value</a><a class="btn ghost" style="color:#F7F4EC;border-color:#F7F4EC" href="/nos-engagements">Comprendre nos engagements</a></div>
+    <div class="cta"><a class="btn gold" href="/diagnostic">Présenter mon bien à PLU Value</a><a class="btn ghost" style="color:#F7F4EC;border-color:#F7F4EC" href="/nos-engagements">Comprendre nos engagements</a></div>
   </section>"""
 
 PARTNER = """<p class="quote">Votre patrimoine. Notre investissement. Une valeur à créer ensemble.</p>"""

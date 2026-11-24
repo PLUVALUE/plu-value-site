@@ -75,7 +75,7 @@ P[""] = ("PLU Value | Valorisation et division immobilière",
         <span class="eyebrow">Partenariat de valorisation immobilière</span>
         <h1 id="h-hero">Avant de vendre votre maison, découvrez tout son potentiel.</h1>
         <p class="lead">Division de maison, création de logements indépendants, valorisation de terrain : PLU Value étudie les possibilités de votre patrimoine et investit dans la préparation des projets qu'elle sélectionne.</p>
-        <div class="cta"><a class="btn primary" href="/deposer-un-bien">Faire étudier mon bien</a><a class="btn ghost" href="/nos-solutions">Découvrir nos solutions</a></div>
+        <div class="cta"><a class="btn primary" href="/diagnostic">Faire étudier mon bien</a><a class="btn ghost" href="/nos-solutions">Découvrir nos solutions</a></div>
         <p class="reassure"><span>Étude préalable gratuite</span><span>Accompagnement technique et juridique</span><span>Montage juridique et financier</span></p>
       </div>
       <figure class="shot"><img src="/media/maison-avant.webp" alt="Pavillon des années 1970 avec garage et jardin" width="439" height="439"></figure>
@@ -171,7 +171,7 @@ P["nos-solutions"] = ("Nos solutions : diviser une maison, un terrain, un immeub
   <section aria-labelledby="h-c">
     <h2 id="h-c">Et si plusieurs solutions se combinent ?</h2>
     <p>C'est fréquent : une maison divisée en deux logements et un lot à bâtir détaché du jardin, par exemple. L'étude compare les scénarios et retient celui qui crée le plus de valeur pour un risque raisonnable.</p>
-    <div class="cta"><a class="btn primary" href="/deposer-un-bien">Faire étudier mon bien</a><a class="btn ghost" href="/exemples-valorisation">Voir des exemples</a></div>
+    <div class="cta"><a class="btn primary" href="/diagnostic">Faire étudier mon bien</a><a class="btn ghost" href="/exemples-valorisation">Voir des exemples</a></div>
   </section>
 {FINAL_CTA}""")
 
