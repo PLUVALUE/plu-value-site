@@ -759,6 +759,139 @@ ARTICLES.append(dict(
 <p class="meta">Cette page est une information générale, pas un conseil juridique ni fiscal. Consultez votre notaire avant toute décision.</p>
 """))
 
+# ---------------------------------------------------------------- 26/11/2026
+ARTICLES.append(dict(
+    slug="declaration-prealable-de-division", date="2026-11-26", cat="Urbanisme · Déclaration préalable", read="7 min",
+    title="Déclaration préalable de division : faut-il la déposer, avec quelles pièces et quels délais ?",
+    seo="Déclaration préalable de division : pièces, délais, étapes",
+    desc="Faut-il une déclaration préalable pour diviser un terrain ? Cerfa, pièces, délai d'un mois, affichage, cas dispensés : la procédure sourcée.",
+    body="""
+<p class="answer">Oui, en principe : pour détacher une ou plusieurs parcelles en vue d'y construire, il faut déposer une déclaration préalable (DP) en mairie, sauf si la division crée des voies ou des équipements communs, auquel cas c'est un permis d'aménager. La mairie dispose d'un mois pour répondre, en général deux mois en secteur protégé, et son silence vaut accord. Une division sans projet de construction est, elle, dispensée de formalité d'urbanisme hors périmètre protégé [1].</p>
+
+<h2>Quand une déclaration préalable est-elle obligatoire pour diviser un terrain ?</h2>
+<p>Le code de l'urbanisme appelle « lotissement » toute division d'une propriété foncière ayant pour objet de créer un ou plusieurs lots destinés à être bâtis [2]. Quand un lotissement n'est pas soumis à permis d'aménager, il fait l'objet d'une déclaration préalable [3]. C'est le cas le plus courant pour un particulier qui détache un terrain à bâtir de son jardin.</p>
+<div class="table"><table>
+<thead><tr><th>Votre situation</th><th>Formalité (d'après service-public.gouv.fr)</th></tr></thead>
+<tbody>
+<tr><td>Détacher un lot pour y construire, sans voie ni espace commun</td><td>Déclaration préalable [1]</td></tr>
+<tr><td>Diviser sans aucun projet de construction, hors périmètre protégé</td><td>Aucune formalité d'urbanisme [1]</td></tr>
+<tr><td>Division avec création de voies ou d'équipements communs</td><td>Permis d'aménager [1]</td></tr>
+<tr><td>Division en secteur protégé (abords de monument historique, site patrimonial, site classé)</td><td>À confirmer en mairie : la fiche officielle se contredit et indique être « en cours de mise à jour » [1]</td></tr>
+</tbody></table></div>
+<p>Certaines divisions ne demandent ni DP ni permis d'aménager : par exemple le détachement d'un terrain supportant des bâtiments qui ne sont pas destinés à être démolis, ou le rattachement d'une partie de terrain à une propriété contiguë [4]. Ces exceptions sont encadrées : demandez-les par écrit à la mairie plutôt que de les présumer.</p>
+
+<h2>Quel formulaire et quelles pièces joindre au dossier ?</h2>
+<p>Selon service-public.gouv.fr, la DP pour détacher des lots en vue de construire, hors secteur protégé et sans création de voie ni d'espace commun, se dépose sur le Cerfa n° 16703*03, en deux exemplaires, ou en ligne si votre commune accepte les dépôts dématérialisés [5]. Les pièces mentionnées comme obligatoires sont un plan de situation du terrain, un plan de masse et un plan en coupe ; des plans de façades et de toitures s'ajoutent si des bâtiments sont modifiés [5].</p>
+<p>La liste exacte dépend de votre dossier. Nous n'avons pas relu le détail des articles R*442-3 et suivants sur le contenu du dossier ; la notice jointe au formulaire fait foi. Dans la pratique, le géomètre-expert prépare le plan de division et vérifie les limites : voir <a href="/blog/etapes-division-parcellaire.html">les étapes d'une division parcellaire</a>.</p>
+
+<h2>Quel est le délai d'instruction, et que se passe-t-il sans réponse ?</h2>
+<p>Le délai est d'un mois à partir du dépôt, en général de deux mois en secteur protégé. La mairie a un mois pour vous signaler que le dossier est incomplet ; vous avez alors trois mois pour le compléter. Si vous ne recevez aucune réponse dans le délai, la décision est tacite et vaut accord [6].</p>
+<p>Une décision de refus ou des prescriptions que vous contestez peuvent être discutées : recours gracieux dans le mois qui suit la notification, puis contentieux dans les deux mois [7]. Si l'architecte des Bâtiments de France a émis un avis défavorable, un recours préalable est obligatoire [7].</p>
+
+<h2>Comment l'accord est-il affiché, et qui peut le contester ?</h2>
+<p>Un extrait de la décision est affiché en mairie dans les huit jours pendant deux mois, et un panneau doit être posé sur le terrain pendant toute la durée du chantier [6]. L'affichage compte, car c'est lui qui fait courir le délai pendant lequel des voisins ou d'autres tiers peuvent contester l'autorisation. Nous n'avons pas relu l'article du code qui fixe ce délai ; notre article sur <a href="/blog/etapes-division-parcellaire.html">les étapes de la division</a> en donne le principe, à confirmer auprès de votre notaire.</p>
+<p>Une autorisation accordée est valable trois ans [6].</p>
+
+<h2>La DP suffit-elle pour vendre le lot ?</h2>
+<p>Non. La déclaration préalable répond à une seule question : la division est-elle acceptable au regard de l'urbanisme ? Pour vendre, il faut aussi un bornage et un plan de division par un géomètre-expert, puis un acte chez le notaire. L'acheteur devra ensuite obtenir son propre permis de construire. C'est pour cela que la vérification des règles du PLU (recul, emprise, accès, taille du lot) vient avant le dépôt : une DP acceptée n'empêche pas qu'un lot trop petit ou mal desservi reste difficile à vendre. Voir <a href="/division-terrain">la division de terrain</a> et <a href="/blog/diviser-son-terrain-plu.html">ce que le PLU autorise vraiment</a>.</p>
+<p>Pour savoir avant de déposer si le projet est réaliste sur votre parcelle, le <em>certificat d'urbanisme opérationnel</em> permet d'interroger la mairie sur un projet précis ; notre article sur les étapes en détaille l'intérêt.</p>
+
+<h2>Pourquoi un dossier de division est-il parfois refusé ou bloqué ?</h2>
+<p>Les motifs les plus courants tiennent au règlement du PLU, pas à la forme du dossier : lot trop étroit ou en deuxième rideau, accès insuffisant, réseaux à renforcer, emprise ou recul non respectés. Nous n'avons pas de statistique officielle sur les refus et n'en publions donc aucune. Ce que l'on peut dire : lire le règlement de la zone et vérifier l'accès avant de payer un géomètre évite la plupart des dossiers mal engagés. Notre page <a href="/notre-methode">notre méthode</a> décrit l'ordre dans lequel nous faisons ces vérifications.</p>
+
+<h2>Questions fréquentes</h2>
+<details><summary>Quel Cerfa utiliser pour une déclaration préalable de division ?</summary><p>Pour détacher un ou plusieurs lots en vue de construire, hors secteur protégé et sans création de voie ni d'espace commun, c'est le Cerfa n° 16703*03 selon service-public.gouv.fr [5]. Vérifiez le formulaire en vigueur le jour du dépôt.</p></details>
+<details><summary>Combien de temps la mairie met-elle à répondre ?</summary><p>Un mois à partir du dépôt, en général deux mois en secteur protégé. Sans réponse dans le délai, la décision est tacite et vaut accord [6].</p></details>
+<details><summary>Faut-il une déclaration préalable pour diviser un terrain sans construire ?</summary><p>Selon service-public.gouv.fr, une division sans projet de construction est dispensée de formalité d'urbanisme hors périmètre protégé [1]. Elle le devient dès que l'on détache un lot en vue d'y construire.</p></details>
+<details><summary>Quand faut-il un permis d'aménager plutôt qu'une DP ?</summary><p>Quand la division crée des voies ou des équipements communs [1]. En secteur protégé, la règle est en cours de mise à jour sur le site officiel : demandez à la mairie la procédure applicable à votre parcelle.</p></details>
+<details><summary>La DP suffit-elle pour vendre un lot ?</summary><p>Non : il faut aussi un plan de division et un bornage par un géomètre-expert, puis un acte notarié. L'acheteur devra obtenir son permis de construire.</p></details>
+
+<h2>Sources</h2>
+<ol class="sources">
+<li>Service-public.gouv.fr, « Diviser son terrain : quelles formalités ? », fiche F37932, vérifiée le 21 juillet 2026, mise à jour annoncée en cours : https://www.service-public.gouv.fr/particuliers/vosdroits/F37932 (consulté le 24/11/2026).</li>
+<li>Code de l'urbanisme, article L442-1, Légifrance : https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000025019439 (consulté le 24/11/2026).</li>
+<li>Code de l'urbanisme, article L442-3, Légifrance, www.legifrance.gouv.fr (consulté le 24/11/2026).</li>
+<li>Code de l'urbanisme, article R*442-1 (cas non soumis à DP ni à permis d'aménager), Légifrance, www.legifrance.gouv.fr (consulté le 24/11/2026).</li>
+<li>Service-public.gouv.fr, fiche R1995, Cerfa n° 16703*03 « Déclaration préalable, installations et aménagements non soumis à permis d'aménager » : https://www.service-public.gouv.fr/particuliers/vosdroits/R1995 (consulté le 24/11/2026).</li>
+<li>Service-public.gouv.fr, « Déclaration préalable (DP) », fiche F17578, vérifiée le 22 octobre 2026 : https://www.service-public.gouv.fr/particuliers/vosdroits/F17578 (consulté le 24/11/2026).</li>
+<li>Service-public.gouv.fr, fiche R1995 (recours gracieux et contentieux, avis de l'ABF), modifiée le 12 novembre 2026 (consulté le 24/11/2026).</li>
+</ol>
+<p class="meta">Cette page est une information générale, pas un conseil juridique. Les textes évoluent : vérifiez auprès de votre mairie et de votre notaire avant toute démarche.</p>
+"""))
+
+ARTICLES.append(dict(
+    slug="maison-trop-grande-a-la-retraite-que-faire", date="2026-11-26", cat="Propriétaires · Retraite", read="8 min",
+    title="Maison trop grande à la retraite : que faire, sans forcément tout vendre ?",
+    seo="Maison trop grande à la retraite : que faire ?",
+    desc="Maison trop grande à la retraite, que faire ? Adapter, accueillir un jeune, viager, vendre, ou vendre seulement une partie : les options comparées, sourcées.",
+    body="""
+<p class="answer">Maison trop grande à la retraite, que faire ? Vous avez cinq pistes : rester et adapter la maison, accueillir quelqu'un dans les chambres vides, vendre en viager en restant sur place, tout vendre pour plus petit, ou vendre seulement une partie (un bout de terrain, ou une partie de la maison transformée en logement). La dernière piste est la moins connue. Elle n'est pas possible partout : elle dépend des règles d'urbanisme de votre commune, et se vérifie avant de décider.</p>
+
+<h2>Les enfants sont partis : votre maison est-elle vraiment « trop grande » ?</h2>
+<p>Il reste trois ou quatre chambres où personne ne dort, un étage que l'on ne chauffe plus qu'à Noël, un jardin qui demande chaque année un peu plus d'efforts. Vous n'êtes pas un cas isolé. Selon l'Insee, 41 % des maisons individuelles sont en « sous-occupation très accentuée », c'est-à-dire qu'elles comptent au moins trois pièces de plus que ce qui est théoriquement nécessaire au ménage. Et 60 % des ménages concernés comptent une personne de 60 ans ou plus [1].</p>
+<p>Ce chiffre ne dit pas qu'il faut partir. Une maison où l'on a ses repères, ses voisins et de la place pour les petits-enfants a une valeur qui ne se mesure pas en pièces. La question utile est plutôt : qu'est-ce qui pèse le plus ? L'escalier, l'entretien, les charges, le jardin, ou le besoin d'argent pour la suite ? La réponse oriente vers l'une des options qui suivent.</p>
+
+<h2>Quelles sont vos options, honnêtement ?</h2>
+<div class="table">
+  <table>
+    <thead><tr><th>Option</th><th>Ce qu'elle règle</th><th>Ce qu'elle ne règle pas</th></tr></thead>
+    <tbody>
+      <tr><td>Ne rien changer</td><td>Vous gardez tout</td><td>L'entretien, les charges et l'escalier restent</td></tr>
+      <tr><td>Adapter la maison</td><td>Le quotidien : douche, escalier, accès</td><td>La surface et le jardin restent à entretenir</td></tr>
+      <tr><td>Accueillir un jeune ou un locataire</td><td>La maison vit, une présence, parfois un revenu</td><td>Il faut accepter de partager son chez-soi</td></tr>
+      <tr><td>Viager occupé</td><td>Un revenu, et vous restez sur place</td><td>La maison ne sera pas transmise aux enfants</td></tr>
+      <tr><td>Tout vendre pour plus petit</td><td>Moins de charges, un logement adapté</td><td>Vous quittez la maison et le quartier</td></tr>
+      <tr><td>Vendre une partie seulement</td><td>Moins de surface à tenir, de l'argent sans tout quitter</td><td>Possible seulement si les règles locales le permettent ; demande du temps</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Peut-on rester en adaptant la maison ?</h2>
+<p>Souvent, oui. L'aide publique MaPrimeAdapt' finance une partie des travaux d'adaptation du logement et de ses accès extérieurs : monte-escalier, aménagement de la salle de bain, rampe, élargissement de la porte d'entrée. Selon service-public.gouv.fr, un propriétaire occupant y a droit sous conditions de ressources dès 70 ans, sans condition de perte d'autonomie ; l'aide couvre 50 % ou 70 % du montant des travaux selon les revenus, dans la limite de 22 000 € hors taxes de travaux [2]. Nous avons lu cette fiche dans sa version anglaise : vérifiez les conditions sur la fiche en français ou auprès de France Rénov' avant de vous engager.</p>
+
+<h2>Et si quelqu'un occupait les chambres vides ?</h2>
+<p>C'est le principe du logement partagé solidaire, aussi appelé cohabitation intergénérationnelle. Selon service-public.gouv.fr, une personne de plus de 60 ans qui dispose d'au moins une chambre libre peut accueillir un jeune de moins de 30 ans, soit gratuitement en échange de menus services ou d'un temps de présence, soit contre une participation financière modeste. Un contrat écrit fixe la durée et les engagements de chacun [3]. Cette page officielle date d'août 2024 : faites confirmer les règles en vigueur.</p>
+<p>C'est une bonne réponse à la solitude et aux pièces vides. Ce n'en est pas une si vous avez besoin d'une somme importante.</p>
+
+<h2>Le viager permet-il de rester chez soi ?</h2>
+<p>Oui, dans sa forme « occupée ». Selon service-public.gouv.fr, avec un viager occupé, le vendeur conserve jusqu'à son décès l'usufruit ou un droit d'usage du bien vendu. L'acheteur verse une rente, et parfois une somme au départ appelée bouquet, qui n'est pas obligatoire [4]. En contrepartie, la maison est vendue : elle ne fera pas partie de ce que vous transmettrez.</p>
+<p>Une formule voisine consiste à vendre la nue-propriété en gardant l'usufruit. Nous n'avons pas pu lire de fiche officielle à son sujet pour cette page : parlez-en à votre notaire, qui vous dira aussi ce que chaque formule change pour vos impôts et pour vos héritiers.</p>
+
+<h2>Faut-il tout vendre pour un appartement ou une résidence services ?</h2>
+<p>C'est le choix le plus simple à comprendre : vous vendez, vous achetez ou louez plus petit, de plain-pied ou avec ascenseur, près des commerces. C'est aussi le plus lourd à vivre, parce qu'il faut tout quitter d'un coup. Nous n'avons pas pu ouvrir les pages du portail public pour-les-personnes-agees.gouv.fr pendant la préparation de cet article ; nous ne donnons donc ici aucun tarif de résidence. Notre article <a href="/blog/vendre-sa-maison-residence-senior-ehpad.html">vendre sa maison pour aller en résidence senior ou payer l'EHPAD</a> détaille cette piste.</p>
+<p>Un point à connaître avant de mettre en vente : une grande maison sur un grand terrain coûte cher au total, et peu d'acheteurs ont ce budget. Elle peut donc mettre du temps à trouver preneur.</p>
+
+<h2>Peut-on vendre seulement une partie de sa maison ou de son terrain ?</h2>
+<p>Parfois, et c'est la piste que les guides oublient. Elle prend deux formes.</p>
+<ul>
+  <li><strong>Vendre une partie du terrain.</strong> Le fond du jardin, ou un côté de la parcelle, devient un terrain sur lequel une autre maison sera construite. Vous gardez votre maison et un jardin plus petit. Détacher un lot à bâtir passe en général par une déclaration préalable en mairie, instruite en un mois, deux en secteur protégé [5]. Voir <a href="/blog/vendre-une-partie-de-son-terrain-maison-trop-grande.html">vendre une partie de son terrain</a> et notre page <a href="/division-terrain">division de terrain</a>.</li>
+  <li><strong>Créer un second logement dans la maison.</strong> Par exemple : vous gardez le rez-de-chaussée, et l'étage devient un logement indépendant, avec son entrée. Le ministère de la Justice rappelle que diviser un bâtiment en lots ne demande pas d'autorisation en soi, mais que les travaux nécessaires peuvent être soumis à déclaration préalable ou à permis de construire [6]. Voir <a href="/blog/diviser-une-maison-en-plusieurs-logements.html">diviser une maison en plusieurs logements</a>.</li>
+</ul>
+<p>Dans les deux cas, c'est le plan local d'urbanisme de votre commune qui décide : distance aux limites, part du terrain qui peut être bâtie, accès, places de stationnement par logement. Deux maisons de la même rue peuvent recevoir deux réponses différentes. Personne ne peut vous dire que votre terrain est divisible sans avoir lu le règlement de votre zone et regardé votre parcelle.</p>
+<p>Il faut aussi être clair sur le temps. Entre l'étude, l'autorisation, les délais de recours, le géomètre et le notaire, une division se compte en mois. Elle convient quand la décision se prépare, pas quand il faut de l'argent tout de suite. Notre page <a href="/valoriser-maison-familiale">valoriser une maison familiale</a> explique comment nous abordons ces situations.</p>
+
+<h2>Pourquoi ne pas le faire seul ?</h2>
+<p>Parce que diviser n'est pas une démarche, c'est un petit projet immobilier. Il faut lire le règlement d'urbanisme comme un juriste, vérifier avec un architecte que la maison ou le terrain s'y prête, faire chiffrer les travaux, connaître le marché pour savoir ce qui trouvera un acheteur, puis avancer les frais de géomètre, d'études et de dossier pendant des mois avant la première vente.</p>
+<p>Mal préparée, une division peut être refusée par la mairie, ou aboutir à un lot dont personne ne veut : les frais sont alors payés pour rien, et votre propre maison peut y perdre. C'est un risque réel, et il n'y a aucune raison de le porter seul à l'âge où l'on veut se simplifier la vie.</p>
+<p>PLU Value réunit ces métiers. L'étude de votre bien est gratuite. Quand nous retenons un projet, nous y engageons nos propres moyens : nous finançons les études et les démarches, et nous partageons avec vous la valeur créée au-dessus d'un prix de référence fixé au départ. Nous avons donc le même intérêt que vous à ce que ce soit bien fait. La vente est confiée à une agence immobilière, et rien n'est promis d'avance : chaque bien est étudié au cas par cas. Voir <a href="/nos-engagements">nos engagements</a>.</p>
+
+<h2>Questions fréquentes</h2>
+<details><summary>Que faire d'une maison trop grande à la retraite ?</summary><p>Cinq pistes existent : adapter la maison pour y rester, accueillir un jeune ou un locataire, vendre en viager occupé, tout vendre pour un logement plus petit, ou vendre seulement une partie du terrain ou de la maison quand les règles d'urbanisme le permettent. Le bon choix dépend de ce qui vous pèse le plus et de votre besoin d'argent.</p></details>
+<details><summary>Peut-on rester chez soi en vendant une partie de sa maison ?</summary><p>Parfois. On peut détacher une partie du terrain, ou créer un second logement dans la maison. C'est le plan local d'urbanisme de la commune qui dit si c'est possible, et il faut l'étudier avant de décider.</p></details>
+<details><summary>Combien de temps faut-il pour vendre une partie de son terrain ?</summary><p>Nous ne donnons pas de délai, car il dépend du dossier. La seule instruction d'une déclaration préalable prend un mois, deux en secteur protégé, et il faut y ajouter l'étude, les délais de recours, le géomètre et le notaire : comptez en mois, pas en semaines.</p></details>
+
+<h2>Sources</h2>
+<ol class="sources">
+  <li>Insee Première n° 2064, « Un quart des ménages vivent dans un logement en sous-occupation très accentuée », juillet 2025 : https://www.insee.fr/fr/statistiques/8606928 (consulté le 26/11/2026).</li>
+  <li>Service-public.gouv.fr, « MaPrimeAdapt' : travaux d'adaptation du logement à la perte d'autonomie », fiche F37501, vérifiée le 1er janvier 2026 : https://www.service-public.gouv.fr/particuliers/vosdroits/F37501 (consulté le 26/11/2026, version anglaise de la fiche).</li>
+  <li>Service-public.gouv.fr, « Tout savoir sur le logement partagé solidaire », actualité A17556, publiée le 20 août 2024 : https://www.service-public.gouv.fr/particuliers/actualites/A17556 (consulté le 26/11/2026 ; la page signale elle-même son ancienneté).</li>
+  <li>Service-public.gouv.fr, « Achat ou vente en viager : quelles sont les règles ? », A16435, vérifié le 18 août 2025 : https://www.service-public.gouv.fr/particuliers/actualites/A16435 (consulté le 26/11/2026).</li>
+  <li>Service-public.gouv.fr, « Déclaration préalable (DP) », fiche F17578, vérifiée le 22 octobre 2026 : https://www.service-public.gouv.fr/particuliers/vosdroits/F17578 (consulté le 26/11/2026, version anglaise de la fiche).</li>
+  <li>Ministère de la Justice, « Faut-il une autorisation pour diviser un bâtiment en plusieurs lots ? », mis à jour le 14 mai 2024 : https://www.justice.fr/fiche/faut-autorisation-diviser-batiment-plusieurs-lots (consulté le 26/11/2026).</li>
+</ol>
+<p class="meta">Cette page est une information générale, pas un conseil juridique, fiscal, médical ni patrimonial. Non lus pour cette page : le portail pour-les-personnes-agees.gouv.fr et toute fiche officielle sur la vente en nue-propriété. Consultez votre notaire avant toute décision.</p>
+"""))
+
 SEO = {'densification-douce-pavillonnaire-commune': 'Densification douce du pavillonnaire : le rôle de la commune', 'vendre-une-partie-de-son-terrain-maison-trop-grande': 'Vendre une partie de son terrain : maison trop grande ?', 'diviser-son-terrain-champigny-sur-marne': 'Diviser son terrain à Champigny-sur-Marne : le PLU'}
 for a in ARTICLES:
     if a['slug'] in SEO: a['seo'] = SEO[a['slug']]
